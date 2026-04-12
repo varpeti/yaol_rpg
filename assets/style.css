@@ -1,0 +1,331 @@
+/* Fonts */
+
+@font-face {
+  font-family: bagnard;
+  src: url(./Bagnard.otf);
+}
+
+@font-face {
+  font-family: youngserif;
+  src: url(./YoungSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: officecodepro;
+  src: url(./officecodepro-regular.otf);
+}
+
+/* Theme (https://rosepinetheme.com) */
+
+[data-theme="light"] {
+  --c-base: hsl(32deg, 57%, 95%);
+  --c-surface: hsl(35deg, 100%, 98%);
+  --c-overlay: hsl(33deg, 43%, 91%);
+  --c-muted: hsl(257deg, 9%, 61%);
+  --c-subtle: hsl(248deg, 12%, 52%);
+  --c-text: hsl(248deg, 19%, 40%);
+  --c-love: hsl(343deg, 35%, 55%);
+  --c-gold: hsl(35deg, 81%, 56%);
+  --c-rose: hsl(3deg, 53%, 67%);
+  --c-pine: hsl(197deg, 53%, 34%);
+  --c-foam: hsl(189deg, 30%, 48%);
+  --c-foam2: hsl(189deg, 30%, 95%);
+  --c-iris: hsl(268deg, 21%, 57%);
+  --c-highlight-low: hsl(25deg, 35%, 93%);
+  --c-highlight-med: hsl(10deg, 9%, 86%);
+  --c-highlight-high: hsl(315deg, 4%, 80%);
+}
+
+[data-theme="dark"] {
+  --c-base: hsl(246deg, 24%, 17%);
+  --c-surface: hsl(248deg, 24%, 20%);
+  --c-overlay: hsl(248deg, 21%, 26%);
+  --c-muted: hsl(249deg, 12%, 47%);
+  --c-subtle: hsl(248deg, 15%, 61%);
+  --c-text: hsl(245deg, 50%, 91%);
+  /* --c-love: hsl(343deg, 76%, 68%); */
+  --c-love: hsl(2deg, 66%, 75%); /* rose */
+  --c-gold: hsl(35deg, 88%, 72%);
+  --c-rose: hsl(2deg, 66%, 75%);
+  /* --c-pine: hsl(197deg, 48%, 47%); */
+  --c-pine: hsl(343deg, 76%, 68%); /* love */
+  --c-foam: hsl(189deg, 43%, 73%);
+  --c-foam2: hsl(245deg, 22%, 20%);
+  --c-iris: hsl(267deg, 57%, 78%);
+  --c-highlight-low: hsl(245deg, 22%, 20%);
+  --c-highlight-med: hsl(247deg, 16%, 30%);
+  --c-highlight-high: hsl(249deg, 15%, 38%);
+}
+
+.theme-selector-button {
+  font-family: bagnard;
+  color: var(--c-text);
+  background-color: transparent;
+  border: none;
+}
+
+.theme-selector-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.25rem;
+  z-index: 10000;
+  padding: 0.125rem;
+  border: 1px solid var(--c-muted);
+  border-radius: 4px;
+  background-color: var(--c-base);
+}
+
+/* Body */
+
+html {
+  background-color: var(--c-base);
+}
+
+body {
+  font-family: youngserif;
+  margin: 1.5rem;
+  padding: 1rem;
+  color: var(--c-text);
+  background: var(--c-surface);
+}
+
+:not(pre) > code {
+  background-color: var(--c-foam2);
+  border: 1px solid var(--c-muted);
+  border-radius: 4px;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+  font-weight: bold;
+}
+
+code {
+  font-family: officecodepro;
+}
+
+pre code {
+  white-space: pre;
+}
+
+details pre {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+details {
+  max-width: 95%;
+}
+
+/* Header */
+
+header {
+  margin: auto;
+}
+
+header > h1, header > p {
+  display: flex;
+  justify-content: center;
+}
+
+/* Artworks */
+
+.nav-and-cover {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .nav-and-cover {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+nav {
+  flex: 1;
+}
+
+.nav-and-cover figure {
+  flex: 1;
+}
+
+img {
+  width: 33rem;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+html[data-theme="dark"] img {
+  background: radial-gradient(
+      ellipse at center,
+      var(--c-text) 0%,
+      var(--c-surface) 66%,
+      var(--c-surface) 100%
+  );
+}
+
+html[data-theme="dark"] img[alt="TheLich"] {
+  background: radial-gradient(
+      ellipse at center,
+      var(--c-iris) 0%,
+      var(--c-surface) 66%,
+      var(--c-surface) 100%
+  );
+}
+
+figcaption {
+  display: none;
+}
+
+/* Box Styles */
+
+details {
+  display: inline-block;
+  background-color: var(--c-base);
+  border: 1px solid var(--c-muted);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 0.125rem;
+}
+
+/* Auto Numbering Heading */
+
+/*
+body {
+  counter-reset: h2;
+}
+
+h2 {
+  counter-reset: h3;
+}
+
+h3 {
+  counter-reset: h4;
+}
+
+h4 {
+  counter-reset: h5;
+}
+
+h5 {
+  counter-reset: h6;
+}
+
+h2:before {
+  counter-increment: h2;
+  content: counter(h2) " ";
+}
+
+h3:before {
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3) " ";
+}
+
+h4:before {
+  counter-increment: h4;
+  content: counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+
+h5:before {
+  counter-increment: h5;
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
+}
+
+h6:before {
+  counter-increment: h6;
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " ";
+}
+
+h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {
+  font-family: bagnard;
+}
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: bagnard;
+  color: var(--c-pine);
+}
+
+.toc-section-number, .header-section-number {
+  font-family: bagnard;
+}
+
+/* Tables */
+
+table {
+  margin: 0 auto;
+  border: 2px solid var(--c-base);
+  background-color: var(--c-base);
+  border-radius: 4px;
+  text-align: left;
+  width: 100%;
+  float: left;
+}
+
+table td, table th {
+  border: 1px solid var(--c-surface);
+  border-radius: 3px;
+  padding: 0.25rem 1rem;
+}
+
+table thead {
+  background: var(--c-overlay);
+}
+
+table thead th {
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+      display: block;
+  }
+
+  thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  tr {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+  }
+
+  td {
+      border: none;
+  }
+
+  td:before {
+      content: attr(data-label) ": ";
+      font-weight: bold;
+      background-color: var(--c-surface);
+      margin-right: 1rem;
+  }
+}
+
+/* Links */
+
+a:link {
+  color: var(--c-love);
+}
+
+a:visited {
+  color: var(--c-rose);
+}
+
+a:hover {
+  color: var(--c-gold);
+}
+
+a:active {
+  color: var(--c-gold);
+}

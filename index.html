@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="varpeti" />
+  <title>Yaol Rpg</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Yaol Rpg</h1>
+<p class="author">varpeti</p>
+</header>
+<div class="nav-and-cover">
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#character" id="toc-character"><span
+class="toc-section-number">1</span> Character</a>
+<ul>
+<li><a href="#attributes" id="toc-attributes"><span
+class="toc-section-number">1.1</span> Attributes</a></li>
+<li><a href="#stats" id="toc-stats"><span
+class="toc-section-number">1.2</span> Stats</a></li>
+<li><a href="#appearance-personality-background"
+id="toc-appearance-personality-background"><span
+class="toc-section-number">1.3</span> Appearance, Personality,
+Background</a></li>
+<li><a href="#inventory" id="toc-inventory"><span
+class="toc-section-number">1.4</span> Inventory</a>
+<ul>
+<li><a href="#item" id="toc-item"><span
+class="toc-section-number">1.4.1</span> Item</a></li>
+<li><a href="#conditions" id="toc-conditions"><span
+class="toc-section-number">1.4.2</span> Conditions</a></li>
+<li><a href="#offensive-items" id="toc-offensive-items"><span
+class="toc-section-number">1.4.3</span> Offensive items</a>
+<ul>
+<li><a href="#melee" id="toc-melee"><span
+class="toc-section-number">1.4.3.1</span> Melee</a></li>
+<li><a href="#ranged" id="toc-ranged"><span
+class="toc-section-number">1.4.3.2</span> Ranged</a></li>
+</ul></li>
+<li><a href="#defensive-items" id="toc-defensive-items"><span
+class="toc-section-number">1.4.4</span> Defensive items</a>
+<ul>
+<li><a href="#armor" id="toc-armor"><span
+class="toc-section-number">1.4.4.1</span> Armor</a></li>
+<li><a href="#shield" id="toc-shield"><span
+class="toc-section-number">1.4.4.2</span> Shield</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#character-progression"
+id="toc-character-progression"><span
+class="toc-section-number">1.5</span> Character Progression</a>
+<ul>
+<li><a href="#number-go-up" id="toc-number-go-up"><span
+class="toc-section-number">1.5.1</span> Number go up</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#actions" id="toc-actions"><span
+class="toc-section-number">2</span> Actions</a>
+<ul>
+<li><a href="#saving-throw" id="toc-saving-throw"><span
+class="toc-section-number">2.1</span> Saving throw</a></li>
+<li><a href="#damage-roll" id="toc-damage-roll"><span
+class="toc-section-number">2.2</span> Damage roll</a></li>
+<li><a href="#advantages-and-disadvantages"
+id="toc-advantages-and-disadvantages"><span
+class="toc-section-number">2.3</span> Advantages and
+Disadvantages</a></li>
+<li><a href="#magic-rolls" id="toc-magic-rolls"><span
+class="toc-section-number">2.4</span> Magic rolls</a></li>
+<li><a href="#information" id="toc-information"><span
+class="toc-section-number">2.5</span> Information</a></li>
+<li><a href="#taking-damage" id="toc-taking-damage"><span
+class="toc-section-number">2.6</span> Taking Damage</a>
+<ul>
+<li><a href="#injuries" id="toc-injuries"><span
+class="toc-section-number">2.6.1</span> Injuries</a></li>
+<li><a href="#defense" id="toc-defense"><span
+class="toc-section-number">2.6.2</span> Defense</a>
+<ul>
+<li><a href="#immunity-resistance-vulnerability"
+id="toc-immunity-resistance-vulnerability"><span
+class="toc-section-number">2.6.2.1</span> Immunity, Resistance,
+Vulnerability</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#magic" id="toc-magic"><span
+class="toc-section-number">3</span> Magic</a>
+<ul>
+<li><a href="#casting-a-spell" id="toc-casting-a-spell"><span
+class="toc-section-number">3.1</span> Casting a Spell</a></li>
+<li><a href="#recharge" id="toc-recharge"><span
+class="toc-section-number">3.2</span> Recharge</a></li>
+</ul></li>
+<li><a href="#time" id="toc-time"><span
+class="toc-section-number">4</span> Time</a>
+<ul>
+<li><a href="#resting" id="toc-resting"><span
+class="toc-section-number">4.1</span> Resting</a></li>
+</ul></li>
+<li><a href="#combat" id="toc-combat"><span
+class="toc-section-number">5</span> Combat</a>
+<ul>
+<li><a href="#initiative" id="toc-initiative"><span
+class="toc-section-number">5.1</span> Initiative</a></li>
+<li><a href="#rounds" id="toc-rounds"><span
+class="toc-section-number">5.2</span> Rounds</a></li>
+<li><a href="#end-of-combat" id="toc-end-of-combat"><span
+class="toc-section-number">5.3</span> End of Combat</a></li>
+</ul></li>
+<li><a href="#compatibility" id="toc-compatibility"><span
+class="toc-section-number">6</span> Compatibility</a></li>
+<li><a href="#resources-and-shoutout"
+id="toc-resources-and-shoutout"><span
+class="toc-section-number">7</span> Resources and Shoutout</a></li>
+</ul>
+</nav>
+<figure>
+<img src="assets/Darkness_Ambush.svg" alt="Cover Image">
+<figcaption aria-hidden="true">Cover Image</figcaption>
+</figure>
+</div>
+<!-- markdownlint-disable MD013 MD026 MD033 -->
+<!-- Long Lines; Punctuations at the end of title; Inline HTML -->
+<script src="assets/theme-selector.js"></script>
+<hr />
+<p>The universe holds many mysteries waiting to be uncovered. Discard
+every assumption and pretense of knowing. You must be fearless and stay
+sharp at all times.</p>
+<p>To play the game, you need polyhedral dice (d4, d6, d8, d10, d12,
+d20) and some way to track the Characters, be it pen and paper or
+digital. A Game Master and willing Players to form a Party. Snacks,
+optional but highly recommended.</p>
+<hr />
+<figure>
+<img src="./assets/fighter.svg" alt="Fighter" />
+<figcaption aria-hidden="true">Fighter</figcaption>
+</figure>
+<h2 data-number="1" id="character"><span
+class="header-section-number">1</span> Character</h2>
+<h3 data-number="1.1" id="attributes"><span
+class="header-section-number">1.1</span> Attributes</h3>
+<p>Your character has three attribute scores; these are the measure of
+basic strengths and weaknesses.</p>
+<ul>
+<li><code>STR</code>: Physical strength, endurance, resilience.</li>
+<li><code>DEX</code>: Dexterity, speed, agility.</li>
+<li><code>WIL</code>: Willpower, charisma, luck.</li>
+</ul>
+<p>Roll <strong>4d6</strong> for each attribute in order, and keep the
+<strong>two highest dice</strong> <code>[highest 2 of 4d6]</code>. You
+may swap any two attribute scores.</p>
+<p>Attributes can change, both <a href="#resting">up</a> and <a
+href="#taking-damage">down</a>; record the Maximum and Current.</p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>Rolled (5 5 4 2) -&gt; 10 STR
+Rolled (6 6 4 1) -&gt; 12 DEX
+Rolled (5 4 4 3) -&gt; 09 WIL
+
+Swapped DEX and STR.
+
+Recorded as: ATR Max/Current
+
+STR 12/12 DEX 10/10 WIL 09/09</code></pre>
+</details>
+<h3 data-number="1.2" id="stats"><span
+class="header-section-number">1.2</span> Stats</h3>
+<p>The only “Main” stat is the <strong>Hit Protection</strong>:</p>
+<ul>
+<li><code>HP</code>: <strong>Hit Protection</strong> - this is the <a
+href="#taking-damage">damage your character can take</a> without the
+risk of serious injuries.</li>
+</ul>
+<p>Roll <strong>2d4</strong> for <code>HP</code> and add
+<strong>4</strong> to the higher one.
+<code>[highest 1 of 2d4] + 4</code></p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>Rolled (2 3) -&gt; 3+4 = 7
+
+Recorded as: HP Max/Current
+
+STR 12/12 DEX 10/10 WIL 09/09 HP 07/07</code></pre>
+</details>
+<p>There are some stats that are provided by items; the table can decide
+if it is worth noting these down on the sheet, or if reading them from
+the items is sufficient.</p>
+<ul>
+<li><code>DR</code>: <a href="#armor">Damage Reduction</a> - this
+passively reduces the damage taken.</li>
+<li><code>Immunity</code> and <code>Resistance/Vulnerability</code>: <a
+href="#immunity-resistance-vulnerability">Immunity, Resistance, or
+Vulnerability</a> to certain types of damage.</li>
+<li><code>Block</code>, <code>Dodge</code>, <code>Parry</code> and
+<code>Recless Counter Attack</code>: <a href="#defense">Basic defence
+action</a> modifier’s.</li>
+</ul>
+<details>
+<summary>
+Optionally
+</summary>
+<pre class="text"><code>Other stats can be recorded as well, depending on the game setting, such as:
+
+- Speed: How much space/meters/feet the character can travel per Move action; Fly, Climb, and Swim speed can be tracked as well.
+- Size: The size of the character, used for calculations.
+- Inspiration: A token of gratitude from the GM for good play, which can be exchanged for a re-roll.
+- Insanity: Level of ever-growing insanity in a horror setting.</code></pre>
+</details>
+<h3 data-number="1.3" id="appearance-personality-background"><span
+class="header-section-number">1.3</span> Appearance, Personality,
+Background</h3>
+<p>Name and describe your character:</p>
+<ul>
+<li><strong>Appearance</strong>: How others observe them. Let your
+imagination run wild.</li>
+<li><strong>Personality</strong>: Their Virtues and Vices. Keep them
+friendly and cooperative.</li>
+<li><strong>Background</strong>: Their short background story,
+intermingled with the other Players’ characters.</li>
+</ul>
+<p>These are used for role-play, and they have mechanical impact on the
+game as well.</p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>Flint, a Mordecai from the Great-Tree forest
+STR 10/10 DEX 08/08 WIL 09/09 HP 07/07
+
+About 190cm tall, skinny yet muscular. Flint is a Mordecai, a humanoid creature with 3 legs, 3 arms, 3 eyes, 3 ears, and 3 mouths evenly placed around his body. It is hard to determine which way he is facing.
+
+Flint is quite the chatterbox; he often talks before he thinks and is unable to read the room.
+He likes to challenge strong foes, especially when injustice is on the table, but does not care deeply about others, only the ones he respects.
+
+One such person is present: Clayd. They trained together in the Great-Tree Academy, rivaling each other and duelling countless times. Both of them think they won more bouts than the other.
+
+Flint hates small bugs; he deeply despises spiders and spider webs. He fears their touch, especially when it comes out of nowhere.</code></pre>
+</details>
+<p>Characters die easily. For quick character creation, players can roll
+on random tables.</p>
+<h3 data-number="1.4" id="inventory"><span
+class="header-section-number">1.4</span> Inventory</h3>
+<p>Each character has <strong>10</strong> inventory slots. That is the
+way in this world. Ten items to hold onto, no more. One item takes as
+many slots as the number of hands needed to carry it comfortably. If all
+ten are full, the character is encumbered, cannot move fast, and has
+disadvantage on every action. Inventory can be accessed instantly; there
+is no distinction between an item held in hand and one strapped on the
+character’s back.</p>
+<h4 data-number="1.4.1" id="item"><span
+class="header-section-number">1.4.1</span> Item</h4>
+<p>Each item has a limited durability. They can bear <strong>3</strong>
+<strong>Usage marks</strong>.</p>
+<p>If all <strong>Usage marks</strong> on an item are filled, it is
+depleted/damaged and not usable without risking total destruction.</p>
+<p>Items can be repaired, maintained, replenished, or recharged, but it
+requires time, resources, expertise, and the right conditions.</p>
+<p>Items cannot bear more than <strong>3</strong> <strong>Usage
+marks</strong>. If an item would receive more in one go, it only
+receives the maximum of <strong>3</strong>.</p>
+<p>Players can try to use items with <strong>3</strong> <strong>Usage
+marks</strong>, but the item will be destroyed if it receives another
+<strong>Usage mark</strong>, and the action will fail.</p>
+<p>Every time a Character uses an item and rolls either a Saving throw,
+Damage roll, or Spell casting, mark 1 usage for each rolled
+<strong>1</strong> (even for rolls with (dis)advantage).</p>
+<p>For items with depleting resources (such as a torch), roll their
+<strong>Usage die</strong> (or d6 if not stated) every N Turns (or 3 if
+not stated on the item).</p>
+<p>For items without active rolls (such as armor), roll their
+<strong>Usage die</strong> (or d6 if not stated) after every time they
+were used (e.g., after combat).</p>
+<h4 data-number="1.4.2" id="conditions"><span
+class="header-section-number">1.4.2</span> Conditions</h4>
+<p>Each condition, be it boon or bane, takes up one inventory slot. Each
+condition can affect more than just the inventory, and each has a
+condition for removal.</p>
+<p>If a Player is encumbered (inventory is full) and receives a bane,
+they must remove a boon. If the Player has no boon, they have to drop an
+item. If there is no item to drop, just add the condition to the
+inventory; for each extra condition they gain +1 disadvantage on each
+action.</p>
+<p>If a Player is encumbered (inventory is full) and receives a boon,
+they can swap it for another boon. If the Player has no boon, they
+cannot receive it.</p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>Drained (bane): Disadvantage on WIL save. Clear: After Full Rest
+Exhausted (bane): Clear: After Long Rest
+Hungry (bane): Clear: After eating a meal
+Miss Fortune&#39;s Kiss (boon): Advantage on the next Saving throw or Damage roll.
+Bless (boon): Advantage on Saving throw or Damage roll. Clear: 5 Rounds (5 minutes)</code></pre>
+</details>
+<h4 data-number="1.4.3" id="offensive-items"><span
+class="header-section-number">1.4.3</span> Offensive items</h4>
+<p>Each weapon has a <strong>Damage dice</strong> and rarely a
+<strong>Bonus</strong>. It’s a flat bonus damage each time a weapon
+deals damage.</p>
+<h5 data-number="1.4.3.1" id="melee"><span
+class="header-section-number">1.4.3.1</span> Melee</h5>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Type</th>
+<th>Slot</th>
+<th>Damage dice</th>
+<th>Average</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unarmed</td>
+<td>0</td>
+<td>1d4</td>
+<td>2.5</td>
+<td>Fist, Foot</td>
+</tr>
+<tr>
+<td>One handed</td>
+<td>1</td>
+<td>1d6</td>
+<td>3.5</td>
+<td>Dagger, Short Sword</td>
+</tr>
+<tr>
+<td>Two handed</td>
+<td>2</td>
+<td>1d8</td>
+<td>4.5</td>
+<td>Long Sword, Axe, Pike, Halberd, Spear</td>
+</tr>
+<tr>
+<td>Dual Wielding</td>
+<td>2x1</td>
+<td>2d4</td>
+<td>5.0</td>
+<td>Daggers, Scimitars</td>
+</tr>
+<tr>
+<td>Heavy Weapon</td>
+<td>3</td>
+<td>1d10</td>
+<td>5.5</td>
+<td>Great Axe, Warhammer</td>
+</tr>
+</tbody>
+</table>
+<p>Unarmed strikes have no <a href="#item">Usage marks</a>.</p>
+<p>When Dual Wielding, attacking with both weapons is considered one
+action, and the player is free to choose which weapon gets the <a
+href="#item">Usage marks</a>.</p>
+<p>Attacking multiple targets at once (swing): Roll once, share the
+damage.</p>
+<h5 data-number="1.4.3.2" id="ranged"><span
+class="header-section-number">1.4.3.2</span> Ranged</h5>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Type</th>
+<th>Slot</th>
+<th>Damage dice Short</th>
+<th>Damage dice Long</th>
+<th>Average Short</th>
+<th>Average Long</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Throwables</td>
+<td>0/1</td>
+<td>1d4</td>
+<td>-</td>
+<td>2.5</td>
+<td>-</td>
+<td>Rock, Dagger</td>
+</tr>
+<tr>
+<td>Light</td>
+<td>1+1</td>
+<td>1d6</td>
+<td>1d4</td>
+<td>3.5</td>
+<td>2.5</td>
+<td>Light Bow, Slingshot, Light Crossbow, Blowgun</td>
+</tr>
+<tr>
+<td>Long</td>
+<td>2+1</td>
+<td>1d8</td>
+<td>1d6</td>
+<td>4.5</td>
+<td>3.5</td>
+<td>Long Bow, Crossbow, etc.</td>
+</tr>
+<tr>
+<td>Dual Wielding</td>
+<td>2x1+1</td>
+<td>2d4</td>
+<td>1d8</td>
+<td>5.0</td>
+<td>4.5</td>
+<td>Two Light Crossbows</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>3+1</td>
+<td>1d10</td>
+<td>2d4</td>
+<td>5.5</td>
+<td>5.0</td>
+<td>Hand Cannon</td>
+</tr>
+</tbody>
+</table>
+<p>Ranged weapons (aside from throwables) require ammunition; that is
+the cost of range. Each kind of ammunition can only have 1 <a
+href="#item">Usage mark</a> maximum. The Player is free to choose to
+mark the ammunition (thereby depleting it) or mark the weapon.</p>
+<p>Loading ammunition into a weapon is a <a href="#rounds">Small
+Action</a>.</p>
+<p>Aiming and shooting costs 1 <a href="#combat">Action Point</a>.</p>
+<h4 data-number="1.4.4" id="defensive-items"><span
+class="header-section-number">1.4.4</span> Defensive items</h4>
+<p>There are 2 types of defence: Passive (Armor) and Active
+(Shield).</p>
+<h5 data-number="1.4.4.1" id="armor"><span
+class="header-section-number">1.4.4.1</span> Armor</h5>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Type</th>
+<th>Slot</th>
+<th>Damage reduction <strong>DR</strong></th>
+<th>DEX Save Modifier</th>
+<th>Usage dice (after fight)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>0</td>
+<td>0</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Light</td>
+<td>1</td>
+<td>1</td>
+<td>-</td>
+<td>1d4</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>2</td>
+<td>2</td>
+<td>-1</td>
+<td>1d6</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>3</td>
+<td>3</td>
+<td>-2</td>
+<td>1d8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Damage Reduction</strong> reduces each instance of inflicted
+damage by a fixed amount.</p>
+<p>A Character cannot have more than <strong>3</strong>
+<code>DR</code>.</p>
+<p>After a fight, if the Player received any damage, roll the
+<strong>Usage die</strong> and <a href="#item">mark usage</a> if a
+<strong>1</strong> is rolled.</p>
+<h5 data-number="1.4.4.2" id="shield"><span
+class="header-section-number">1.4.4.2</span> Shield</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Slot</th>
+<th>Block Bonus</th>
+<th>Parry Bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>1</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>1</td>
+<td>1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>2</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>3</td>
+<td>3</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#defense">Blocking</a> with a shield adds the <strong>Block
+Bonus</strong> to the <a href="#saving-throw">Saving throw</a>.
+<code>1d20 + STR + Block Bonus</code></p>
+<h3 data-number="1.5" id="character-progression"><span
+class="header-section-number">1.5</span> Character Progression</h3>
+<p>There is no class system; the items a character is holding define
+their options. A character can boost their potential by obtaining more
+versatile and powerful <a href="#item">items</a>.</p>
+<h4 data-number="1.5.1" id="number-go-up"><span
+class="header-section-number">1.5.1</span> Number go up</h4>
+<p>Characters can level up through experience:</p>
+<ul>
+<li>Gain +1 <a href="#attributes">Maximum Attribute point</a> (whichever
+was damaged). Max 20.</li>
+<li>Gain +1 to their <a href="#stats">Maximum HP</a>. Max 20.</li>
+<li>Gain proficiency with a <a href="#offensive-items">weapon type</a>.
+Each <a href="#damage-roll">Damage roll</a> with that kind of weapon is
+rolled with +1. Max 3.</li>
+</ul>
+<hr />
+<figure>
+<img src="./assets/Thief.svg" alt="Thief" />
+<figcaption aria-hidden="true">Thief</figcaption>
+</figure>
+<h2 data-number="2" id="actions"><span
+class="header-section-number">2</span> Actions</h2>
+<p>The Players should describe or role-play what their Characters want
+to do or are doing. The GM should then describe the possible outcomes,
+or the outcome of their actions.</p>
+<p>Many “Basic” actions are described in this book. They are not the
+only options, they are just the baseline. Players should think of clever
+ideas, both in and out of combat, and (try to) execute them; the GM
+should honor this.</p>
+<p>Rolling dice should be risky. Players should avoid it and find clever
+solutions instead.</p>
+<h3 data-number="2.1" id="saving-throw"><span
+class="header-section-number">2.1</span> Saving throw</h3>
+<p>Rolling to see if something happens is almost always on the side that
+is affected. In rare cases where an action is deemed fallible, the
+player has to roll a <strong>Saving throw</strong> to determine the
+outcome.</p>
+<p>The GM should only ask for Saving throws if the outcome is uncertain.
+As a rule of thumb, if the fail rate for the Character is below 50%, the
+action should automatically succeed.</p>
+<p>The GM should ensure that the outcomes of a <strong>Saving
+throw</strong> - both success and failure - are obvious to the Players
+before the roll.</p>
+<p>Rolling a Saving throw is <code>1d20 + Attribute &gt;= 25</code>
+<em>(30% at ATR=10; 55% at ATR=15; 80% at ATR=20)</em></p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>A muscular barbarian wants to throw a boulder down the cliff -&gt; Auto Success, no need to roll
+A skinny old wizard wants to throw a boulder down the cliff by pure strength -&gt; Needs a STR Saving throw
+
+A very athletic leopardfolk wants to dodge a runaway cart -&gt; Auto Success, no need to roll
+An encumbered character wants to dodge a runaway cart -&gt; Needs a DEX Saving throw
+
+A pub owner tries to lure well-fed adventurers to their establishment with magic -&gt; Auto Success (for the adventurers), no need to roll
+A pub owner tries to lure starving adventurers to their establishment with magic -&gt; Needs a WIL Saving throw</code></pre>
+</details>
+<h3 data-number="2.2" id="damage-roll"><span
+class="header-section-number">2.2</span> Damage roll</h3>
+<p>Each <a href="#offensive-items">weapon</a> that can be used to deal
+damage has a <strong>Damage dice</strong> to roll damage with. Roll the
+dice: that is the damage. If <strong>1</strong> is rolled on any die
+that die fails (0 damage).</p>
+<h3 data-number="2.3" id="advantages-and-disadvantages"><span
+class="header-section-number">2.3</span> Advantages and
+Disadvantages</h3>
+<p>If some event comes down to rolling dice, the Player rolls the base
+die/dice and can have multiple copies of the same die/dice for
+(dis)advantages.</p>
+<p>The Player rolls them, then takes the higher values for advantage or
+the lower values for disadvantage. (Dis)advantages stack. One
+disadvantage cancels one advantage (and vice-versa).</p>
+<p>Players can exchange <strong>1</strong> Attribute point for
+<strong>+1</strong> advantage before rolling, once. This is not
+considered Attribute Damage; it cannot be used if the <a
+href="#attributes">Current Attribute</a> is <strong>1</strong> or
+<strong>0</strong>. In the case of a <a href="#saving-throw">Saving
+throw</a>, the Attribute must be the same as the one used for the roll.
+In the case of a <a href="#damage-roll">Damage Roll</a>, any Attribute
+that makes sense can be used.</p>
+<p>Rolling with (dis)advantage carries a risk: it increases the chance
+of rolling a <strong>1</strong>, which adds another <a
+href="#item">Usage mark</a>. Players can freely choose to give up
+advantage(s) if they want to conserve the weapon they are using.</p>
+<p>If the question is whether to add (dis)advantages to the Player or
+the opposite to an NPC, always add them to the Player.</p>
+<h3 data-number="2.4" id="magic-rolls"><span
+class="header-section-number">2.4</span> Magic rolls</h3>
+<p><a href="#casting-a-spell">Casting a spell</a></p>
+<h3 data-number="2.5" id="information"><span
+class="header-section-number">2.5</span> Information</h3>
+<p>Information is freely given, never tied to rolling dice. The GM
+should describe everything clearly; the Players should ask frequently,
+and the GM should answer honestly. It is better to give the Players more
+choices than to dwell on whether their characters should know something
+or not.</p>
+<p>The GM should always telegraph dangers. Players need ample warning so
+they can decide whether to heed it or ignore it and rush to their
+demise. Injury, death, and all negative outcomes should be the
+consequence of the Players’ choices; they should never come as a
+surprise.</p>
+<p>Dangers should be meaningful; the GM should never shy away from
+punishing recklessness.</p>
+<p>On the other side, the GM should always reward cleverness. If the
+Players find a way to bypass difficult traps or defeat hard bosses with
+ease, let them have it.</p>
+<h3 data-number="2.6" id="taking-damage"><span
+class="header-section-number">2.6</span> Taking Damage</h3>
+<p>Characters take damage to their <a href="#stats">Hit Protection</a>
+<code>HP</code> until it is depleted, unless stated otherwise
+(<strong>direct</strong> hit to Attribute, <strong>ignore</strong> HP,
+etc). All excess damage, and all damage after <code>HP</code> is
+depleted, goes toward the <a href="#attributes">Attributes</a>. The
+damage source usually states which Attribute it is affecting
+(“Attribute” damage); if not, the GM rules it, or lets the Attacker or
+Victim decide.</p>
+<ul>
+<li><code>HP</code>:
+<ul>
+<li>0 Hit Protection. The character has no more endurance/will/luck to
+avoid injuries.</li>
+<li>All excess and subsequent damage is directed to the Attributes.</li>
+<li>Most living things will think twice about whether they want to
+continue the fight at this point.</li>
+</ul></li>
+</ul>
+<h4 data-number="2.6.1" id="injuries"><span
+class="header-section-number">2.6.1</span> Injuries</h4>
+<p>If one of a Character’s Current Attributes reaches 0, they gain a
+permanent, life-altering injury. Mark it on the character sheet. Only
+extremely rare, high-quality healing can fix such injuries. The <a
+href="#attributes">Maximum of that Attribute</a> is divided by 2
+(rounded down); this cannot be reversed, they must slowly <a
+href="#number-go-up">level up</a> again. They need help as soon as
+possible (within ~5 Rounds; ~5 minutes) or they die.</p>
+<ul>
+<li><code>STR</code>:
+<ul>
+<li>0 Physical strength. The character is incapable of doing anything
+that requires more strength than a newborn.</li>
+<li>Their inventory items are dropped.</li>
+<li>The injuries are physical: losing a limb, an eye, or something
+similarly major.</li>
+<li>They need medical help.</li>
+</ul></li>
+<li><code>DEX</code>:
+<ul>
+<li>0 Dexterity. The character is incapable of any movement; their
+movement coordination is that of a newborn.</li>
+<li>The injuries are physical: shattered bones, severely torn muscle,
+concussion, blood loss, etc.</li>
+<li>They need medical help.</li>
+<li>The body can be carried by others (slot cost depending on size), but
+their items cannot be carried along with them. They are capable of
+dropping items at will.</li>
+</ul></li>
+<li><code>WIL</code>:
+<ul>
+<li>0 Willpower. The character is incapable of forming any coherent
+thought; their mind is worse than a newborn’s.</li>
+<li>The injuries are mental: permanent fear of something, triggers,
+insanity, a changed personality, etc.</li>
+<li>The character thrashes around, randomly attacking those around them
+(roll dice to decide targets, items used, etc).</li>
+<li>They need to be tackled/incapacitated and then soothed.</li>
+<li><em>(Optionally: if help never arrives, some spirit from the
+inventory or from the environment can take over the body)</em></li>
+</ul></li>
+</ul>
+<h4 data-number="2.6.2" id="defense"><span
+class="header-section-number">2.6.2</span> Defense</h4>
+<p>Each Character can have passive defense, usually provided by items
+such as <a href="#armor">armor</a> (<strong>Damage Reduction</strong>
+<code>DR</code>).</p>
+<p>If a Character is attacked, they can choose to defend themselves
+actively. This costs one <a href="#combat">Action Point</a> in battle.
+The basic options are:</p>
+<ul>
+<li><strong>Block</strong>: A <code>STR</code> + <a href="#shield">Block
+Bonus</a> <a href="#saving-throw">Saving throw</a>.
+<ul>
+<li>Success: 0 damage.</li>
+<li>Fail: half damage (rounded down).</li>
+</ul></li>
+<li><strong>Dodge</strong>: A <code>DEX</code> <a
+href="#saving-throw">Saving throw</a>.
+<ul>
+<li>Success: 0 damage; the character can move 1 space.</li>
+<li>Fail: half damage (rounded down).</li>
+</ul></li>
+<li><strong>Parry</strong>: A Damage roll with a weapon + <a
+href="#shield">Parry Bonus</a>.
+<ul>
+<li>If higher: subtract the attacker’s damage and apply the remainder to
+the attacker.</li>
+<li>If lower: full damage.</li>
+</ul></li>
+<li><strong>Reckless Counter Attack</strong>: A <a
+href="#damage-roll">Damage roll</a> with a weapon.
+<ul>
+<li>Apply damage to both. Ignore both Character’s <a
+href="#armor">Passive (Armor) Damage reduction</a></li>
+</ul></li>
+</ul>
+<p>Players can come up with any other action; the GM should consider
+them and honor creativity and role-play.</p>
+<p>The GM should use the Active defense mechanic for NPCs sparingly, as
+it can significantly slow down combat.</p>
+<h5 data-number="2.6.2.1" id="immunity-resistance-vulnerability"><span
+class="header-section-number">2.6.2.1</span> Immunity, Resistance,
+Vulnerability</h5>
+<p>Some creatures can have Immunity or Resistance to different types of
+damage. Magic items can provide Immunity and Resistance as well.</p>
+<p>Resistance can be negative, meaning it is a Vulnerability.</p>
+<ul>
+<li><strong>Immunity</strong>: Total immunity to a certain damage type.
+Should be extremely rare.</li>
+<li><strong>Resistance/Vulnerability</strong>: Resistance or
+Vulnerability to a certain damage type. For each level of
+Resistance/Vulnerability, the Character receives more/less damage from
+it. The maximum Resistance/Vulnerability is <strong>3</strong>.</li>
+</ul>
+<hr />
+<figure>
+<img src="./assets/Necromancer.svg" alt="Necromancer" />
+<figcaption aria-hidden="true">Necromancer</figcaption>
+</figure>
+<h2 data-number="3" id="magic"><span
+class="header-section-number">3</span> Magic</h2>
+<p>Spells are living spirits, travelers between worlds. To stay, they
+possess physical objects. To cast a spell, your character must have the
+possessed item in their inventory, or touch it, and say aloud an
+incantation to ask the spirit for its power.</p>
+<h3 data-number="3.1" id="casting-a-spell"><span
+class="header-section-number">3.1</span> Casting a Spell</h3>
+<p>When your character casts a spell, decide on the <strong>Spell
+Power</strong>, up to the number of usage dots remaining on the item.
+Roll a number of <strong>d6</strong> equal to the <strong>Spell
+Power</strong>. The spell has an <strong>effect</strong> that varies
+depending on <code>DICE</code> and <code>NUMBER</code>, which are
+calculated based on the roll.</p>
+<p>Note the spell values (or leave the dice on the table if you have
+enough d6):</p>
+<ul>
+<li><code>ONES</code> = count of the <strong>1</strong> dice across all
+batches rolled</li>
+<li><code>DICE</code> = count of the non-<strong>1</strong> dice across
+all batches rolled</li>
+<li><code>NUMBER</code> = sum of the largest rolled number in each
+batch, equal to
+<code>number of batches * 6 + largest number in the last batch</code></li>
+</ul>
+<p>Whenever one or more <strong>6</strong>s are rolled when casting a
+Spell, the caster counts the rolled <strong>6</strong>s (n) and rolls
+another batch of (n)d6. Keep repeating until no <strong>6</strong> is
+rolled, then note the spell values.</p>
+<p>Whenever one or more <strong>1</strong>s are rolled when casting a
+Spell (<code>ONES</code> is not 0), the caster takes <code>ONES</code>
+<code>WIL</code> damage. Then make a <code>WIL</code> save. If failed,
+take the <strong>Drained</strong> condition. Mark <code>ONES</code> (or
+the maximum) usage on the item.</p>
+<p>If <code>DICE</code> is <strong>0</strong>, the spell fails.
+<em>(Optionally, this can trigger a wild magic cast: either on a random
+table, or based on the situation, the GM/Players can suggest
+options.)</em></p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>Flint, a Mordecai from the Great-Tree forest
+STR 10/10 DEX 08/08 WIL 09/09 HP 07/01
+
+Flint has an item with a spell called &quot;Boon of Terrifying Distortion&quot;. It has 0 usage marks out of 3.
+
+Flint decides to cast it with 3 Spell Power. He rolls the following 3d6: (6 6 1)
+Because he rolled two 6s, he rolls another batch with 2d6: (6 4)
+Because he rolled another 6, he rolls another batch with 1d6: (1)
+
+Because he rolled 2 ONES, he loses 1 HP and 1 WIL (reaching 0 HP) and rolls a Saving throw:
+1d20 + WIL &gt;= 25
+18 + 8 &gt;= 25 -&gt; success, no Drained condition.
+He marks 2 uses on the item because of the two ONES.
+
+Spell Effect numbers:
+Rolls:     ( 6 6 1 | 6 4 | 1 )
+DICE: 4    ( 2     | 2   | 0 )
+NUMBER: 12 ( 6     | 6   | 0 )
+
+Flint targets himself with the Boon of Terrifying Distortion and receives it as a condition.
+It wraps around him and lasts for DICE (4) turns.
+Whoever attacks Flint or observes him too long must throw a WIL save;
+if failed, the victim gains the Fear condition for NUMBER (12) turns or takes NUMBER (12) WIL damage.
+The victim decides, and it can be split.</code></pre>
+</details>
+<h3 data-number="3.2" id="recharge"><span
+class="header-section-number">3.2</span> Recharge</h3>
+<p>When an <a href="#item">item’s Usage marks</a> for a Spell are all
+filled, it is depleted and cannot be cast without risking total
+destruction. Each spell has a recharge requirement; fulfilling it will
+recharge the Spirit.</p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>Flint, a Mordecai from the Great-Tree forest
+STR 10/08 DEX 08/06 WIL 09/08 HP 07/00
+
+Flint has exhausted the item with the &quot;Boon of Terrifying Distortion&quot; spell.
+The spell states the following recharge condition:
+
+To recharge one usage mark, the item holder must receive and overcome any Fear condition,
+or must stay for one hour in a place that inflicts fear on the holder.
+
+Flint has arachnophobia, and the party found a perfect spot for him in the dungeon:
+a crawl space filled with tiny spiders, dark and claustrophobic. 
+He tries to endure it for 3 hours while his party rests and repairs equipment.
+
+(The GM rules that he must make 1 WIL Save for each started hour, with increasing disadvantage.)
+
+At the start, he rolls a WIL Saving throw:
+1d20 + WIL &gt;= 25
+19 + 8 &gt;= 25 -&gt; Success. He can stay for one hour.
+
+At the second hour mark, he rolls another with 1 disadvantage:
+[lowest 1 of 2d20] + WIL &gt;= 25
+(17 17) + 8 &gt;= 25 -&gt; Success. He can stay for another hour.
+
+At the third hour mark, he rolls another with 2 disadvantage:
+[lowest 1 of 3d20] + WIL &gt;= 25
+(1 8 19) + 8 &gt;= 25 -&gt; Failed.
+He runs out screaming and terrified as soon as the 3rd hour starts. 
+But he successfully removed 2 usage marks from the item.</code></pre>
+</details>
+<hr />
+<figure>
+<img src="./assets/Night_Watch.svg" alt="Night Watch" />
+<figcaption aria-hidden="true">Night Watch</figcaption>
+</figure>
+<h2 data-number="4" id="time"><span
+class="header-section-number">4</span> Time</h2>
+<ul>
+<li>Day (24 hours; 4 watches)
+<ul>
+<li>Segments: Morning, Afternoon, Evening, Night</li>
+<li>Marks: Sunrise, Noon, Sunset, Midnight</li>
+<li>Usage: Long travel, Long rest</li>
+</ul></li>
+<li>Watch (6 hours; 36 Turns)
+<ul>
+<li>Segments: 6 segments (1 hour each)</li>
+<li>Marks: Every 3rd Turn (30 min)</li>
+<li>Usage: Medium travel, Full rest (6 hours)</li>
+</ul></li>
+<li>Turn (10 minutes; 10 Rounds)
+<ul>
+<li>Usage:
+<ul>
+<li>All combat takes at least one Turn.</li>
+<li>Quick rest is 1 Turn (10 min).</li>
+<li>Short rest is 3 Turns (30 min).</li>
+</ul></li>
+</ul></li>
+<li>Round (~1 minute; 3 Actions)
+<ul>
+<li>Usage: Combat</li>
+<li>Each combatant takes 3 Actions, that is one Round.</li>
+</ul></li>
+<li>Action (~10 sec)
+<ul>
+<li>Usage: Combat</li>
+</ul></li>
+</ul>
+<p>You can use <a href="https://mausritter.com/">Mausritter</a>’s Turn
+Tracker to track time.</p>
+<p>Time is the main currency, events occurs with or without the players
+in the world.</p>
+<h3 data-number="4.1" id="resting"><span
+class="header-section-number">4.1</span> Resting</h3>
+<p>Everyone needs rest; brave adventurers are not exempt from this rule.
+Here is how they can rest and replenish attributes and stats.</p>
+<p>We measure rest in Rest Points <code>RP</code>.</p>
+<ul>
+<li>Quick Rest (1 Turn; 10 minutes)
+<ul>
+<li>Used for: Characters catch their breath, patch minor wounds, and
+refill their belly with a quick snack and drink.</li>
+<li>Without food or drink: 1 RP</li>
+<li>With food or drink: 2 RP</li>
+<li>With food and drink: 3 RP</li>
+</ul></li>
+<li>Short Rest (3 Turns; 30 minutes)
+<ul>
+<li>Used for: Characters patch their wounds and refill their belly with
+food and drink.</li>
+<li>Without food or drink: 4 RP</li>
+<li>With food or drink: 7 RP</li>
+<li>With food and drink: 10 RP</li>
+</ul></li>
+<li>Full Rest (1 Watch; 6 hours)
+<ul>
+<li>Used for: Characters sleep, heal, and refill their belly with food
+and drink.</li>
+<li>Without food or drink: 10 RP</li>
+<li>With food or drink: 20 RP</li>
+<li>With food and drink: 30 RP</li>
+</ul></li>
+<li>Long Rest (Days/Weeks):
+<ul>
+<li>Used for: Characters heal and enjoy themselves with their
+hard-earned money.</li>
+<li>Fully restores all Attributes and HP.</li>
+<li>If the circumstances are right, permanent injuries can be healed or
+mitigated as well.</li>
+</ul></li>
+</ul>
+<p>RP point shop (all unspent RP is lost):</p>
+<ul>
+<li>1: Restore 1 <a href="#stats">HP</a></li>
+<li>5: Restore 1 <a href="#attributes">Attribute</a></li>
+<li>10: Remove 1 <a href="#item">Usage mark</a> from a repairable item
+if all conditions are met.</li>
+</ul>
+<p>These are the baselines; the GM should increase/decrease the RP
+earned based on the circumstances. A spider-infested cave, even without
+danger, will never provide the same rest as a flower field with a gentle
+spring breeze. Also, staple ration food is not as tasty as a freshly
+cooked meal. Wine and ale are preferable over water from a questionable
+source. <em>(Optional rule: If Characters chat with each other
+(role-played), they can earn extra RP.)</em></p>
+<p>Each Character needs at least one meal and one sleep per day, or they
+become <strong>Hungry</strong> and <strong>Exhausted</strong> (Bane <a
+href="#conditions">conditions</a>).</p>
+<p>If a Character eats or drinks from their inventory, mark
+<strong>1</strong> usage on the food and/or drink. Both food and drink
+can be shared, but each share is one extra <a href="#item">Usage
+mark</a>.</p>
+<p>Players should ensure their safety during rest by finding a safe
+space, keeping watch, setting traps, alarms, etc. If the rest is
+interrupted, they receive only a fraction of the RP or none at all. The
+GM should telegraph the danger level beforehand, based on the situation
+and the Party’s preparation.</p>
+<hr />
+<figure>
+<img src="./assets/skeletons.svg" alt="Skeletons" />
+<figcaption aria-hidden="true">Skeletons</figcaption>
+</figure>
+<h2 data-number="5" id="combat"><span
+class="header-section-number">5</span> Combat</h2>
+<p>Combat can be run anywhere on the spectrum from “Theatre of the Mind”
+to full tactical with battle maps. The table can agree on a mode
+beforehand, or try different modes, or categorize fights by type. A
+random encounter does not have to be tactical, whereas a long BBEG fight
+is better with a battle map.</p>
+<p>Action Point <code>AP</code> is the resource that defines how many
+Actions a Character can take in one Round.</p>
+<h3 data-number="5.1" id="initiative"><span
+class="header-section-number">5.1</span> Initiative</h3>
+<p>Combat starts when someone is attacked. Whoever attacked starts with
+2 <code>AP</code> (before their attack is resolved). There is no
+initiative order; instead, roll a <code>DEX</code> or <code>WIL</code>
+Saving throw for each combatant to determine starting <code>AP</code>
+for the 1st round:</p>
+<ul>
+<li>Surprised: Roll a <code>WIL</code> <a href="#saving-throw">Saving
+throw</a>
+<ul>
+<li>Success: 1 <code>AP</code></li>
+<li>Fail: 0 <code>AP</code></li>
+</ul></li>
+<li>Not Surprised: Roll a <code>DEX</code> <a
+href="#saving-throw">Saving throw</a>
+<ul>
+<li>Success: 2 <code>AP</code></li>
+<li>Fail: 1 <code>AP</code></li>
+</ul></li>
+</ul>
+<h3 data-number="5.2" id="rounds"><span
+class="header-section-number">5.2</span> Rounds</h3>
+<p>Split the Combatants into opposing parties (usually two, but
+three-way or more battles are possible as well).</p>
+<p>The 1st Attacker’s Party goes first, then the 1st Victim’s Party
+second (and if there are more parties, the order of the rest is decided
+by the GM).</p>
+<p>From each party, do one action (or combined/combo actions), then
+continue with the next party.</p>
+<p>There is no strict order within a party; if Players cannot decide, go
+clockwise from the Player who last acted.</p>
+<details>
+<summary>
+Example for the overall flow
+</summary>
+<pre class="text"><code>Players stumble upon a random Goblin party.
+They don&#39;t know it yet, but the Goblins are the bait for a Witch who wants to eliminate the party.
+
+-- Initiative --
+
+Player party (P) | Goblin Party (G) | Witch Party (W)
+        Flint 2  |        Leader 1  |        Witch 2
+        Clayd 1  |       Warrior 0  |
+         Bore 1  |        Archer 0  |
+
+-- Round 1 --
+
+(P) Flint, without thinking, rushes in and attacks the Goblin Leader with his rapier {starting the battle} (1 AP Attack) [Flint 1 AP]
+(G) The Goblin Leader attacks Flint (1 AP Attack) [Goblin Leader 0 AP]
+(W) Witch opts out to not reveal herself [Witch 2 AP]
+
+(P) Clayd asks Bore for buffs; Bore buffs Clayd (1 AP Spell Casting) [Bore 0 AP]
+(G) Goblins are out of AP
+(W) Witch opts out to not reveal herself again [Witch 2 AP]
+
+(P) Clayd moves next to Flint and the Goblin Leader (1 AP Move) [Clayd 0 AP]
+(G) Goblins are out of AP
+(W) Witch casts Entangling Roots over the Goblins and Players (1 AP Spell) [Witch 1 AP]
+
+(P) Flint attacks the Goblin Leader with his rapier (1 AP Attack) [Flint 0 AP]
+(G) Goblins are out of AP
+(W) Witch casts Raining Fire over the Goblins and Players (1 AP Spell) [Witch 0 AP]
+    Killing the Goblin Leader and doing significant damage to everyone, also burning up the vines.
+
+-- Round 2 --
+(All Combatants&#39; AP is reset to 3)
+
+(P) Clayd realizes the dire situation and runs for an escape (3 AP Move) [Clayd 0 AP]
+(G) Goblin Warrior flees in the opposite direction [Goblin Warrior 3 AP]
+(W) Seeing the fleeing Player, the Witch starts to cast something big (3 out of 6 AP Spell Casting) [Witch 0 AP]
+
+(P) Bore sees the Witch casting a longer spell and comes up with the idea to teleport Flint above the Witch for a divebomb attack.
+    He shouts the idea to Flint and casts the Teleport Ally Spell (1 AP Spell Casting).
+    Flint realizes the situation just in time and divebombs the Witch with his rapier (1 AP Attack) [Bore 2 AP, Flint 2 AP]
+(G) Goblin Archer flees with the Warrior [Goblin Archer 3 AP]
+(W) Witch realizes she would die before the ritual is finished and stops it, which creates a magical explosion...
+</code></pre>
+</details>
+<p>There is one free <strong>Small Action</strong> per Round:
+opening/closing a door, pushing a button, picking up one item from the
+floor, loading ammunition, etc. Each further <strong>Small
+Action</strong> requires 1 <code>AP</code>.</p>
+<p>Anything a Character can do, they can do in combat as well. Players
+should propose ideas; the GM can decide if they are viable or risky (and
+may request a <a href="#saving-throw">Saving throw</a>) and set the
+<code>AP</code> cost (which can be more than one).</p>
+<details>
+<summary>
+Example Basic Actions
+</summary>
+<pre class="text"><code>- Attack with a weapon
+- Aim and Shoot
+- Move
+- Cast a spell
+- Help
+- Tackle/Grab/Grapple
+- Toss/Push/Shove
+- Use Contraption</code></pre>
+</details>
+<p>Characters can combine multiple Actions in one go. For example,
+running and shoving an enemy with greater impact for 2
+<code>AP</code>.</p>
+<p>Characters can also perform combos for greater impact. For example,
+one character distracts the enemy while another stabs them in the
+back.</p>
+<p>Players should describe or role-play their action in enough detail to
+leave no doubt; the GM should confirm the details, and after all agree,
+<a href="#actions">roll for the Action</a> (or simply do it; not all
+Actions require rolls).</p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>- Player: Can I shoot the goblin at the entrance with my slingshot?
+- GM: Yes, the goblin is at &quot;Short&quot; range, so use the &quot;Short&quot; range Damage die. Do you have ammunition loaded in the slingshot? There is rubble next to you if you want to grab a stone.
+- Player: Okay then, I grab a sharp stone from the rubble next to me, load it into the slingshot, then aim at the goblin by the entrance and shoot.
+- GM: That would be one Small Action to grab the stone, 1 AP to load the slingshot, and 1 AP to Aim and Shoot. If you go with this, you can roll your Damage die.
+</code></pre>
+</details>
+<p>A Character repeating the same Action is penalized with +1
+disadvantage, so switch weapons, cast other spells, etc.</p>
+<p>If a Combatant is attacked and aware of the attack, they can defend
+themselves. They can use the basic <a href="#defense">Defence
+actions</a>, or come up with an idea based on the situation and their
+abilities. If the Player chooses to defend, it costs <code>AP</code>
+just like any other Action.</p>
+<details>
+<summary>
+Example
+</summary>
+<pre class="text"><code>- GM: Flint, this goblin tries to attack you with a dagger (d4). Do you want to defend yourself?
+- Player: Yes, I would like to Parry with my Rapier, which has a +1 Parry advantage.
+- GM: Okay then, do a Damage roll for 1 AP, and we will see the outcome.
+</code></pre>
+</details>
+<p>After each Combatant has exhausted all their <code>AP</code> (or
+opted out of using some), start the next round and reset all combatants’
+<code>AP</code> to <strong>3</strong>.</p>
+<h3 data-number="5.3" id="end-of-combat"><span
+class="header-section-number">5.3</span> End of Combat</h3>
+<p>Combat ends when there is no willing and capable opposition
+remaining. This can be a combination of a peace treaty, surrender,
+fleeing, incapacitation, or death. Most creatures want to live and
+preserve their health, especially when there is nothing important worth
+fighting for.</p>
+<h2 data-number="6" id="compatibility"><span
+class="header-section-number">6</span> Compatibility</h2>
+<ul>
+<li>OSR monster HD is rolled with d8.</li>
+<li>Attributes should be converted such that 14 means a 50% chance on a
+Saving throw. 9 is considered “Level 1” with a 25% success rate.
+<ul>
+<li><code>STR</code> - Strength, Constitution</li>
+<li><code>DEX</code> - Dexterity</li>
+<li><code>WIL</code> - Wisdom, Charisma, (Intelligence)</li>
+</ul></li>
+</ul>
+<h2 data-number="7" id="resources-and-shoutout"><span
+class="header-section-number">7</span> Resources and Shoutout</h2>
+<p>Thanks to:</p>
+<ul>
+<li><a href="https://cairnrpg.com/">Cairn</a> for the inspiration of the
+Character system</li>
+<li><a href="https://mausritter.com/">Mausritter</a> for the inspiration
+of the Inventory, Item, and Usage marks system</li>
+<li><a
+href="https://goblinpunch.blogspot.com/2016/05/the-glog.html">GLOG</a>
+for the inspiration of the Magic system</li>
+<li><a href="https://thedungeoncoach.com/pages/dc20">DC20</a> for the
+inspiration of the Action Point system</li>
+<li><a href="https://questingblog.com/maze-rats/">Maze Rats</a> for the
+amazing work. Because of you, GMs can generate almost anything</li>
+<li>Countless OSR RPGs and Adventures for inspiration and content</li>
+</ul>
+<p>Resources:</p>
+<ul>
+<li>Fonts:
+<ul>
+<li><a href="https://open-foundry.com/fonts/bagnard">Bagnard</a> - <a
+href="./assets/Bagnard-License-OFL.txt">SIL Open Font License</a></li>
+<li><a href="https://open-foundry.com/fonts/young-serif">Young Serif</a>
+- <a href="./assets/YoungSerif-License-OFL.txt">SIL Open Font
+License</a></li>
+<li><a href="https://open-foundry.com/fonts/office-code-pro">Office Code
+Pro</a> - <a href="./assets/officecodepro-License-OFL.txt">SIL Open Font
+License</a></li>
+</ul></li>
+<li>Theme:
+<ul>
+<li><a href="https://rosepinetheme.com/">Rose Pine</a> - <a
+href="https://github.com/rose-pine/rose-pine-theme/blob/main/LICENSE">MIT
+License</a></li>
+</ul></li>
+<li>Artwork:
+<ul>
+<li><a href="https://www.gordyh.net/">Gordy Higgins</a> - <a
+href="https://en.wikipedia.org/wiki/Public_domain">Public
+Domain</a></li>
+</ul></li>
+</ul>
+<figure>
+<img src="./assets/TheLich.svg" alt="TheLich" />
+<figcaption aria-hidden="true">TheLich</figcaption>
+</figure>
+</body>
+</html>
