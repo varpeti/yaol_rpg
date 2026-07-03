@@ -1,0 +1,5 @@
+exclude:
+  - spells.md
+  - hidden_spells.md
+  - to_html.sh
+  - template.html
