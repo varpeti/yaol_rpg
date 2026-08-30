@@ -8,8 +8,8 @@ css: "assets/style.css"
 cover-image: "assets/Darkness_Ambush.svg"
 ---
 
-<!-- markdownlint-disable MD013 MD026 MD033 -->
-<!-- Long Lines; Punctuations at the end of title; Inline HTML -->
+<!-- markdownlint-disable MD013 MD026 MD033 MD038-->
+<!-- Long Lines; Punctuations at the end of title; Inline HTML, extra space in code-->
 
 <script src="assets/theme-selector.js"></script>
 
@@ -29,26 +29,29 @@ To play the game, you need polyhedral dice (d4, d6, d8, d10, d12, d20) and some 
 
 Your character has three attribute scores; these are the measure of basic strengths and weaknesses.
 
-- `STR`: Physical strength, endurance, resilience.
-- `DEX`: Dexterity, speed, agility.
-- `WIL`: Willpower, charisma, luck.
+- `STR`: Strength, Endurance, Resilience.
+- `DEX`: Dexterity, Speed, Agility.
+- `WIL`: Willpower, Charisma, Awareness.
 
-Roll **4d6** for each attribute in order, and keep the **two highest dice** `[highest 2 of 4d6]`. You may swap any two attribute scores.
+Characters naturally fall between -2 and +3. But with magic they can be pushed to -5 and +5.
 
-Attributes can change, both [up](#resting) and [down](#taking-damage); record the Maximum and Current.
+Chose a method:
+
+- **Standard array**: Assign each Attribute one of these: `3 1 -1`.
+- **Point buy**: Each Attribute starts with -2; Allocate 9 points however you like, but a single Attribute cannot be larger than 3.
+- **Roll**: For each attribute in order `1d6 - 3`. You can swap two OR re-roll one attribute.
 
 <details><summary>Example</summary>
 
 ```text
-Rolled (5 5 4 2) -> 10 STR
-Rolled (6 6 4 1) -> 12 DEX
-Rolled (5 4 4 3) -> 09 WIL
+Rolled 4 -> 4-3 = 1 STR
+Rolled 3 -> 3-3 = 0 DEX
+Rolled 5 -> 5-3 = 2 WIL
 
-Swapped DEX and STR.
+Swapped DEX and WIL.
 
-Recorded as: ATR Max/Current
-
-STR 12/12 DEX 10/10 WIL 09/09
+Recorded as:
+STR 1 DEX 2 WIL 0
 ```
 
 </details>
@@ -59,25 +62,27 @@ The only "Main" stat is the **Hit Protection**:
 
 - `HP`: **Hit Protection** - this is the [damage your character can take](#taking-damage) without the risk of serious injuries.
 
-Roll **2d4** for `HP` and add **4** to the higher one. `[highest 1 of 2d4] + 4`
+Chose a method:
+
+- **Fix**: 5
+- **Roll**: Roll **2d8** and keep the highest.
 
 <details><summary>Example</summary>
 
 ```text
-Rolled (2 3) -> 3+4 = 7
+Rolled (3 6) -> 6 HP
 
-Recorded as: HP Max/Current
+Recorded as: HP Current/Max
 
-STR 12/12 DEX 10/10 WIL 09/09 HP 07/07
+STR 1 DEX 2 WIL 0 HP 6/6
 ```
 
 </details>
 
 There are some stats that are provided by items; the table can decide if it is worth noting these down on the sheet, or if reading them from the items is sufficient.
 
-- `DR`: [Damage Reduction](#armor) - this passively reduces the damage taken.
-- `Immunity` and `Resistance/Vulnerability`: [Immunity, Resistance, or Vulnerability](#immunity-resistance-vulnerability) to certain types of damage.
-- `Block`, `Dodge`, `Parry` and `Recless Counter Attack`: [Basic defence action](#defense) modifier's.
+- `Resistance`: [Resistance](#immunity-resistance-vulnerability) - this passively reduces the damage taken.
+- `Block`, `Dodge`, `Parry` and `Reckless Counter Attack`: [Basic defense action](#defense) modifier's.
 
 <details><summary>Optionally</summary>
 
@@ -92,81 +97,92 @@ Other stats can be recorded as well, depending on the game setting, such as:
 
 </details>
 
-### Appearance, Personality, Background
+### Background
 
-Name and describe your character:
+Name and describe your character in one or few words for each:
 
-- **Appearance**: How others observe them. Let your imagination run wild.
-- **Personality**: Their Virtues and Vices. Keep them friendly and cooperative.
-- **Background**: Their short background story, intermingled with the other Players' characters.
+- **Appearance**: One unique trait they have.
+- **Virtue**: One thing they excel at.
+- **Vice**: One thing they fall short.
+- **Relationship**: With at least one party member.
 
-These are used for role-play, and they have mechanical impact on the game as well.
+These are used for role-play, and they could have mechanical impact on the game as well.
 
 <details><summary>Example</summary>
 
 ```text
-Flint, a Mordecai from the Great-Tree forest
-STR 10/10 DEX 08/08 WIL 09/09 HP 07/07
+Flint
+STR 1 DEX 2 WIL 0 HP 6/6
 
-About 190cm tall, skinny yet muscular. Flint is a Mordecai, a humanoid creature with 3 legs, 3 arms, 3 eyes, 3 ears, and 3 mouths evenly placed around his body. It is hard to determine which way he is facing.
-
-Flint is quite the chatterbox; he often talks before he thinks and is unable to read the room.
-He likes to challenge strong foes, especially when injustice is on the table, but does not care deeply about others, only the ones he respects.
-
-One such person is present: Clayd. They trained together in the Great-Tree Academy, rivaling each other and duelling countless times. Both of them think they won more bouts than the other.
-
-Flint hates small bugs; he deeply despises spiders and spider webs. He fears their touch, especially when it comes out of nowhere.
+- Appearance: Long Blond hair, but left side is shaved.
+- Virtue: Great Cheff.
+- Vice: Hates boring food.
+- Relationship: Childhood friends with Clayd.
 ```
 
 </details>
 
-Characters die easily. For quick character creation, players can roll on random tables.
+Characters die easily. For quick character creation, players can roll on random tables for Background.
 
 ### Inventory
 
-Each character has **10** inventory slots. That is the way in this world. Ten items to hold onto, no more. One item takes as many slots as the number of hands needed to carry it comfortably. If all ten are full, the character is encumbered, cannot move fast, and has disadvantage on every action. Inventory can be accessed instantly; there is no distinction between an item held in hand and one strapped on the character's back.
+Each character has:
+
+- **Two hands** (hopefully) `2 slot`: They can only use items if they are holding it. Hands can hold **stacked** items, but cannot use them until unstacked. With both hands a character can hold items which have more than **2 slot** within reason of course.
+- **Belt and Pockets** `4 slot`: Items to quickly grab/swap. [Small Action](#combat)
+- **Backpack** `10 slot`: [Backpack](#backpack)
+- **Body**: They can use the body to wear items like armor, rings, necklaces etc. Stacking is within reason, Eg: Can wear a tiara under/on a hat. Magic items does not like to share space on the body. Mouth and other body orifices can be used to hold on items temporally. Access depends on the item and location, Eg: Removing a hat is quick, getting out of a plate armor takes a significant time.
+
+#### Backpack
+
+Magical part of the body, not a literal removable backpack. It is used to store items. Harder to access, especially when time constrained.
+
+It holds the [Conditions](#conditions) as well, and acts as the secondary **HP** (see: [Wounds](#wound) and [Death](#death) )
+
+When time constrained like in [Combat](#combat): To search for an item roll `1d10`. You can grab any item which are located up to the rolled value. If an item covers more slots it can be grabbed even if it is only partially located. If you don't grab anything, you can swap the items in the backpack. Swapping item(s) from hand(s) or placing item(s) inside: Place the new item(s) anywhere.
 
 #### Item
 
-Each item has a limited durability. They can bear **3** **Usage marks**.
+Items have **slot** and can have **stackable**, **usage** attribute.
 
-If all **Usage marks** on an item are filled, it is depleted/damaged and not usable without risking total destruction.
+- **x slot**: This item takes x slot in the inventory.
+- **x stackable**: This item can be stacked x times, until another **slot** is required. Different Items can be stacked together if they are the same.
 
-Items can be repaired, maintained, replenished, or recharged, but it requires time, resources, expertise, and the right conditions.
+##### Usage
 
-Items cannot bear more than **3** **Usage marks**. If an item would receive more in one go, it only receives the maximum of **3**.
+- **x/max usage**: Certain items have finite number of uses or duration tracked as **usage**. After the item is used, roll an **usage dice** `xd6`. For each die rolled 1 or 2 remove one **usage**.
 
-Players can try to use items with **3** **Usage marks**, but the item will be destroyed if it receives another **Usage mark**, and the action will fail.
+Usage can have further modifiers:
 
-Every time a Character uses an item and rolls either a Saving throw, Damage roll, or Spell casting, mark 1 usage for each rolled **1** (even for rolls with (dis)advantage).
+- **broken**: The item become permanent broken if reaches **0 usage**, cannot be repaired, refuelled etc.
+- **time**: Roll **usage dice** when the time is up, or when the item usage is stopped.
+- **conditions to restore**: Rest, Refuel, Repair, etc
 
-For items with depleting resources (such as a torch), roll their **Usage die** (or d6 if not stated) every N Turns (or 3 if not stated on the item).
-
-For items without active rolls (such as armor), roll their **Usage die** (or d6 if not stated) after every time they were used (e.g., after combat).
+Items without default usage can be worn-down/destroyed as well, so the GM can assign usage, or call **usage dice roll** for such items.
 
 #### Conditions
 
-Each condition, be it boon or bane, takes up one inventory slot. Each condition can affect more than just the inventory, and each has a condition for removal.
+Each Condition, be it boon or bane, takes up one inventory slot in the [Backpack](#backpack). Each Condition can affect more than just the inventory, and each has a condition for removal.
 
-If a Player is encumbered (inventory is full) and receives a bane, they must remove a boon. If the Player has no boon, they have to drop an item. If there is no item to drop, just add the condition to the inventory; for each extra condition they gain +1 disadvantage on each action.
-
-If a Player is encumbered (inventory is full) and receives a boon, they can swap it for another boon. If the Player has no boon, they cannot receive it.
+If a Character's [Backpack](#backpack) is full and receives a condition, they must drop something if they can. If they cannot they die. (See: [Death](#death))
 
 <details><summary>Example</summary>
 
 ```text
-Drained (bane): Disadvantage on WIL save. Clear: After Full Rest
-Exhausted (bane): Clear: After Long Rest
-Hungry (bane): Clear: After eating a meal
-Miss Fortune's Kiss (boon): Advantage on the next Saving throw or Damage roll.
-Bless (boon): Advantage on Saving throw or Damage roll. Clear: 5 Rounds (5 minutes)
+Wound: Clear: 1 on Rest
+Drained: -1 on WIL roll. Clear: all on Rest
+Exhausted: -1 on DEX roll. Clear: all on Rest
+Hungry: -1 on STR roll. Clear: all after eating a meal
+Prone: You can only crawl, melle attacks +1 agains you, ranged attacks -1 agains you. Clear: 1 AP to stand up
+Miss Fortune's Kiss: +1d4 on the next Attribute or Damage roll. Clear: Next roll or at will
+Bless: Advantage on Attribute or Damage roll. Clear: 5 Rounds (5 minutes) or at will
 ```
 
 </details>
 
 #### Offensive items
 
-Each weapon has a **Damage dice** and rarely a **Bonus**. It's a flat bonus damage each time a weapon deals damage.
+Each weapon has a **Damage dice** and rarely a **Bonus**. The bonus is a flat bonus damage each time a weapon deals damage.
 
 ##### Melee
 
@@ -178,9 +194,7 @@ Each weapon has a **Damage dice** and rarely a **Bonus**. It's a flat bonus dama
 | Dual Wielding | 2x1  | 2d4         | 5.0     | Daggers, Scimitars                    |
 | Heavy Weapon  | 3    | 1d10        | 5.5     | Great Axe, Warhammer                  |
 
-Unarmed strikes have no [Usage marks](#item).
-
-When Dual Wielding, attacking with both weapons is considered one action, and the player is free to choose which weapon gets the [Usage marks](#item).
+When Dual Wielding, attacking with both weapons is considered one action, and the player is free to choose which weapon gets the [Usage](#usage).
 
 Attacking multiple targets at once (swing): Roll once, share the damage.
 
@@ -189,12 +203,12 @@ Attacking multiple targets at once (swing): Roll once, share the damage.
 | Type          | Slot  | Damage dice Short | Damage dice Long | Average Short | Average Long | Example                                       |
 | -             | -     | -                 | -                | -             | -            | -                                             |
 | Throwables    | 0/1   | 1d4               | -                | 2.5           | -            | Rock, Dagger                                  |
-| Light         | 1+1   | 1d6               | 1d4              | 3.5           | 2.5          | Light Bow, Slingshot, Light Crossbow, Blowgun |
+| Short         | 1+1   | 1d6               | 1d4              | 3.5           | 2.5          | Short Bow, Slingshot, Light Crossbow, Blowgun |
 | Long          | 2+1   | 1d8               | 1d6              | 4.5           | 3.5          | Long Bow, Crossbow, etc.                      |
 | Dual Wielding | 2x1+1 | 2d4               | 1d8              | 5.0           | 4.5          | Two Light Crossbows                           |
 | Heavy         | 3+1   | 1d10              | 2d4              | 5.5           | 5.0          | Hand Cannon                                   |
 
-Ranged weapons (aside from throwables) require ammunition; that is the cost of range. Each kind of ammunition can only have 1 [Usage mark](#item) maximum. The Player is free to choose to mark the ammunition (thereby depleting it) or mark the weapon.
+Ranged weapons (aside from throwables) require ammunition; that is the cost of range. Mark the [Usage](#usage) on the ammunition.
 
 Loading ammunition into a weapon is a [Small Action](#rounds).
 
@@ -202,22 +216,29 @@ Aiming and shooting costs 1 [Action Point](#combat).
 
 #### Defensive items
 
-There are 2 types of defence: Passive (Armor) and Active (Shield).
+There are 2 types of defensive items: Passive (Armor) and Active (Shield).
 
 ##### Armor
 
-| Type   | Slot | Damage reduction **DR** | DEX Save Modifier | Usage dice (after fight) |
-| -      | -    | -                       | -                 | -                        |
-| None   | 0    | 0                       | -                 | -                        |
-| Light  | 1    | 1                       | -                 | 1d4                      |
-| Medium | 2    | 2                       | -1                | 1d6                      |
-| Heavy  | 3    | 3                       | -2                | 1d8                      |
+| Type   | Slot | Usage | DEX Modifier |
+| -      | -    | -     | -            |
+| None   | 0    | 0     | -            |
+| Light  | 1    | 3     | -            |
+| Medium | 2    | 5     | -1           |
+| Heavy  | 3    | 7     | -2           |
 
-**Damage Reduction** reduces each instance of inflicted damage by a fixed amount.
+**Resistance:** The armor determines which damage types it can mitigate. Use common sense, be creative, nothing is impenetrable. Description of the attack can and should overwrite the default. The table should aim for consistency and the GM should rule case-by case fairy.
 
-A Character cannot have more than **3** `DR`.
+<details><summary>Examples</summary>
 
-After a fight, if the Player received any damage, roll the **Usage die** and [mark usage](#item) if a **1** is rolled.
+```text
+Chainmail (Slashing, Piercing)
+  Note: Can be piecred, for example with long poisoned needles
+Plate-armor (Slashing, Bludgeoning)
+  Note: Provide no protection to the feet without Boots
+```
+
+</details>
 
 ##### Shield
 
@@ -228,19 +249,11 @@ After a fight, if the Player received any damage, roll the **Usage die** and [ma
 | Large  | 2    | 2           | -           |
 | Heavy  | 3    | 3           | -           |
 
-[Blocking](#defense) with a shield adds the **Block Bonus** to the [Saving throw](#saving-throw). `1d20 + STR + Block Bonus`
+[Blocking](#defense) with a shield adds the **Block Bonus** to the [Attribute Roll](#attribute-roll).
 
 ### Character Progression
 
 There is no class system; the items a character is holding define their options. A character can boost their potential by obtaining more versatile and powerful [items](#item).
-
-#### Number go up
-
-Characters can level up through experience:
-
-- Gain +1 [Maximum Attribute point](#attributes) (whichever was damaged). Max 20.
-- Gain +1 to their [Maximum HP](#stats). Max 20.
-- Gain proficiency with a [weapon type](#offensive-items). Each [Damage roll](#damage-roll) with that kind of weapon is rolled with +1. Max 3.
 
 ---
 
@@ -254,50 +267,62 @@ Many "Basic" actions are described in this book. They are not the only options, 
 
 Rolling dice should be risky. Players should avoid it and find clever solutions instead.
 
-### Saving throw
+### Attribute Roll
 
-Rolling to see if something happens is almost always on the side that is affected. In rare cases where an action is deemed fallible, the player has to roll a **Saving throw** to determine the outcome.
+Rolling to see if something happens is almost always on the side that is affected. In rare cases where an action is deemed fallible, the player has to roll a **Attribute Roll** to determine the outcome.
 
-The GM should only ask for Saving throws if the outcome is uncertain. As a rule of thumb, if the fail rate for the Character is below 50%, the action should automatically succeed.
+The GM should only ask for **Attribute Rolls** if the outcome is uncertain. As a rule of thumb, if the fail rate for the Character is below 25%, the action should automatically succeed.
 
-The GM should ensure that the outcomes of a **Saving throw** - both success and failure - are obvious to the Players before the roll.
+The GM should ensure that the outcomes of a **Attribute Roll** are obvious to the Players before the roll.
 
-Rolling a Saving throw is `1d20 + Attribute >= 25` _(30% at ATR=10; 55% at ATR=15; 80% at ATR=20)_
+Rolling an **Attribute Roll** is `2d10 + Attribute`
 
-<details><summary>Example</summary>
+- Tier 1: ` 2-10`: Failure (No)
+- Tier 2: `11-15`: Partial Success/Failure (Yes but, No but)
+- Tier 3: `16-20`: Success (Yes)
+- Critical Failure: Natural 2 or 3 (No and)
+- Critical Success: Natural 19 or 20 (Yes and)
 
-```text
-A muscular barbarian wants to throw a boulder down the cliff -> Auto Success, no need to roll
-A skinny old wizard wants to throw a boulder down the cliff by pure strength -> Needs a STR Saving throw
+<details><summary>For Nerds</summary>
 
-A very athletic leopardfolk wants to dodge a runaway cart -> Auto Success, no need to roll
-An encumbered character wants to dodge a runaway cart -> Needs a DEX Saving throw
+|  %  |  Tier 2 | Tier 3 |
+| --- |  ---    | ---    |
+| -5  |  15     |  0     |
+| -4  |  21     |  1     |
+| -3  |  28     |  3     |
+| -2  |  36     |  6     |
+| -1  |  45     | 10     |
+|  0  |  55     | 15     |
+| +1  |  64     | 21     |
+| +2  |  72     | 28     |
+| +3  |  79     | 36     |
+| +4  |  85     | 45     |
+| +5  |  90     | 55     |
 
-A pub owner tries to lure well-fed adventurers to their establishment with magic -> Auto Success (for the adventurers), no need to roll
-A pub owner tries to lure starving adventurers to their establishment with magic -> Needs a WIL Saving throw
-```
+Critical Failure: 3%
+Critical Success: 3%
 
 </details>
 
 ### Damage roll
 
-Each [weapon](#offensive-items) that can be used to deal damage has a **Damage dice** to roll damage with. Roll the dice: that is the damage. If **1** is rolled on any die that die fails (0 damage).
+Roll an **Attribute Roll** with the Attribute used for the attack.
+
+- Tier 1: +0 dmg
+- Tier 2: +1 dmg
+- Tier 3: +2 dmg
+- Critical Failure: Attacker receives the full damage, or something similarly terrible
+- Critical Success: Double Damage or Injury
+
+Each [weapon](#offensive-items) that can be used to deal damage has a **Damage dice** to roll damage with. Roll the dice: that is the damage.
+
+Roll [Usage Dice](#item) as well. The **usage** does not influence the result.
+
+All can be rolled at once if the player has enough distinguishable dice.
 
 ### Advantages and Disadvantages
 
-If some event comes down to rolling dice, the Player rolls the base die/dice and can have multiple copies of the same die/dice for (dis)advantages.
-
-The Player rolls them, then takes the higher values for advantage or the lower values for disadvantage. (Dis)advantages stack. One disadvantage cancels one advantage (and vice-versa).
-
-Players can exchange **1** Attribute point for **+1** advantage before rolling, once. This is not considered Attribute Damage; it cannot be used if the [Current Attribute](#attributes) is **1** or **0**. In the case of a [Saving throw](#saving-throw), the Attribute must be the same as the one used for the roll. In the case of a [Damage Roll](#damage-roll), any Attribute that makes sense can be used.
-
-Rolling with (dis)advantage carries a risk: it increases the chance of rolling a **1**, which adds another [Usage mark](#item). Players can freely choose to give up advantage(s) if they want to conserve the weapon they are using.
-
-If the question is whether to add (dis)advantages to the Player or the opposite to an NPC, always add them to the Player.
-
-### Magic rolls
-
-[Casting a spell](#casting-a-spell)
+Stacking flat plus or minus modifiers
 
 ### Information
 
@@ -311,64 +336,70 @@ On the other side, the GM should always reward cleverness. If the Players find a
 
 ### Taking Damage
 
-Characters take damage to their [Hit Protection](#stats) `HP` until it is depleted, unless stated otherwise (**direct** hit to Attribute, **ignore** HP, etc). All excess damage, and all damage after `HP` is depleted, goes toward the [Attributes](#attributes). The damage source usually states which Attribute it is affecting ("Attribute" damage); if not, the GM rules it, or lets the Attacker or Victim decide.
+Characters take damage to their [Hit Protection](#stats) `HP` until it is depleted, unless stated otherwise (wound/injuries). All excess damage, and all damage after `HP` is depleted, add +1 [wound](#wound).
 
-- `HP`:
-  - 0 Hit Protection. The character has no more endurance/will/luck to avoid injuries.
-  - All excess and subsequent damage is directed to the Attributes.
+- `0 HP`:
+  - The character has no more endurance/will/luck to avoid wounds.
   - Most living things will think twice about whether they want to continue the fight at this point.
+
+#### Wound
+
+The **wound** is a [Condition](#conditions) which can only be cleared during [Resting](#resting).
 
 #### Injuries
 
-If one of a Character's Current Attributes reaches 0, they gain a permanent, life-altering injury. Mark it on the character sheet. Only extremely rare, high-quality healing can fix such injuries. The [Maximum of that Attribute](#attributes) is divided by 2 (rounded down); this cannot be reversed, they must slowly [level up](#number-go-up) again. They need help as soon as possible (within ~5 Rounds; ~5 minutes) or they die.
+- In extreme cases, a character can suffer injuries like dismemberment.
+- This usually permanent, gory and requires immediate attention. Take +1 [wound](#wound) every minute.
+- Modify the Character Sheet. (Eg: Lost leg: slower movement speed; Lost arm: remove arm inventory slot, etc)
+- Critical Success on an [Damage Roll](#damage-roll) could be the source of injuries.
 
-- `STR`:
-  - 0 Physical strength. The character is incapable of doing anything that requires more strength than a newborn.
-  - Their inventory items are dropped.
-  - The injuries are physical: losing a limb, an eye, or something similarly major.
-  - They need medical help.
-- `DEX`:
-  - 0 Dexterity. The character is incapable of any movement; their movement coordination is that of a newborn.
-  - The injuries are physical: shattered bones, severely torn muscle, concussion, blood loss, etc.
-  - They need medical help.
-  - The body can be carried by others (slot cost depending on size), but their items cannot be carried along with them. They are capable of dropping items at will.
-- `WIL`:
-  - 0 Willpower. The character is incapable of forming any coherent thought; their mind is worse than a newborn's.
-  - The injuries are mental: permanent fear of something, triggers, insanity, a changed personality, etc.
-  - The character thrashes around, randomly attacking those around them (roll dice to decide targets, items used, etc).
-  - They need to be tackled/incapacitated and then soothed.
-  - _(Optionally: if help never arrives, some spirit from the inventory or from the environment can take over the body)_
+#### Death
+
+A character will die if their [Backpack](#backpack) is full, cannot drop anything and receive another [Condition](#conditions)
 
 #### Defense
 
-Each Character can have passive defense, usually provided by items such as [armor](#armor) (**Damage Reduction** `DR`).
+**Passive Defense**: Provided by items such as [armor](#armor) or [Conditions](#conditions).
 
-If a Character is attacked, they can choose to defend themselves actively. This costs one [Action Point](#combat) in battle. The basic options are:
+**Active defense**:
 
-- **Block**: A `STR` + [Block Bonus](#shield) [Saving throw](#saving-throw).
-  - Success: 0 damage.
-  - Fail: half damage (rounded down).
-- **Dodge**: A `DEX` [Saving throw](#saving-throw).
-  - Success: 0 damage; the character can move 1 space.
-  - Fail: half damage (rounded down).
-- **Parry**: A Damage roll with a weapon + [Parry Bonus](#shield).
+Cost: Roll [Usage Dice](#usage) for items used for blocking. Or 1 `AP` if no item used.
+
+- **Block**: A `STR` [Attribute Roll](#attribute-roll) with [Block Bonus](#shield).
+  - Tier 1: Full damage
+  - Tier 2: Half damage (rounded down)
+  - Tier 3: 0 damage
+  - Critical Failure: Double damage
+  - Critical Success: Push the enemy so hard they become [prone](#conditions)
+- **Dodge**: A `DEX` [Attribute Roll](#attribute-roll).
+  - Tier 1: Full damage
+  - Tier 2: Half damage (rounded down) + can move 1 space
+  - Tier 3: 0 damage + can move 1 space
+  - Critical Failure: Double damage
+  - Critical Success: can move **Speed** space
+- **Parry**: A [Damage roll](#damage-roll) with a weapon plus [Parry Bonus](#shield).
   - If higher: subtract the attacker's damage and apply the remainder to the attacker.
   - If lower: full damage.
 - **Reckless Counter Attack**: A [Damage roll](#damage-roll) with a weapon.
-  - Apply damage to both. Ignore both Character's [Passive (Armor) Damage reduction](#armor)
+  - Apply damage to both. Ignore both Character's [Resistance](#immunity-resistance-vulnerability) including [Armor](#armor).
 
 Players can come up with any other action; the GM should consider them and honor creativity and role-play.
 
-The GM should use the Active defense mechanic for NPCs sparingly, as it can significantly slow down combat.
-
 ##### Immunity, Resistance, Vulnerability
 
-Some creatures can have Immunity or Resistance to different types of damage. Magic items can provide Immunity and Resistance as well.
+Some Items provide and some creatures can have Immunity, Resistance, Vulnerability to different types of damage.
 
-Resistance can be negative, meaning it is a Vulnerability.
+- **Immunity**: Total immunity to a certain damage type. Extremely rare.
+- **Resistance**: Resistance to a certain damage type. If a character receives damage which can be resisted by worn/used item:
+  - If the **usage** is higher than the **damage**: subtract the **damage** from the **usage**. Roll this many [Usage Dice](#usage).
+  - If the **damage** is higher than the **usage**: subtract the **usage** from the **damage**. Roll **usage** [Usage Dice](#usage) and receive the rest as damage.
+  - The character receives damage for each **usage** removed.
+- **x Vulnerability**: Vulnerability to certain damage type. +x Extra damage is received from this damage type.
 
-- **Immunity**: Total immunity to a certain damage type. Should be extremely rare.
-- **Resistance/Vulnerability**: Resistance or Vulnerability to a certain damage type. For each level of Resistance/Vulnerability, the Character receives more/less damage from it. The maximum Resistance/Vulnerability is **3**.
+#### Other source of damage
+
+- Falling: 3 meter or more: 1d6 blunt damage for every 3 meters
+- Suffocation: Can hold breath for `STR` minutes (minimum 1) after that take 1d10 wounds every minute
 
 ---
 
@@ -377,93 +408,27 @@ Resistance can be negative, meaning it is a Vulnerability.
 ## Magic
 
 Spells are living spirits, travelers between worlds. To stay, they possess physical objects.
-To cast a spell, your character must have the possessed item in their inventory, or touch it, and say aloud an incantation to ask the spirit for its power.
+To cast a spell, your character must have the possessed item in their hand, and say aloud an incantation to ask the spirit for its power and fulfill other prerequisites.
+
+### Spells
+
+- [Cairn Spells](./cairn-spells.md#cairn-spells)
+- **DnD Spells**: Characters can cast up to their **WIS** Level any spell (if they have the spirit). Cantrip = Level 0
+- **Adventure spells**: The world is magical, nothing can prevent it to brake rules or create never-seen-before spells with unique mechanics.
+
+Each spell by default have [2 usage](#usage) and **Restored** by [Resting](#resting).
 
 ### Casting a Spell
 
-When your character casts a spell, decide on the **Spell Power**, up to the number of usage dots remaining on the item. Roll a number of **d6** equal to the **Spell Power**. The spell has an **effect** that varies depending on `DICE` and `NUMBER`, which are calculated based on the roll.
+Roll a `WIS` [Attribute Roll](#attribute-roll) and [Usage Dice](#usage):
 
-Note the spell values (or leave the dice on the table if you have enough d6):
+- Tier 1: Failure
+- Tier 2: Decide: Failure or Success for -1 [usage](#usage) (if possible)
+- Tier 3: Success
+- Critical Failure: Cast a Random spell with same target(s); -1 permanent [max usage](#usage) for this Spirit item. If the max usage is 0, the item is destroyed.
+- Critical Success: Success + 1 permanent [max usage](#usage) for this Spirit item.
 
-- `ONES` = count of the **1** dice across all batches rolled
-- `DICE` = count of the non-**1** dice across all batches rolled
-- `NUMBER` = sum of the largest rolled number in each batch, equal to `number of batches * 6 + largest number in the last batch`
-
-Whenever one or more **6**s are rolled when casting a Spell, the caster counts the rolled **6**s (n) and rolls another batch of (n)d6. Keep repeating until no **6** is rolled, then note the spell values.
-
-Whenever one or more **1**s are rolled when casting a Spell (`ONES` is not 0), the caster takes `ONES` `WIL` damage. Then make a `WIL` save. If failed, take the **Drained** condition. Mark `ONES` (or the maximum) usage on the item.
-
-If `DICE` is **0**, the spell fails. _(Optionally, this can trigger a wild magic cast: either on a random table, or based on the situation, the GM/Players can suggest options.)_
-
-<details><summary>Example</summary>
-
-```text
-Flint, a Mordecai from the Great-Tree forest
-STR 10/10 DEX 08/08 WIL 09/09 HP 07/01
-
-Flint has an item with a spell called "Boon of Terrifying Distortion". It has 0 usage marks out of 3.
-
-Flint decides to cast it with 3 Spell Power. He rolls the following 3d6: (6 6 1)
-Because he rolled two 6s, he rolls another batch with 2d6: (6 4)
-Because he rolled another 6, he rolls another batch with 1d6: (1)
-
-Because he rolled 2 ONES, he loses 1 HP and 1 WIL (reaching 0 HP) and rolls a Saving throw:
-1d20 + WIL >= 25
-18 + 8 >= 25 -> success, no Drained condition.
-He marks 2 uses on the item because of the two ONES.
-
-Spell Effect numbers:
-Rolls:     ( 6 6 1 | 6 4 | 1 )
-DICE: 4    ( 2     | 2   | 0 )
-NUMBER: 12 ( 6     | 6   | 0 )
-
-Flint targets himself with the Boon of Terrifying Distortion and receives it as a condition.
-It wraps around him and lasts for DICE (4) turns.
-Whoever attacks Flint or observes him too long must throw a WIL save;
-if failed, the victim gains the Fear condition for NUMBER (12) turns or takes NUMBER (12) WIL damage.
-The victim decides, and it can be split.
-```
-
-</details>
-
-### Recharge
-
-When an [item's Usage marks](#item) for a Spell are all filled, it is depleted and cannot be cast without risking total destruction. Each spell has a recharge requirement; fulfilling it will recharge the Spirit.
-
-<details><summary>Example</summary>
-
-```text
-Flint, a Mordecai from the Great-Tree forest
-STR 10/08 DEX 08/06 WIL 09/08 HP 07/00
-
-Flint has exhausted the item with the "Boon of Terrifying Distortion" spell.
-The spell states the following recharge condition:
-
-To recharge one usage mark, the item holder must receive and overcome any Fear condition,
-or must stay for one hour in a place that inflicts fear on the holder.
-
-Flint has arachnophobia, and the party found a perfect spot for him in the dungeon:
-a crawl space filled with tiny spiders, dark and claustrophobic. 
-He tries to endure it for 3 hours while his party rests and repairs equipment.
-
-(The GM rules that he must make 1 WIL Save for each started hour, with increasing disadvantage.)
-
-At the start, he rolls a WIL Saving throw:
-1d20 + WIL >= 25
-19 + 8 >= 25 -> Success. He can stay for one hour.
-
-At the second hour mark, he rolls another with 1 disadvantage:
-[lowest 1 of 2d20] + WIL >= 25
-(17 17) + 8 >= 25 -> Success. He can stay for another hour.
-
-At the third hour mark, he rolls another with 2 disadvantage:
-[lowest 1 of 3d20] + WIL >= 25
-(1 8 19) + 8 >= 25 -> Failed.
-He runs out screaming and terrified as soon as the 3rd hour starts. 
-But he successfully removed 2 usage marks from the item.
-```
-
-</details>
+Running out of [usage](#usage) does not prevent the cast on Tier 3.
 
 ---
 
@@ -496,47 +461,46 @@ Time is the main currency, events occurs with or without the players in the worl
 
 ### Resting
 
-Everyone needs rest; brave adventurers are not exempt from this rule. Here is how they can rest and replenish attributes and stats.
+Everyone needs rest, brave adventurers are not exempt from this rule.
 
-We measure rest in Rest Points `RP`.
+**Requires:**
 
-- Quick Rest (1 Turn; 10 minutes)
-  - Used for: Characters catch their breath, patch minor wounds, and refill their belly with a quick snack and drink.
-  - Without food or drink: 1 RP
-  - With food or drink: 2 RP
-  - With food and drink: 3 RP
-- Short Rest (3 Turns; 30 minutes)
-  - Used for: Characters patch their wounds and refill their belly with food and drink.
-  - Without food or drink: 4 RP
-  - With food or drink: 7 RP
-  - With food and drink: 10 RP
-- Full Rest (1 Watch; 6 hours)
-  - Used for: Characters sleep, heal, and refill their belly with food and drink.
-  - Without food or drink: 10 RP
-  - With food or drink: 20 RP
-  - With food and drink: 30 RP
-- Long Rest (Days/Weeks):
-  - Used for: Characters heal and enjoy themselves with their hard-earned money.
-  - Fully restores all Attributes and HP.
-  - If the circumstances are right, permanent injuries can be healed or mitigated as well.
+- Safe space
+- Food (and drink)
+- 6 hours total with 4 hour uninterrupted sleep
 
-RP point shop (all unspent RP is lost):
+**Provides by default at the end:**
 
-- 1: Restore 1 [HP](#stats)
-- 5: Restore 1 [Attribute](#attributes)
-- 10: Remove 1 [Usage mark](#item) from a repairable item if all conditions are met.
+- Restore all [HP](#stats)
+- Restore [usage](#usage) for items which are **Rest** restored.
+- Clear [Conditions](#conditions) which are tied to **Rest**. (Like [wounds](#wound))
 
-These are the baselines; the GM should increase/decrease the RP earned based on the circumstances. A spider-infested cave, even without danger, will never provide the same rest as a flower field with a gentle spring breeze. Also, staple ration food is not as tasty as a freshly cooked meal. Wine and ale are preferable over water from a questionable source. _(Optional rule: If Characters chat with each other (role-played), they can earn extra RP.)_
+**Extra light activities, can be done while keeping watch:**
 
-Each Character needs at least one meal and one sleep per day, or they become **Hungry** and **Exhausted** (Bane [conditions](#conditions)).
+- Repair items (if possible in the situation) -> Restore [usage](#usage)
+- Tend another Character's [wound](#wound) -> Remove +1 wound or +2 if first aid kit or other kind of applicable healing is used.
+- Craft items (if possible in the situation)
+- Cooking over fire: +1 wound removal or Advantage for a roll.
+- Prepare for a described task, mentally or physically -> Possible Advantage for that task until the next Rest.
+- Other light activities described or faded in the black.
 
-If a Character eats or drinks from their inventory, mark **1** usage on the food and/or drink. Both food and drink can be shared, but each share is one extra [Usage mark](#item).
+**Encounters during Rest:**
 
-Players should ensure their safety during rest by finding a safe space, keeping watch, setting traps, alarms, etc. If the rest is interrupted, they receive only a fraction of the RP or none at all. The GM should telegraph the danger level beforehand, based on the situation and the Party's preparation.
+If the Party tries to Rest in an unsafe place, there is a possibility for an encounter. They should prepare for it, keep watch in rotation, plant traps or a warning system, or not and get a surprise.
+
+Interrupted Rest does not give any benefits. But it is possible to continue an interrupted Rest.
 
 ---
 
 ![Skeletons](./assets/skeletons.svg)
+
+## Light
+
+Without proper light source characters cannot navigate or act, unlike some creatures. There are 3 levels of light:
+
+- Bright (Sun, torch, lantern) - no modifiers
+- Dim (candle, match) - Disadvantage 2
+- Darkness (nothing) - Disadvantage 5
 
 ## Combat
 
@@ -544,16 +508,22 @@ Combat can be run anywhere on the spectrum from "Theatre of the Mind" to full ta
 
 Action Point `AP` is the resource that defines how many Actions a Character can take in one Round.
 
+There is one free **Small Action** per Round: opening/closing a door, pushing a button, picking up one item from the floor, loading ammunition, Swapping an item from the [Belt and Pocket](#inventory), [Backpack](#backpack) Search+Grab, Search+Reorder, Search+Swap or Place an item. Each further **Small Action** requires 1 `AP`.
+
+Dropping [items](#item) from hands, and dropping **at will** [Conditions](#conditions) from [Backpack](#backpack) is an **always free action**.
+
 ### Initiative
 
-Combat starts when someone is attacked. Whoever attacked starts with 2 `AP` (before their attack is resolved). There is no initiative order; instead, roll a `DEX` or `WIL` Saving throw for each combatant to determine starting `AP` for the 1st round:
+Combat starts when someone is attacks. The attacker starts with 2 `AP` (after their attack is resolved). There is no initiative order; instead, roll a `DEX` or `WIL` [Attribute Roll](#attribute-roll) for each combatant to determine starting `AP` for the 1st round:
 
-- Surprised: Roll a `WIL` [Saving throw](#saving-throw)
-  - Success: 1 `AP`
-  - Fail: 0 `AP`
-- Not Surprised: Roll a `DEX` [Saving throw](#saving-throw)
-  - Success: 2 `AP`
-  - Fail: 1 `AP`
+- Surprised: Roll a `WIL` [Attribute Roll](#attribute-roll)
+  - Tier 1: 0 AP
+  - Tier 2: 1 AP
+  - Tier 3: 2 AP
+- Not Surprised: Roll a `DEX` [Attribute Roll](#attribute-roll)
+  - Tier 1: 1 AP
+  - Tier 2: 2 AP
+  - Tier 3: 3 AP
 
 ### Rounds
 
@@ -561,7 +531,7 @@ Split the Combatants into opposing parties (usually two, but three-way or more b
 
 The 1st Attacker's Party goes first, then the 1st Victim's Party second (and if there are more parties, the order of the rest is decided by the GM).
 
-From each party, do one action (or combined/combo actions), then continue with the next party.
+From each party, do one action or combined/combo actions, then continue with the next party.
 
 There is no strict order within a party; if Players cannot decide, go clockwise from the Player who last acted.
 
@@ -601,7 +571,7 @@ Player party (P) | Goblin Party (G) | Witch Party (W)
 (All Combatants' AP is reset to 3)
 
 (P) Clayd realizes the dire situation and runs for an escape (3 AP Move) [Clayd 0 AP]
-(G) Goblin Warrior flees in the opposite direction [Goblin Warrior 3 AP]
+(G) Goblin Warrior flees in the opposite direction [Goblin Warrior 0 AP]
 (W) Seeing the fleeing Player, the Witch starts to cast something big (3 out of 6 AP Spell Casting) [Witch 0 AP]
 
 (P) Bore sees the Witch casting a longer spell and comes up with the idea to teleport Flint above the Witch for a divebomb attack.
@@ -614,9 +584,7 @@ Player party (P) | Goblin Party (G) | Witch Party (W)
 
 </details>
 
-There is one free **Small Action** per Round: opening/closing a door, pushing a button, picking up one item from the floor, loading ammunition, etc. Each further **Small Action** requires 1 `AP`.
-
-Anything a Character can do, they can do in combat as well. Players should propose ideas; the GM can decide if they are viable or risky (and may request a [Saving throw](#saving-throw)) and set the `AP` cost (which can be more than one).
+Anything a Character can do, they can do in combat as well. Players should propose ideas; the GM can decide if they are viable or risky (and may request a [Attribute Roll](#attribute-roll)) and set the `AP` cost (which can be more than one).
 
 <details><summary>Example Basic Actions</summary>
 
@@ -653,14 +621,14 @@ Players should describe or role-play their action in enough detail to leave no d
 
 A Character repeating the same Action is penalized with +1 disadvantage, so switch weapons, cast other spells, etc.
 
-If a Combatant is attacked and aware of the attack, they can defend themselves. They can use the basic [Defence actions](#defense), or come up with an idea based on the situation and their abilities. If the Player chooses to defend, it costs `AP` just like any other Action.
+If a Combatant is attacked and aware of the attack, they can defend themselves. They can use the basic [Defence actions](#defense), or come up with an idea based on the situation and their abilities.
 
 <details><summary>Example</summary>
 
 ```text
 - GM: Flint, this goblin tries to attack you with a dagger (d4). Do you want to defend yourself?
 - Player: Yes, I would like to Parry with my Rapier, which has a +1 Parry advantage.
-- GM: Okay then, do a Damage roll for 1 AP, and we will see the outcome.
+- GM: Okay then, do a Damage roll with Usage Dice, and we will see the outcome.
 
 ```
 
@@ -675,10 +643,6 @@ Combat ends when there is no willing and capable opposition remaining. This can 
 ## Compatibility
 
 - OSR monster HD is rolled with d8.
-- Attributes should be converted such that 14 means a 50% chance on a Saving throw. 9 is considered "Level 1" with a 25% success rate.
-  - `STR` - Strength, Constitution
-  - `DEX` - Dexterity
-  - `WIL` - Wisdom, Charisma, (Intelligence)
 
 ## Resources and Shoutout
 
