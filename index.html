@@ -51,31 +51,45 @@ class="toc-section-number">1.3</span> Background</a></li>
 <li><a href="#inventory" id="toc-inventory"><span
 class="toc-section-number">1.4</span> Inventory</a>
 <ul>
+<li><a href="#two-hands" id="toc-two-hands"><span
+class="toc-section-number">1.4.1</span> Two hands</a></li>
+<li><a href="#belt-and-pockets" id="toc-belt-and-pockets"><span
+class="toc-section-number">1.4.2</span> Belt and Pockets</a></li>
 <li><a href="#backpack" id="toc-backpack"><span
-class="toc-section-number">1.4.1</span> Backpack</a></li>
-<li><a href="#item" id="toc-item"><span
-class="toc-section-number">1.4.2</span> Item</a>
+class="toc-section-number">1.4.3</span> Backpack</a>
+<ul>
+<li><a href="#physical-backpack-with-items"
+id="toc-physical-backpack-with-items"><span
+class="toc-section-number">1.4.3.1</span> Physical Backpack with
+Items</a></li>
+<li><a href="#body" id="toc-body"><span
+class="toc-section-number">1.4.3.2</span> Body</a></li>
+<li><a href="#conditions" id="toc-conditions"><span
+class="toc-section-number">1.4.3.3</span> Conditions</a></li>
+</ul></li>
+<li><a href="#items" id="toc-items"><span
+class="toc-section-number">1.4.4</span> Items</a>
 <ul>
 <li><a href="#usage" id="toc-usage"><span
-class="toc-section-number">1.4.2.1</span> Usage</a></li>
+class="toc-section-number">1.4.4.1</span> Usage</a></li>
+<li><a href="#item-value" id="toc-item-value"><span
+class="toc-section-number">1.4.4.2</span> Item Value</a></li>
 </ul></li>
-<li><a href="#conditions" id="toc-conditions"><span
-class="toc-section-number">1.4.3</span> Conditions</a></li>
 <li><a href="#offensive-items" id="toc-offensive-items"><span
-class="toc-section-number">1.4.4</span> Offensive items</a>
+class="toc-section-number">1.4.5</span> Offensive items</a>
 <ul>
 <li><a href="#melee" id="toc-melee"><span
-class="toc-section-number">1.4.4.1</span> Melee</a></li>
+class="toc-section-number">1.4.5.1</span> Melee</a></li>
 <li><a href="#ranged" id="toc-ranged"><span
-class="toc-section-number">1.4.4.2</span> Ranged</a></li>
+class="toc-section-number">1.4.5.2</span> Ranged</a></li>
 </ul></li>
 <li><a href="#defensive-items" id="toc-defensive-items"><span
-class="toc-section-number">1.4.5</span> Defensive items</a>
+class="toc-section-number">1.4.6</span> Defensive items</a>
 <ul>
 <li><a href="#armor" id="toc-armor"><span
-class="toc-section-number">1.4.5.1</span> Armor</a></li>
+class="toc-section-number">1.4.6.1</span> Armor</a></li>
 <li><a href="#shield" id="toc-shield"><span
-class="toc-section-number">1.4.5.2</span> Shield</a></li>
+class="toc-section-number">1.4.6.2</span> Shield</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#character-progression"
@@ -93,6 +107,8 @@ class="toc-section-number">2.2</span> Damage roll</a></li>
 id="toc-advantages-and-disadvantages"><span
 class="toc-section-number">2.3</span> Advantages and
 Disadvantages</a></li>
+<li><a href="#magic-roll" id="toc-magic-roll"><span
+class="toc-section-number">2.4</span> Magic roll</a></li>
 </ul></li>
 <li><a href="#information" id="toc-information"><span
 class="toc-section-number">3</span> Information</a></li>
@@ -133,11 +149,9 @@ class="toc-section-number">5.2</span> Spell Casting</a></li>
 class="toc-section-number">6</span> Time</a>
 <ul>
 <li><a href="#resting" id="toc-resting"><span
-class="toc-section-number">6.1</span> Resting</a>
-<ul>
+class="toc-section-number">6.1</span> Resting</a></li>
 <li><a href="#hunger" id="toc-hunger"><span
-class="toc-section-number">6.1.1</span> Hunger</a></li>
-</ul></li>
+class="toc-section-number">6.2</span> Hunger</a></li>
 </ul></li>
 <li><a href="#light" id="toc-light"><span
 class="toc-section-number">7</span> Light</a></li>
@@ -288,55 +302,103 @@ STR 1 DEX 2 WIL 0 HP 6/6
 on random tables for Background.</p>
 <h3 data-number="1.4" id="inventory"><span
 class="header-section-number">1.4</span> Inventory</h3>
-<p>Each character has:</p>
+<figure>
+<img src="./assets/Inventory.drawio.svg" alt="Inventory" />
+<figcaption aria-hidden="true">Inventory</figcaption>
+</figure>
+<h4 data-number="1.4.1" id="two-hands"><span
+class="header-section-number">1.4.1</span> Two hands</h4>
 <ul>
-<li><strong>Two hands</strong> (hopefully) <code>2 slot</code>: They can
-only use items if they are holding it. Hands can hold
-<strong>stacked</strong> items, but cannot use them until unstacked.
-With both hands a character can hold items which have more than
-<strong>2 slot</strong> within reason of course.</li>
-<li><strong>Belt and Pockets</strong> <code>4 slot</code>: Items to
-quickly grab/swap. <a href="#combat">Small Action</a></li>
-<li><strong>Backpack</strong> <code>10 slot</code>: <a
-href="#backpack">Backpack</a></li>
-<li><strong>Body</strong>: They can use the body to wear items like
-armor, rings, necklaces etc. Stacking is within reason, Eg: Can wear a
-tiara under/on a hat. Magic items does not like to share space on the
-body. Mouth and other body orifices can be used to hold on items
-temporally. Access depends on the item and location, Eg: Removing a hat
-is quick, getting out of a plate armor takes a significant time.</li>
+<li><code>2 slot</code> (hopefully)</li>
+<li>Characters can only use items if they are holding it.</li>
+<li>Hands can hold <strong>stacked</strong> items, but cannot use them
+until unstacked.</li>
+<li>With both hands a character can hold items which have more than
+<strong>2 slot</strong> within reason.</li>
+<li>Using a <strong>Heavy</strong> <a href="#offensive-items">Items</a>
+(3 Slots) requires 3 <code>STR</code> or more.</li>
+<li><strong>Versatile</strong> <a href="#offensive-items">Items</a> (2
+Slot) can be used as One or Two handed requiring 1 or 2 hand slot
+respectively</li>
 </ul>
-<h4 data-number="1.4.1" id="backpack"><span
-class="header-section-number">1.4.1</span> Backpack</h4>
-<p>Magical part of the body, not a literal removable backpack. It is
-used to store items. Harder to access, especially when time
-constrained.</p>
-<p>It holds the <a href="#conditions">Conditions</a> as well, and acts
-as the secondary <strong>HP</strong> (see: <a href="#wound">Wounds</a>
-and <a href="#death">Death</a> )</p>
-<p>When time constrained like in <a href="#combat">Combat</a>: To search
-for an item roll <code>1d10</code>. You can grab any item which are
-located up to the rolled value. If an item covers more slots it can be
-grabbed even if it is only partially located. If you don’t grab
-anything, you can swap the items in the backpack. Swapping item(s) from
-hand(s) or placing item(s) inside: Place the new item(s) anywhere.</p>
-<h4 data-number="1.4.2" id="item"><span
-class="header-section-number">1.4.2</span> Item</h4>
+<h4 data-number="1.4.2" id="belt-and-pockets"><span
+class="header-section-number">1.4.2</span> Belt and Pockets</h4>
+<ul>
+<li><code>4 slot</code></li>
+<li>Items to quickly take/store/swap, it takes only a <a
+href="#combat">Small Action</a> even when the time is constrained.</li>
+</ul>
+<h4 data-number="1.4.3" id="backpack"><span
+class="header-section-number">1.4.3</span> Backpack</h4>
+<ul>
+<li><code>10 slot</code></li>
+</ul>
+<p>3 things share <strong>The Backpack</strong> inventory:</p>
+<h5 data-number="1.4.3.1" id="physical-backpack-with-items"><span
+class="header-section-number">1.4.3.1</span> Physical Backpack with
+Items</h5>
+<ul>
+<li>It can hold items</li>
+<li>It can be removed/replaced/stolen etc.</li>
+<li>The default and largest size is 10. Smaller means cannot store items
+on larger slots.</li>
+<li>Storing items: Place the items anywhere they fit.</li>
+<li>Taking items, searching and rearranging:
+<ul>
+<li>When time is not constrained: Just do it.</li>
+<li>When time constrained like in <a href="#combat">Combat</a>: To
+search for an item, roll <code>1d10</code>. You can grab any item which
+are located up to the rolled value. If an item covers more slots it can
+be grabbed even if it is only partially located. If you don’t grab
+anything, you can rearrange the items in the backpack.</li>
+</ul></li>
+</ul>
+<h5 data-number="1.4.3.2" id="body"><span
+class="header-section-number">1.4.3.2</span> Body</h5>
+<ul>
+<li>Large items worn on the Body need slots (Eg: Armor)</li>
+<li>Small items worn on the body does not need a slot. (Eg: Ring,
+Necklace, Earring, etc)</li>
+<li>Magic items does not like to share space on the body.</li>
+<li>Normal, non-armor clothing does not need slot if worn on the
+body.</li>
+<li>Mouth and other body orifices can be used to hold on items
+temporally.</li>
+<li>Access speed depends on the item and location, Eg: Removing a hat is
+quick, getting out of a plate armor takes a significant time.</li>
+</ul>
+<h5 data-number="1.4.3.3" id="conditions"><span
+class="header-section-number">1.4.3.3</span> Conditions</h5>
+<ul>
+<li>Each Condition, be it boon or bane, takes up one inventory slot. It
+can affect more than just the inventory, and each has a condition for
+removal.</li>
+<li>Because of <a href="#wound">Wounds</a> <strong>The Backpack</strong>
+acts as the secondary <code>HP</code>:</li>
+<li>If a Character’s <a href="#backpack">Backpack</a> is full and
+receives a condition, they must drop something if they can. If they
+cannot they <a href="#death">die</a>.</li>
+<li>Conditions which can be cleared <strong>at will</strong>, can be
+refused or cleared any time.</li>
+</ul>
+<p><a href="./conditions.html">List of Basic Conditions</a></p>
+<h4 data-number="1.4.4" id="items"><span
+class="header-section-number">1.4.4</span> Items</h4>
 <p>Items have <strong>slot</strong> and can have
-<strong>stackable</strong>, <strong>usage</strong> attribute.</p>
+<strong>stackable</strong> and <strong>usage</strong> attribute.</p>
 <ul>
 <li><strong>x slot</strong>: This item takes x slot in the
 inventory.</li>
-<li><strong>x stackable</strong>: This item can be stacked x times,
+<li><strong>stackable x</strong>: This item can be stacked x times,
 until another <strong>slot</strong> is required. Different Items can be
-stacked together if they are the same.</li>
+stacked together if they are the same type.</li>
 </ul>
-<h5 data-number="1.4.2.1" id="usage"><span
-class="header-section-number">1.4.2.1</span> Usage</h5>
+<h5 data-number="1.4.4.1" id="usage"><span
+class="header-section-number">1.4.4.1</span> Usage</h5>
 <ul>
-<li><strong>x/max usage</strong>: Certain items have finite number of
-uses or duration tracked as <strong>usage</strong>. After the item is
-used, roll an <strong>usage dice</strong> <code>xd6</code>. For each die
+<li><strong>x usage</strong>: Certain items have finite number of uses
+or duration tracked as <strong>usage</strong>. After the item is used,
+roll an <strong>usage dice</strong> <code>xd6</code>. For each die
 rolled 1 or 2 remove one <strong>usage</strong>.</li>
 </ul>
 <p>Usage can have further modifiers:</p>
@@ -351,45 +413,41 @@ etc</li>
 <p>Items without default usage can be worn-down/destroyed as well, so
 the GM can assign usage, or call <strong>usage dice roll</strong> for
 such items.</p>
-<h4 data-number="1.4.3" id="conditions"><span
-class="header-section-number">1.4.3</span> Conditions</h4>
-<p>Each Condition, be it boon or bane, takes up one inventory slot in
-the <a href="#backpack">Backpack</a>. Each Condition can affect more
-than just the inventory, and each has a condition for removal.</p>
-<p>If a Character’s <a href="#backpack">Backpack</a> is full and
-receives a condition, they must drop something if they can. If they
-cannot they die. (See: <a href="#death">Death</a>)</p>
-<details>
-<summary>
-Example
-</summary>
-<pre class="text"><code>Wound: Clear: 1 on Rest
-Drained: -1 on WIL roll. Clear: all on Rest
-Exhausted: -1 on DEX roll. Clear: all on Rest
-Hungry: -1 on STR roll. Clear: all after eating a meal
-Prone: You can only crawl, melle attacks +1 agains you, ranged attacks -1 agains you. Clear: 1 AP to stand up
-Lucky: +1d4 on the next Attribute or Damage roll. Clear: Next roll or at will
-Bless: Advantage on Attribute roll. Clear: 5 Rounds (5 minutes) or at will</code></pre>
-</details>
-<h4 data-number="1.4.4" id="offensive-items"><span
-class="header-section-number">1.4.4</span> Offensive items</h4>
+<h5 data-number="1.4.4.2" id="item-value"><span
+class="header-section-number">1.4.4.2</span> Item Value</h5>
+<ul>
+<li><a href="./items.html">Common</a> - Mundane object, basic weapons,
+etc</li>
+<li><a href="./cairn_spells.html">Artifact</a> - Artifacts with Spell
+Spirits</li>
+<li>Uncommon - 1-2 Modifiers</li>
+<li>Rare - Special abilities and/or high modifiers</li>
+<li>Epic - Special abilities and/or high modifiers</li>
+<li>Legendary - Special abilities and/or high modifiers</li>
+</ul>
+<h4 data-number="1.4.5" id="offensive-items"><span
+class="header-section-number">1.4.5</span> Offensive items</h4>
 <p>Each weapon has a <strong>Damage dice</strong> and rarely a
 <strong>Bonus</strong>. The bonus is a flat bonus damage each time a
 weapon deals damage.</p>
-<h5 data-number="1.4.4.1" id="melee"><span
-class="header-section-number">1.4.4.1</span> Melee</h5>
-<table>
+<p>Using <strong>Heavy</strong> weapon/armor requires 3 <code>STR</code>
+or more.</p>
+<h5 data-number="1.4.5.1" id="melee"><span
+class="header-section-number">1.4.5.1</span> Melee</h5>
+<table style="width:100%;">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
 </colgroup>
 <thead>
 <tr>
 <th>Type</th>
 <th>Slot</th>
+<th>Usage</th>
 <th>Damage dice</th>
 <th>Average</th>
 <th>Example</th>
@@ -399,6 +457,7 @@ class="header-section-number">1.4.4.1</span> Melee</h5>
 <tr>
 <td>Unarmed</td>
 <td>0</td>
+<td></td>
 <td>1d4</td>
 <td>2.5</td>
 <td>Fist, Foot</td>
@@ -406,6 +465,7 @@ class="header-section-number">1.4.4.1</span> Melee</h5>
 <tr>
 <td>One handed</td>
 <td>1</td>
+<td>3</td>
 <td>1d6</td>
 <td>3.5</td>
 <td>Dagger, Short Sword</td>
@@ -413,6 +473,7 @@ class="header-section-number">1.4.4.1</span> Melee</h5>
 <tr>
 <td>Two handed</td>
 <td>2</td>
+<td>4</td>
 <td>1d8</td>
 <td>4.5</td>
 <td>Long Sword, Axe, Pike, Halberd, Spear</td>
@@ -420,6 +481,7 @@ class="header-section-number">1.4.4.1</span> Melee</h5>
 <tr>
 <td>Dual Wielding</td>
 <td>2x1</td>
+<td>2x3</td>
 <td>2d4</td>
 <td>5.0</td>
 <td>Daggers, Scimitars</td>
@@ -427,6 +489,7 @@ class="header-section-number">1.4.4.1</span> Melee</h5>
 <tr>
 <td>Heavy Weapon</td>
 <td>3</td>
+<td>6</td>
 <td>1d10</td>
 <td>5.5</td>
 <td>Great Axe, Warhammer</td>
@@ -434,26 +497,30 @@ class="header-section-number">1.4.4.1</span> Melee</h5>
 </tbody>
 </table>
 <p>When Dual Wielding, attacking with both weapons is considered one
-action, and the player is free to choose which weapon gets the <a
+action, Roll <a href="#usage">Usage</a> for both.</p>
+<p>Versatile Weapons are 2 Slot items but can be used as One Handed
+<code>1d6</code> or Two Handed <code>1d8</code>. They have 4 <a
 href="#usage">Usage</a>.</p>
 <p>Attacking multiple targets at once (swing): Roll once, share the
 damage.</p>
-<h5 data-number="1.4.4.2" id="ranged"><span
-class="header-section-number">1.4.4.2</span> Ranged</h5>
-<table style="width:100%;">
+<h5 data-number="1.4.5.2" id="ranged"><span
+class="header-section-number">1.4.5.2</span> Ranged</h5>
+<table>
 <colgroup>
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
 </colgroup>
 <thead>
 <tr>
 <th>Type</th>
 <th>Slot</th>
+<th>Usage</th>
 <th>Damage dice Short</th>
 <th>Damage dice Long</th>
 <th>Average Short</th>
@@ -464,7 +531,8 @@ class="header-section-number">1.4.4.2</span> Ranged</h5>
 <tbody>
 <tr>
 <td>Throwables</td>
-<td>0/1</td>
+<td>1 +0</td>
+<td>tracked</td>
 <td>1d4</td>
 <td>-</td>
 <td>2.5</td>
@@ -473,7 +541,8 @@ class="header-section-number">1.4.4.2</span> Ranged</h5>
 </tr>
 <tr>
 <td>Short</td>
-<td>1+1</td>
+<td>1 +1</td>
+<td>3</td>
 <td>1d6</td>
 <td>1d4</td>
 <td>3.5</td>
@@ -482,7 +551,8 @@ class="header-section-number">1.4.4.2</span> Ranged</h5>
 </tr>
 <tr>
 <td>Long</td>
-<td>2+1</td>
+<td>2 +1</td>
+<td>4</td>
 <td>1d8</td>
 <td>1d6</td>
 <td>4.5</td>
@@ -492,6 +562,7 @@ class="header-section-number">1.4.4.2</span> Ranged</h5>
 <tr>
 <td>Dual Wielding</td>
 <td>2x1+1</td>
+<td>2x3</td>
 <td>2d4</td>
 <td>1d8</td>
 <td>5.0</td>
@@ -500,7 +571,8 @@ class="header-section-number">1.4.4.2</span> Ranged</h5>
 </tr>
 <tr>
 <td>Heavy</td>
-<td>3+1</td>
+<td>3 +1</td>
+<td>6</td>
 <td>1d10</td>
 <td>2d4</td>
 <td>5.5</td>
@@ -509,18 +581,16 @@ class="header-section-number">1.4.4.2</span> Ranged</h5>
 </tr>
 </tbody>
 </table>
-<p>Ranged weapons (aside from throwables) require ammunition; that is
-the cost of range. Mark the <a href="#usage">Usage</a> on the
-ammunition.</p>
+<p>Ranged weapons (aside from Throwables) require ammunition.</p>
 <p>Loading ammunition into a weapon is a <a href="#rounds">Small
-Action</a>.</p>
-<p>Aiming and shooting costs 1 <a href="#combat">Action Point</a>.</p>
-<h4 data-number="1.4.5" id="defensive-items"><span
-class="header-section-number">1.4.5</span> Defensive items</h4>
+Action</a>. Roll <a href="#usage">Usage</a> for the ammunition.</p>
+<p>Aiming and shooting costs 1 <a href="#combat">Action Point</a></p>
+<h4 data-number="1.4.6" id="defensive-items"><span
+class="header-section-number">1.4.6</span> Defensive items</h4>
 <p>There are 2 types of defensive items: Passive (Armor) and Active
 (Shield).</p>
-<h5 data-number="1.4.5.1" id="armor"><span
-class="header-section-number">1.4.5.1</span> Armor</h5>
+<h5 data-number="1.4.6.1" id="armor"><span
+class="header-section-number">1.4.6.1</span> Armor</h5>
 <table>
 <thead>
 <tr>
@@ -568,11 +638,12 @@ Examples
 </summary>
 <pre class="text"><code>Chainmail (Slashing, Piercing)
   Note: Can be piecred, for example with long poisoned needles
-Plate-armor (Slashing, Bludgeoning)
-  Note: Provide no protection to the feet without Boots</code></pre>
+Plate-armor (Slashing, Bludgeoning, Piercing)
+  Note: Metal weapons are greate at cunducting electricity...
+  Note: Skilled dagger user might find the openings...</code></pre>
 </details>
-<h5 data-number="1.4.5.2" id="shield"><span
-class="header-section-number">1.4.5.2</span> Shield</h5>
+<h5 data-number="1.4.6.2" id="shield"><span
+class="header-section-number">1.4.6.2</span> Shield</h5>
 <table>
 <thead>
 <tr>
@@ -616,7 +687,7 @@ Roll</a>.</p>
 class="header-section-number">1.5</span> Character Progression</h3>
 <p>There is no class system; the items a character is holding define
 their options. A character can boost their potential by obtaining more
-versatile and powerful <a href="#item">items</a>.</p>
+versatile and powerful <a href="#items">Items</a>.</p>
 <hr />
 <figure>
 <img src="./assets/Thief.svg" alt="Thief" />
@@ -647,10 +718,10 @@ Roll</strong> are obvious to the Players before the roll.</p>
 <p>Rolling an <strong>Attribute Roll</strong> is
 <code>2d10 + Attribute</code></p>
 <ul>
-<li>Tier 1: <code>&lt;=10</code>: Failure (No)</li>
-<li>Tier 2: <code>11-15</code>: Partial Success/Failure (Yes but, No
+<li>Tier 1: <code>&lt;10</code>: Failure (No)</li>
+<li>Tier 2: <code>10+</code>: Partial Success/Failure (Yes but, No
 but)</li>
-<li>Tier 3: <code>16&lt;=</code>: Success (Yes)</li>
+<li>Tier 3: <code>15+</code>: Success (Yes)</li>
 <li>Critical Failure: Natural 2 or 3 (No and)</li>
 <li>Critical Success: Natural 19 or 20 (Yes and)</li>
 </ul>
@@ -662,6 +733,7 @@ For Nerds
 <thead>
 <tr>
 <th>%</th>
+<th>Tier 1</th>
 <th>Tier 2</th>
 <th>Tier 3</th>
 </tr>
@@ -669,62 +741,77 @@ For Nerds
 <tbody>
 <tr>
 <td>-5</td>
-<td>15</td>
-<td>0</td>
-</tr>
-<tr>
-<td>-4</td>
-<td>21</td>
+<td>79</td>
+<td>20</td>
 <td>1</td>
 </tr>
 <tr>
-<td>-3</td>
-<td>28</td>
+<td>-4</td>
+<td>72</td>
+<td>25</td>
 <td>3</td>
 </tr>
 <tr>
-<td>-2</td>
-<td>36</td>
+<td>-3</td>
+<td>64</td>
+<td>30</td>
 <td>6</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>55</td>
+<td>35</td>
+<td>10</td>
 </tr>
 <tr>
 <td>-1</td>
 <td>45</td>
-<td>10</td>
-</tr>
-<tr>
-<td>0</td>
-<td>55</td>
+<td>40</td>
 <td>15</td>
 </tr>
 <tr>
-<td>+1</td>
-<td>64</td>
+<td>+0</td>
+<td>36</td>
+<td>43</td>
 <td>21</td>
 </tr>
 <tr>
-<td>+2</td>
-<td>72</td>
+<td>+1</td>
+<td>28</td>
+<td>44</td>
 <td>28</td>
 </tr>
 <tr>
-<td>+3</td>
-<td>79</td>
+<td>+2</td>
+<td>21</td>
+<td>43</td>
 <td>36</td>
 </tr>
 <tr>
-<td>+4</td>
-<td>85</td>
+<td>+3</td>
+<td>15</td>
+<td>40</td>
 <td>45</td>
 </tr>
 <tr>
-<td>+5</td>
-<td>90</td>
+<td>+4</td>
+<td>10</td>
+<td>35</td>
 <td>55</td>
+</tr>
+<tr>
+<td>+5</td>
+<td>6</td>
+<td>30</td>
+<td>64</td>
 </tr>
 </tbody>
 </table>
 <p>Critical Failure: 3% Critical Success: 3%</p>
+<figure>
+<img src="./assets/Attribute_Roll.svg" alt="Attribute Roll" />
+<figcaption aria-hidden="true">Attribute Roll</figcaption>
+</figure>
 </details>
 <h3 data-number="2.2" id="damage-roll"><span
 class="header-section-number">2.2</span> Damage roll</h3>
@@ -741,7 +828,7 @@ similarly terrible</li>
 <p>Each <a href="#offensive-items">Weapon</a> that can be used to deal
 damage has a <strong>Damage dice</strong> to roll damage with. Roll the
 dice: that is the damage.</p>
-<p>Roll <a href="#item">Usage Dice</a> as well. The
+<p>Roll <a href="#items">Usage Dice</a> as well. The
 <strong>usage</strong> does not influence the result.</p>
 <p>All can be rolled at once if the player has enough distinguishable
 dice.</p>
@@ -749,6 +836,9 @@ dice.</p>
 class="header-section-number">2.3</span> Advantages and
 Disadvantages</h3>
 <p>Stacking flat plus or minus modifiers</p>
+<h3 data-number="2.4" id="magic-roll"><span
+class="header-section-number">2.4</span> Magic roll</h3>
+<p>See <a href="#spell-casting">Spell Casting</a></p>
 <h2 data-number="3" id="information"><span
 class="header-section-number">3</span> Information</h2>
 <p>Information is freely given, never tied to rolling dice. The GM
@@ -771,26 +861,21 @@ class="header-section-number">4</span> Taking Damage</h2>
 <p>Characters take damage to their <a href="#stats">Hit Protection</a>
 <code>HP</code> until it is depleted, unless stated otherwise
 (wound/injuries). All excess damage, and all damage after
-<code>HP</code> is depleted, add +1 <a href="#wound">wound</a>.</p>
-<ul>
-<li><code>0 HP</code>:
-<ul>
-<li>The character has no more endurance/will/luck to avoid wounds.</li>
-<li>Most living things will think twice about whether they want to
-continue the fight at this point.</li>
-</ul></li>
-</ul>
+<code>HP</code> is depleted, add +1 <a href="#wound">Wound</a>.</p>
+<p><code>0 HP</code>: The character has no more endurance/will/luck to
+avoid wounds.</p>
 <h3 data-number="4.1" id="wound"><span
 class="header-section-number">4.1</span> Wound</h3>
-<p>The <strong>wound</strong> is a <a href="#conditions">Condition</a>
-which can only be cleared during <a href="#resting">Resting</a>.</p>
+<p>The <strong>Wound</strong> is a <a href="#conditions">Condition</a>
+which can be cleared by <a href="#resting">Resting</a>.</p>
+<p>Taking too many wound can result in <a href="#death">Death</a>.</p>
 <h3 data-number="4.2" id="injuries"><span
 class="header-section-number">4.2</span> Injuries</h3>
 <ul>
 <li>In extreme cases, a character can suffer injuries like
 dismemberment.</li>
 <li>This usually permanent, gory and requires immediate attention. Take
-+1 <a href="#wound">wound</a> every minute.</li>
++1 <a href="#wound">Wound</a> every minute.</li>
 <li>Modify the Character Sheet. (Eg: Lost leg: slower movement speed;
 Lost arm: remove arm inventory slot, etc)</li>
 <li>Critical Success on an <a href="#damage-roll">Damage Roll</a> could
@@ -800,7 +885,7 @@ be the source of injuries.</li>
 class="header-section-number">4.3</span> Death</h3>
 <p>A character will die if their <a href="#backpack">Backpack</a> is
 full, cannot drop anything and receive another <a
-href="#conditions">Condition</a></p>
+href="#conditions">Condition</a>.</p>
 <h3 data-number="4.4" id="defense"><span
 class="header-section-number">4.4</span> Defense</h3>
 <h4 data-number="4.4.1" id="passive-defense"><span
@@ -820,7 +905,7 @@ Bonus</a>.
 <li>Tier 3: 0 damage</li>
 <li>Critical Failure: Double damage</li>
 <li>Critical Success: Push the enemy so hard they become <a
-href="#conditions">prone</a></li>
+href="./conditions.html#prone">Prone</a></li>
 </ul></li>
 <li><strong>Dodge</strong>: A <code>DEX</code> <a
 href="#attribute-roll">Attribute Roll</a>.
@@ -853,7 +938,7 @@ spell.
 <ul>
 <li>Countering a spell is only possible before the spell resolved (The
 <code>2d10</code> rolling did not happened yet)</li>
-<li>Cannot counter spells with automatic Success.</li>
+<li>Cannot counter spells with Automatic Success.</li>
 <li>It is possible to close by characters provide 1-1 <strong>Tarot
 Card</strong> to counter a spell.</li>
 </ul></li>
@@ -907,8 +992,9 @@ spirit for its power and/or fulfill other prerequisites.</p>
 <li>At Rest draw <code>(WIL or 0) + number of spells you have</code>
 cards from the shared tarot deck (78 cards), this is your ‘Mana
 pool’.</li>
-<li>When the party rests, all cards are returned to the deck and it is
-reshuffled. If the deck runs out of cards, the burned ones can be
+<li>When the party rests, all remaining cards are returned to the deck
+and it is reshuffled.</li>
+<li>If the deck runs out of cards, the burned ones can be
 reshuffled.</li>
 </ul>
 <h3 data-number="5.1" id="spells"><span
@@ -926,36 +1012,131 @@ unique mechanics.</li>
 <ul>
 <li>Range: 8 Space</li>
 <li>Time: 10 minutes</li>
+<li>Spell component: Verbal</li>
+<li>Usage: 2 recharge on <a href="#resting">Rest</a></li>
 </ul>
 <h3 data-number="5.2" id="spell-casting"><span
 class="header-section-number">5.2</span> Spell Casting</h3>
 <ul>
+<li>Hold a single spirit possessed object in hand, without touching any
+other.</li>
+<li>Fulfill the <strong>Spell Components</strong>.</li>
 <li>Choose a card then burn it. This is the modifier.
 <ul>
 <li>2-10: numeric value</li>
-<li>Jack: 11</li>
-<li>Knight: 12</li>
-<li>Queen: 13</li>
-<li>King: 14</li>
-<li>Ace: 15</li>
+<li>Jack, Knight, Queen, King: 10</li>
+<li>Ace: Auto Success (no need to roll)</li>
 <li><a href="./major_arcana.html">Major Arcana</a>: Auto Success (no
-need to roll) + Special Effects</li>
+need to roll) + The special effect</li>
 </ul></li>
 <li>Roll <code>2d10</code></li>
-<li>Result:
+<li>Result of <code>2d10 + card modifier</code>:
 <ul>
-<li>Tier 1: <code>&lt;=10</code>: Failure</li>
-<li>Tier 2: <code>11-15</code>: Choose:
+<li>Tier 1: <code>&lt;10</code>: Failure</li>
+<li>Tier 2: <code>10+</code>: Choose:
 <ul>
 <li>Failure and draw a new card</li>
-<li>Success</li>
+<li>Success and gain a <a href="./conditions.html#drained">Drained
+Condition</a>.</li>
 </ul></li>
-<li>Tier 3: <code>16-20</code>: Success</li>
-<li>Tier 4: <code>20&lt;=</code>: Success and draw a new card</li>
+<li>Tier 3: <code>15+</code>: Success</li>
+<li>Tier 4: <code>20+</code>: Success and draw a new card</li>
+<li>Critical Failure: Failure and gain a <a
+href="./conditions.html#drained">Drained Condition</a>.</li>
+<li>Critical Success: Success, draw a new card and keep the card used
+for casting the spell</li>
 </ul></li>
+<li>Roll <a href="#usage">Usage</a> for the spirit possessed object.
+(can be rolled alongside with the 2d10)</li>
 </ul>
 <p>The GM can draw from the deck each time an NPC casts a spell instead
 of drawing all at once and choosing from the hand.</p>
+<details>
+<summary>
+For Nerds
+</summary>
+<table>
+<thead>
+<tr>
+<th>%</th>
+<th>Tier 1</th>
+<th>Tier 2</th>
+<th>Tier 3</th>
+<th>Tier 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>21</td>
+<td>43</td>
+<td>30</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>15</td>
+<td>40</td>
+<td>35</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10</td>
+<td>35</td>
+<td>40</td>
+<td>15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>30</td>
+<td>43</td>
+<td>21</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td>25</td>
+<td>44</td>
+<td>28</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1</td>
+<td>20</td>
+<td>43</td>
+<td>36</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0</td>
+<td>15</td>
+<td>40</td>
+<td>45</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0</td>
+<td>10</td>
+<td>35</td>
+<td>55</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0</td>
+<td>6</td>
+<td>30</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+<p>Critical Failure: 3% Critical Success: 3%</p>
+<figure>
+<img src="./assets/Magic_Roll.svg" alt="Magic Roll" />
+<figcaption aria-hidden="true">Magic Roll</figcaption>
+</figure>
+</details>
 <hr />
 <figure>
 <img src="./assets/Night_Watch.svg" alt="Night Watch" />
@@ -1012,23 +1193,23 @@ rule.</p>
 <p><strong>Provides by default at the end:</strong></p>
 <ul>
 <li>Restore all <a href="#stats">HP</a></li>
-<li>Restore <a href="#usage">usage</a> for items which are
+<li>Restore <a href="#usage">Usage</a> for items which are
 <strong>Rest</strong> restored.</li>
 <li>Drop all <a href="#magic">Tarot Cards</a> and draw
 <code>(WIL or 0) + number of spells you have</code></li>
 <li>Clear <a href="#conditions">Conditions</a> which are tied to
-<strong>Rest</strong>. (Like <a href="#wound">wounds</a>)</li>
+<strong>Rest</strong>. (Like <a href="#wound">Wounds</a>)</li>
 </ul>
 <p><strong>Extra light activities, can be done while keeping
 watch:</strong></p>
 <ul>
 <li>Repair items (if possible in the situation) -&gt; Restore <a
-href="#usage">usage</a></li>
-<li>Tend another Character’s <a href="#wound">wound</a> -&gt; Remove +1
+href="#usage">Usage</a></li>
+<li>Tend another Character’s <a href="#wound">Wound</a> -&gt; Remove +1
 wound or +2 if first aid kit or other kind of applicable healing is
 used.</li>
-<li>Cooking over fire: +1 wound removal or +1 Advantage for a roll
-(inspiration)</li>
+<li>Cooking over fire: +1 <a href="#wound">Wound</a> removal or <a
+href="./conditions.html#well-fed">Well-Fed Condition</a></li>
 <li>Craft items (if possible in the situation)</li>
 <li>Experimenting with or studying an unknown magic artifact</li>
 <li>Prepare mentally or physically for a described specific task you
@@ -1042,11 +1223,10 @@ for an encounter. They should prepare for it, keep watch in rotation,
 plant traps or a warning system, or not and get a surprise.</p>
 <p>Interrupted Rest does not give any benefits. But it is possible to
 continue an interrupted Rest.</p>
-<h4 data-number="6.1.1" id="hunger"><span
-class="header-section-number">6.1.1</span> Hunger</h4>
-<p>If a characters does not eat for a day (24 hours), they gain a Hungry
-<a href="#conditions">Condition</a> -1 on STR roll. Clear: all after
-eating a meal;</p>
+<h3 data-number="6.2" id="hunger"><span
+class="header-section-number">6.2</span> Hunger</h3>
+<p>If a characters does not eat for a day (24 hours), they gain a <a
+href="./conditions.html#hungry">Hungry Condition</a></p>
 <hr />
 <figure>
 <img src="./assets/skeletons.svg" alt="Skeletons" />
@@ -1072,17 +1252,16 @@ is better with a battle map.</p>
 Actions a Character can take in one Round.</p>
 <p>There is one free <strong>Small Action</strong> per Round:
 opening/closing a door, pushing a button, picking up one item from the
-floor, loading ammunition, Swapping an item from the <a
-href="#inventory">Belt and Pocket</a>, <a href="#backpack">Backpack</a>
-Search+Grab, Search+Reorder, Search+Swap or Place an item. Each further
+floor, loading ammunition, Accessing (take/store/swap) <a
+href="#belt-and-pockets">Belt and Pocket</a>, etc, Each further
 <strong>Small Action</strong> requires 1 <code>AP</code>.</p>
-<p>Dropping <a href="#item">items</a> from hands, and dropping
+<p>Dropping <a href="#items">items</a> from hands, and dropping
 <strong>at will</strong> <a href="#conditions">Conditions</a> from <a
 href="#backpack">Backpack</a> is an <strong>always free
 action</strong>.</p>
 <h3 data-number="8.1" id="initiative"><span
 class="header-section-number">8.1</span> Initiative</h3>
-<p>Combat starts when someone is attacks. The attacker starts with 2
+<p>Combat starts when someone attacks. The attacker starts with 2
 <code>AP</code> (after their attack is resolved). There is no initiative
 order; instead, roll a <code>DEX</code> or <code>WIL</code> <a
 href="#attribute-roll">Attribute Roll</a> for each combatant to
@@ -1094,8 +1273,8 @@ href="#attribute-roll">Attribute Roll</a>
 <li>Tier 1: 0 AP</li>
 <li>Tier 2: 1 AP</li>
 <li>Tier 3: 2 AP</li>
-<li>Critical Failure: 0 AP + Prone <a
-href="#conditions">Condition</a></li>
+<li>Critical Failure: 0 AP + <a href="./conditions.html#prone">Prone
+Condition</a></li>
 <li>Critical Success: 3 AP</li>
 </ul></li>
 <li>Not Surprised: Roll a <code>DEX</code> <a
@@ -1104,10 +1283,11 @@ href="#attribute-roll">Attribute Roll</a>
 <li>Tier 1: 1 AP</li>
 <li>Tier 2: 2 AP</li>
 <li>Tier 3: 3 AP</li>
-<li>Critical Failure: 0 AP + Prone <a
-href="#conditions">Condition</a></li>
-<li>Critical Success: 3 AP + Lucky <a
-href="#conditions">Condition</a></li>
+<li>Critical Failure: 0 AP + <a href="#conditions">Prone
+Condition</a></li>
+<li>Critical Success: 3 AP + <a
+href="./conditions.html#refreshed">Refreshed</a> or <a
+href="./conditions.html#focused">Focused</a> Condition.</li>
 </ul></li>
 </ul>
 <h3 data-number="8.2" id="rounds"><span

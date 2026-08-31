@@ -1,8 +1,8 @@
 ---
 title: "Yaol Rpg Items"
 author: "varpeti"
-toc: false
-numbersections: true
+toc: true
+numbersections: false
 secnumdepth: 6
 css: "assets/style.css"
 ---
@@ -21,6 +21,12 @@ css: "assets/style.css"
 
 - Solves poison or venom problems, or just elongates the suffering?
 - 1 slot stackable 3
+
+## Artifact
+
+- Sprits like posses them.
+- 1 slot stackable 3
+- 2 usage recharge at Rest
 
 ## Bedroll
 
@@ -350,12 +356,6 @@ css: "assets/style.css"
 - Small for smaller and large for larger game
 - 1 or 2 slot
 - 3 usage
-
-## Trinket
-
-- Sentimental or actual value? Sprits like to live inside them.
-- 1 slot stackable 3
-- 1 usage recharge at rest (if contains a spirit aka spell)
 
 ## Twine
 

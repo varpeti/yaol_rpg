@@ -23,7 +23,7 @@ Draw 5 cards, keep the lowest 2, burn the rest.
 ## II The High Priestess
 
 Summon an invulnerable white-gold Pegasuscat. Each creature next to the Pegasuscat (1 Space) has +1 for [Attribute](./index.html#attribute-roll) and [Damage](./index.html#damage-roll) rolls.
-The Pegasuscat has 3 Speed, and can be commanded to move as a [Small Action](./index.html#combat).
+The Pegasuscat has 3 Speed, and can be commanded to move as a [Small Action](./index.html#combat). Lasts for 10 minutes.
 
 ## III The Empress
 
@@ -31,20 +31,26 @@ Roll `1d4` suffer this as true damage, the closes ally gain this many `HP` (up t
 
 ## IV The Emperor
 
-Roll `1d10`. Gain a **Golden Apple**: When eaten removes 1 [Wound](./index.html#wound) and place it to the rolled slot in your [Backpack](./index.html#backpack).
-If there is an [item](./index.html#item) on that slot drop it to the floor. If there is a [condition](./index.html#conditions) on that slot remove it.
+Gain a **Golden Apple**: When eaten removes 1 [Wound](./index.html#wound)
+
+Roll `1d10` and place it to the rolled slot in your [Backpack](./index.html#backpack). If there is an [Item](./index.html#item) on that slot drop it to the floor. If there is a [Condition](./index.html#conditions) on that slot remove it.
 
 ## V The Hierophant
 
-The caster freezes in loud prayer to their god for at least 5 minutes. They are invulnerable until they finish the prayer, but needs air, and not unmovable. If the prayer interrupted take 1 [wound](./index.html#wound).
+The caster freezes in loud prayer to their god for at least 5 minutes. They are invulnerable until they finish the prayer, but needs air, and not unmovable. If the prayer interrupted take 1 [Wound](./index.html#wound).
 
 ## VI The lovers
 
-Chose 2 creature, they gain the Lovers [Condition](./index.html#conditions) Clear: 10 minutes. They cannot harm each other in any way. If they accidentally do harm, the harm automatically applies to the attacker instead of the victim.
+Chose 2 creature, they gain the [Lovers Condition](./index.html#conditions):
+
+### Lovers
+
+- They cannot harm each other in any way. If they accidentally do, the harm automatically applies to the attacker instead of the victim.
+- Clear: 10 minutes.
 
 ## VII The Chariot
 
-When the caster move, move everyone around (1 Space) as well, if they are not blocked by walls or other living beings. Size does not matter.
+The caster gains +3 Speed. When the caster move, move everyone around (1 Space) as well, if they are not blocked by walls or other living beings. Size does not matter.
 
 ## VIII Justice
 
@@ -52,7 +58,7 @@ In 8 Space around the caster, if anyone harms another creature they harm themsel
 
 ## IX The Hermit
 
-Everyone becomes invisible around the caster (3 space) until the caster moves or does any action.
+Silence falls to the 8 Space area around the caster for 10 minutes.
 
 ## X Wheel of Fortune
 
@@ -60,7 +66,7 @@ Roll on the [d666](./cairn_spells.html#d666) table. Immediately cast that spell.
 
 ## XI Strength
 
-Everyone in 8 Space around the caster gains +1 Strength for 10 minutes [Condition](./index.html#conditions) drop at will.
+Everyone in 8 Space around the caster gains 3 [Strengthened Condition](./conditions.html#strengthened)
 
 ## XII The Hanged Man
 
@@ -84,7 +90,12 @@ Make a deal with the Devil:
 
 ## XVI Temperance
 
-Gain the Hungry [Condition](./index.html#conditions), cannot eat for a day (24 hour). But receives +2 `STR`, +1 `WIL` and +1 `DEX`. If you eat you die.
+Caster Receives a [Hungry Condition](./conditions.html#hungry) and a [Holy Fasting Condition](./index.html#conditions).
+
+### Holy Fasting
+
+- Cannot eat or drink for a day. But receives +2 `STR`, +1 `WIL` and +1 `DEX`. If you eat you die.
+- Clear: 24 hours
 
 ## XVII The Stars
 
@@ -93,11 +104,16 @@ Burn all your cards and draw as many +1.
 ## XVII The Moon
 
 Every light source instantly extinguished until it becomes total darkness for the caster.
-Magic emitting light and celestial objects does not provide light for 10 minutes for anyone around the caster in 8 Space, including the caster and it's allies.
+Magic emitting light and celestial objects are blacked out only for a moment.
 
 ## XIX The Sun
 
-Gain the Sun [Condition](./index.html#conditions) Start glowing like the Sun. Blind everyone but yourself. Clear: 1 minute.
+Gain the [Sun Condition](./index.html#conditions)
+
+### Sun
+
+- Start glowing like the Sun. Blind everyone but yourself.
+- Clear: 1 minute.
 
 ## XX Judgement
 
@@ -105,4 +121,4 @@ Everyone around the caster in 8 Space who killed another creature in the last da
 
 ## XXI The World
 
-Choose any spell. Draw an extra card. You can cast the spell immediately using any card you have. This does not cost any extra [AP](./index.html#combat).
+Choose any spell existing in the World. Draw an extra card. You can cast the spell immediately using any card you have. This does not cost any extra [AP](./index.html#combat).

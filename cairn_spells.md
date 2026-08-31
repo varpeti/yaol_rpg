@@ -1,7 +1,7 @@
 ---
 title: "Cairn Spells"
 toc: false
-numbersections: true
+numbersections: false 
 secnumdepth: 6
 css: "assets/style.css"
 ---
@@ -10,8 +10,6 @@ css: "assets/style.css"
 <!-- Long Lines; Punctuations at the end of title; Inline HTML -->
 
 <script src="assets/theme-selector.js"></script>
-
-## Cairn Spells
 
 **These spells are copied from**:
 
@@ -23,14 +21,13 @@ License: [CC-BY-SA 4.0.](https://creativecommons.org/licenses/by-sa/4.0/)
 **Conversions**:
 
 - **STR** damage/lost equals to [Wounds](./index.html#taking-damage) (same amount)
-  - Creatures not played with wounds by the GM take double damage instead.
 - Any **WIL** damage becomes [Drained](./index.html#conditions) (only 1)
 - Deprived = [Drained](./index.html#conditions)
 - Any **DEX** damage becomes [Exhausted](./index.html#conditions) (only 1)
 - Attribute save = [Attribute roll](./index.html#attribute-roll)
 - book = artifact which holds the spell (spirit)
 
-### D100
+## D100
 
 |         |                       |                                                                                                                                                                                                                                                                                              |
 | ------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +50,7 @@ License: [CC-BY-SA 4.0.](https://creativecommons.org/licenses/by-sa/4.0/)
 | **17**  | **Cone of Foam**      | Dense foam sprays from your hand, coating the target. _Spongy and moist with a soapy residue._                                                                                                                                                                                               |
 | **18**  | **Control Plants**    | Nearby plants and trees obey you and gain the ability to move at a slow pace. _Leaves grow along the spine, and it smells faintly of decay._                                                                                                                                                 |
 | **19**  | **Control Weather**   | You may alter the type of weather at will, but you do not otherwise control it. _Highly resistant to fire and water damage._                                                                                                                                                                 |
-| **20**  | **Cure Wounds**       | Restore 1d4 STR per day to a creature you can touch. _Smells of vinegar and thyme. Turns red after use._                                                                                                                                                                                     |
+| **20**  | **Cure Wounds**       | Restore 1 wound for a creature you can touch. _Smells of vinegar and thyme. Turns red after use._                                                                                                                                                                                     |
 | **21**  | **Deafen**            | All nearby creatures are deafened. _Nearby instruments occasionally sound off, as if in protest._                                                                                                                                                                                            |
 | **22**  | **Detect Magic**      | You can see or hear nearby magical auras. _Becomes warm to the touch if magic is used nearby._                                                                                                                                                                                               |
 | **23**  | **Disassemble**       | Any of your body parts may be detached and reattached at will, without causing pain or damage. You can still control them. _Regenerates any torn or defaced pages._                                                                                                                          |
@@ -137,7 +134,7 @@ License: [CC-BY-SA 4.0.](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
 
-### D666
+## D666
 
 |      |                                  |                                                                                                                                                                                         |
 | ---- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

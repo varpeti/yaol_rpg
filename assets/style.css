@@ -175,6 +175,12 @@ html[data-theme="dark"] img[alt="TheLich"] {
   );
 }
 
+
+html[data-theme="dark"] img[alt="Inventory"] {
+  background: none;
+  filter: invert(100%);
+}
+
 figcaption {
   display: none;
 }
