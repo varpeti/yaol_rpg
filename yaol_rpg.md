@@ -35,7 +35,7 @@ Your character has three attribute scores; these are the measure of basic streng
 
 Characters naturally fall between -2 and +3. But with magic they can be pushed to -5 and +5.
 
-Chose a method:
+Chose a method, and stick to it:
 
 - **Standard array**: Assign each Attribute one of these: `3 1 -1`.
 - **Point buy**: Each Attribute starts with -2; Allocate 9 points however you like, but a single Attribute cannot be larger than 3.
@@ -62,10 +62,10 @@ The only "Main" stat is the **Hit Protection**:
 
 - `HP`: **Hit Protection** - this is the [damage your character can take](#taking-damage) without the risk of serious injuries.
 
-Chose a method:
+Chose a method and stick to it:
 
-- **Fix**: 5
-- **Roll**: Roll **2d8** and keep the highest.
+- **Fix**: 4
+- **Roll**: Roll `2d6` and keep the highest.
 
 <details><summary>Example</summary>
 
@@ -82,7 +82,7 @@ STR 1 DEX 2 WIL 0 HP 6/6
 There are some stats that are provided by items; the table can decide if it is worth noting these down on the sheet, or if reading them from the items is sufficient.
 
 - `Resistance`: [Resistance](#immunity-resistance-vulnerability) - this passively reduces the damage taken.
-- `Block`, `Dodge`, `Parry` and `Reckless Counter Attack`: [Basic defense action](#defense) modifier's.
+- `Block with Shield`, `Dodge`, `Parry` and `Reckless Counter Attack` bonus: [Active Defense](#active-defense) modifier's.
 
 <details><summary>Optionally</summary>
 
@@ -174,8 +174,8 @@ Drained: -1 on WIL roll. Clear: all on Rest
 Exhausted: -1 on DEX roll. Clear: all on Rest
 Hungry: -1 on STR roll. Clear: all after eating a meal
 Prone: You can only crawl, melle attacks +1 agains you, ranged attacks -1 agains you. Clear: 1 AP to stand up
-Miss Fortune's Kiss: +1d4 on the next Attribute or Damage roll. Clear: Next roll or at will
-Bless: Advantage on Attribute or Damage roll. Clear: 5 Rounds (5 minutes) or at will
+Lucky: +1d4 on the next Attribute or Damage roll. Clear: Next roll or at will
+Bless: Advantage on Attribute roll. Clear: 5 Rounds (5 minutes) or at will
 ```
 
 </details>
@@ -249,7 +249,7 @@ Plate-armor (Slashing, Bludgeoning)
 | Large  | 2    | 2           | -           |
 | Heavy  | 3    | 3           | -           |
 
-[Blocking](#defense) with a shield adds the **Block Bonus** to the [Attribute Roll](#attribute-roll).
+[Blocking](#active-defense) with a shield adds the **Block Bonus** to the [Attribute Roll](#attribute-roll).
 
 ### Character Progression
 
@@ -277,9 +277,9 @@ The GM should ensure that the outcomes of a **Attribute Roll** are obvious to th
 
 Rolling an **Attribute Roll** is `2d10 + Attribute`
 
-- Tier 1: ` 2-10`: Failure (No)
+- Tier 1: ` <=10`: Failure (No)
 - Tier 2: `11-15`: Partial Success/Failure (Yes but, No but)
-- Tier 3: `16-20`: Success (Yes)
+- Tier 3: `16<= `: Success (Yes)
 - Critical Failure: Natural 2 or 3 (No and)
 - Critical Success: Natural 19 or 20 (Yes and)
 
@@ -314,7 +314,7 @@ Roll an **Attribute Roll** with the Attribute used for the attack.
 - Critical Failure: Attacker receives the full damage, or something similarly terrible
 - Critical Success: Double Damage or Injury
 
-Each [weapon](#offensive-items) that can be used to deal damage has a **Damage dice** to roll damage with. Roll the dice: that is the damage.
+Each [Weapon](#offensive-items) that can be used to deal damage has a **Damage dice** to roll damage with. Roll the dice: that is the damage.
 
 Roll [Usage Dice](#item) as well. The **usage** does not influence the result.
 
@@ -324,7 +324,7 @@ All can be rolled at once if the player has enough distinguishable dice.
 
 Stacking flat plus or minus modifiers
 
-### Information
+## Information
 
 Information is freely given, never tied to rolling dice. The GM should describe everything clearly; the Players should ask frequently, and the GM should answer honestly. It is better to give the Players more choices than to dwell on whether their characters should know something or not.
 
@@ -334,7 +334,7 @@ Dangers should be meaningful; the GM should never shy away from punishing reckle
 
 On the other side, the GM should always reward cleverness. If the Players find a way to bypass difficult traps or defeat hard bosses with ease, let them have it.
 
-### Taking Damage
+## Taking Damage
 
 Characters take damage to their [Hit Protection](#stats) `HP` until it is depleted, unless stated otherwise (wound/injuries). All excess damage, and all damage after `HP` is depleted, add +1 [wound](#wound).
 
@@ -342,50 +342,56 @@ Characters take damage to their [Hit Protection](#stats) `HP` until it is deplet
   - The character has no more endurance/will/luck to avoid wounds.
   - Most living things will think twice about whether they want to continue the fight at this point.
 
-#### Wound
+### Wound
 
 The **wound** is a [Condition](#conditions) which can only be cleared during [Resting](#resting).
 
-#### Injuries
+### Injuries
 
 - In extreme cases, a character can suffer injuries like dismemberment.
 - This usually permanent, gory and requires immediate attention. Take +1 [wound](#wound) every minute.
 - Modify the Character Sheet. (Eg: Lost leg: slower movement speed; Lost arm: remove arm inventory slot, etc)
 - Critical Success on an [Damage Roll](#damage-roll) could be the source of injuries.
 
-#### Death
+### Death
 
 A character will die if their [Backpack](#backpack) is full, cannot drop anything and receive another [Condition](#conditions)
 
-#### Defense
+### Defense
 
-**Passive Defense**: Provided by items such as [armor](#armor) or [Conditions](#conditions).
+#### Passive Defense
 
-**Active defense**:
+Provided by items such as [Armor](#armor) or [Conditions](#conditions).
 
-Cost: Roll [Usage Dice](#usage) for items used for blocking. Or 1 `AP` if no item used.
+#### Active Defense
 
-- **Block**: A `STR` [Attribute Roll](#attribute-roll) with [Block Bonus](#shield).
-  - Tier 1: Full damage
+- **Block with Shield**: A `STR` [Attribute Roll](#attribute-roll) with [Block Bonus](#shield).
+  - Cost: Roll [Usage Dice](#usage) for the shield
+  - Tier 1: Full damage + 2
   - Tier 2: Half damage (rounded down)
   - Tier 3: 0 damage
   - Critical Failure: Double damage
   - Critical Success: Push the enemy so hard they become [prone](#conditions)
 - **Dodge**: A `DEX` [Attribute Roll](#attribute-roll).
+  - Cost: 1 `AP`
   - Tier 1: Full damage
   - Tier 2: Half damage (rounded down) + can move 1 space
   - Tier 3: 0 damage + can move 1 space
   - Critical Failure: Double damage
-  - Critical Success: can move **Speed** space
+  - Critical Success: 0 damage + Can move **Speed** space
 - **Parry**: A [Damage roll](#damage-roll) with a weapon plus [Parry Bonus](#shield).
-  - If higher: subtract the attacker's damage and apply the remainder to the attacker.
-  - If lower: full damage.
+  - If higher: Subtract the attacker's damage and apply the remainder to the attacker
+  - If lower: Full damage + 2
 - **Reckless Counter Attack**: A [Damage roll](#damage-roll) with a weapon.
-  - Apply damage to both. Ignore both Character's [Resistance](#immunity-resistance-vulnerability) including [Armor](#armor).
+  - Apply damage to both. Ignore both Character's [Resistance](#immunity-resistance-vulnerability) including [Armor](#armor)
+- **Counter Spell**: Burn two [Tarot Cards](#magic) the lowest must be higher than the card used for casting the spell.
+  - Countering a spell is only possible before the spell resolved (The `2d10` rolling did not happened yet)
+  - Cannot counter spells with automatic Success.
+  - It is possible to close by characters provide 1-1 **Tarot Card** to counter a spell.
 
-Players can come up with any other action; the GM should consider them and honor creativity and role-play.
+Players can come up with any other defensive action; the GM should consider them and honor creativity and role-play.
 
-##### Immunity, Resistance, Vulnerability
+### Immunity, Resistance, Vulnerability
 
 Some Items provide and some creatures can have Immunity, Resistance, Vulnerability to different types of damage.
 
@@ -396,7 +402,7 @@ Some Items provide and some creatures can have Immunity, Resistance, Vulnerabili
   - The character receives damage for each **usage** removed.
 - **x Vulnerability**: Vulnerability to certain damage type. +x Extra damage is received from this damage type.
 
-#### Other source of damage
+### Other source of damage
 
 - Falling: 3 meter or more: 1d6 blunt damage for every 3 meters
 - Suffocation: Can hold breath for `STR` minutes (minimum 1) after that take 1d10 wounds every minute
@@ -408,27 +414,42 @@ Some Items provide and some creatures can have Immunity, Resistance, Vulnerabili
 ## Magic
 
 Spells are living spirits, travelers between worlds. To stay, they possess physical objects.
-To cast a spell, your character must have the possessed item in their hand, and say aloud an incantation to ask the spirit for its power and fulfill other prerequisites.
+To cast a spell, your character must have the possessed item in their hand, and say aloud an incantation to ask the spirit for its power and/or fulfill other prerequisites.
+
+- At Rest draw `(WIL or 0) + number of spells you have` cards from the shared tarot deck (78 cards), this is your 'Mana pool'.
+- When the party rests, all cards are returned to the deck and it is reshuffled. If the deck runs out of cards, the burned ones can be reshuffled.
 
 ### Spells
 
-- [Cairn Spells](./cairn-spells.md#cairn-spells)
-- **DnD Spells**: Characters can cast up to their **WIS** Level any spell (if they have the spirit). Cantrip = Level 0
-- **Adventure spells**: The world is magical, nothing can prevent it to brake rules or create never-seen-before spells with unique mechanics.
+- [Cairn Spells](./cairn_spells.html)
+- **DnD Spells**: Characters can cast up to their **WIS** Level any spell (if they have the spell/spirit/artifact). Cantrip = Level 0
+- **Adventure spells**: Magic is Magical (duh!), nothing can prevent it to brake rules or create never-seen-before spells with unique mechanics.
 
-Each spell by default have [2 usage](#usage) and **Restored** by [Resting](#resting).
+**Defaults if not stated/implied otherwise**:
 
-### Casting a Spell
+- Range: 8 Space
+- Time: 10 minutes
 
-Roll a `WIS` [Attribute Roll](#attribute-roll) and [Usage Dice](#usage):
+### Spell Casting
 
-- Tier 1: Failure
-- Tier 2: Decide: Failure or Success for -1 [usage](#usage) (if possible)
-- Tier 3: Success
-- Critical Failure: Cast a Random spell with same target(s); -1 permanent [max usage](#usage) for this Spirit item. If the max usage is 0, the item is destroyed.
-- Critical Success: Success + 1 permanent [max usage](#usage) for this Spirit item.
+- Choose a card then burn it. This is the modifier.
+  - 2-10: numeric value
+  - Jack: 11
+  - Knight: 12
+  - Queen: 13
+  - King: 14
+  - Ace: 15
+  - [Major Arcana](./major_arcana.html): Auto Success (no need to roll) + Special Effects
+- Roll `2d10`
+- Result:
+  - Tier 1: ` <=10`: Failure
+  - Tier 2: `11-15`: Choose:
+    - Failure and draw a new card
+    - Success
+  - Tier 3: `16-20`: Success
+  - Tier 4: `20<= `: Success and draw a new card
 
-Running out of [usage](#usage) does not prevent the cast on Tier 3.
+The GM can draw from the deck each time an NPC casts a spell instead of drawing all at once and choosing from the hand.
 
 ---
 
@@ -466,22 +487,24 @@ Everyone needs rest, brave adventurers are not exempt from this rule.
 **Requires:**
 
 - Safe space
-- Food (and drink)
-- 6 hours total with 4 hour uninterrupted sleep
+- Food
+- Minimum 6 hours total with 4 hours uninterrupted sleep
 
 **Provides by default at the end:**
 
 - Restore all [HP](#stats)
 - Restore [usage](#usage) for items which are **Rest** restored.
+- Drop all [Tarot Cards](#magic) and draw `(WIL or 0) + number of spells you have`
 - Clear [Conditions](#conditions) which are tied to **Rest**. (Like [wounds](#wound))
 
 **Extra light activities, can be done while keeping watch:**
 
 - Repair items (if possible in the situation) -> Restore [usage](#usage)
 - Tend another Character's [wound](#wound) -> Remove +1 wound or +2 if first aid kit or other kind of applicable healing is used.
+- Cooking over fire: +1 wound removal or +1 Advantage for a roll (inspiration)
 - Craft items (if possible in the situation)
-- Cooking over fire: +1 wound removal or Advantage for a roll.
-- Prepare for a described task, mentally or physically -> Possible Advantage for that task until the next Rest.
+- Experimenting with or studying an unknown magic artifact
+- Prepare mentally or physically for a described specific task you want to achieve right after the rest -> Possible Advantage(s) for that task.
 - Other light activities described or faded in the black.
 
 **Encounters during Rest:**
@@ -489,6 +512,10 @@ Everyone needs rest, brave adventurers are not exempt from this rule.
 If the Party tries to Rest in an unsafe place, there is a possibility for an encounter. They should prepare for it, keep watch in rotation, plant traps or a warning system, or not and get a surprise.
 
 Interrupted Rest does not give any benefits. But it is possible to continue an interrupted Rest.
+
+#### Hunger
+
+If a characters does not eat for a day (24 hours), they gain a Hungry [Condition](#conditions) -1 on STR roll. Clear: all after eating a meal;
 
 ---
 
@@ -520,10 +547,14 @@ Combat starts when someone is attacks. The attacker starts with 2 `AP` (after th
   - Tier 1: 0 AP
   - Tier 2: 1 AP
   - Tier 3: 2 AP
+  - Critical Failure: 0 AP + Prone [Condition](#conditions)
+  - Critical Success: 3 AP
 - Not Surprised: Roll a `DEX` [Attribute Roll](#attribute-roll)
   - Tier 1: 1 AP
   - Tier 2: 2 AP
   - Tier 3: 3 AP
+  - Critical Failure: 0 AP + Prone [Condition](#conditions)
+  - Critical Success: 3 AP + Lucky [Condition](#conditions)
 
 ### Rounds
 
@@ -621,7 +652,7 @@ Players should describe or role-play their action in enough detail to leave no d
 
 A Character repeating the same Action is penalized with +1 disadvantage, so switch weapons, cast other spells, etc.
 
-If a Combatant is attacked and aware of the attack, they can defend themselves. They can use the basic [Defence actions](#defense), or come up with an idea based on the situation and their abilities.
+If a Combatant is attacked and aware of the attack, they can defend themselves. They can use the [Defence actions](#active-defense), or come up with an idea based on the situation and their abilities.
 
 <details><summary>Example</summary>
 
@@ -646,14 +677,12 @@ Combat ends when there is no willing and capable opposition remaining. This can 
 
 ## Resources and Shoutout
 
-Thanks to:
+Special thanks to:
 
-- [Cairn](https://cairnrpg.com/) for the inspiration of the Character system
+- [Cairn](https://cairnrpg.com/) for the Spells
 - [Mausritter](https://mausritter.com/) for the inspiration of the Inventory, Item, and Usage marks system
-- [GLOG](https://goblinpunch.blogspot.com/2016/05/the-glog.html) for the inspiration of the Magic system
-- [DC20](https://thedungeoncoach.com/pages/dc20) for the inspiration of the Action Point system
-- [Maze Rats](https://questingblog.com/maze-rats/) for the amazing work. Because of you, GMs can generate almost anything
-- Countless OSR RPGs and Adventures for inspiration and content
+- [Maze Rats](https://questingblog.com/maze-rats/) for inspiration
+- Countless other RPGs and Adventures for inspiration
 
 Resources:
 

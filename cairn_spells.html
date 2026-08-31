@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Cairn Spells</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Cairn Spells</h1>
+</header>
+<div class="nav-and-cover">
+</div>
+<!-- markdownlint-disable MD013 MD026 MD033 -->
+<!-- Long Lines; Punctuations at the end of title; Inline HTML -->
+<script src="assets/theme-selector.js"></script>
+<h2 id="cairn-spells">Cairn Spells</h2>
+<p><strong>These spells are copied from</strong>:</p>
+<ul>
+<li>Website: <a
+href="https://cairnrpg.com/second-edition/wardens-guide/spellbooks/">Cairn
+Spells</a> and <a
+href="https://cairnrpg.com/resources/more-spellbooks/">Cairn More
+Spells</a></li>
+<li>Source: <a
+href="https://github.com/yochaigal/cairn/blob/main/second-edition/wardens-guide/spellbooks.md">Cairn
+Spells</a> and <a
+href="https://github.com/yochaigal/cairn/blob/main/resources/more-spellbooks.md">Cairn
+More Spells</a></li>
+</ul>
+<p>License: <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA
+4.0.</a></p>
+<p><strong>Conversions</strong>:</p>
+<ul>
+<li><strong>STR</strong> damage/lost equals to <a
+href="./index.html#taking-damage">Wounds</a> (same amount)
+<ul>
+<li>Creatures not played with wounds by the GM take double damage
+instead.</li>
+</ul></li>
+<li>Any <strong>WIL</strong> damage becomes <a
+href="./index.html#conditions">Drained</a> (only 1)</li>
+<li>Deprived = <a href="./index.html#conditions">Drained</a></li>
+<li>Any <strong>DEX</strong> damage becomes <a
+href="./index.html#conditions">Exhausted</a> (only 1)</li>
+<li>Attribute save = <a href="./index.html#attribute-roll">Attribute
+roll</a></li>
+<li>book = artifact which holds the spell (spirit)</li>
+</ul>
+<h3 id="d100">D100</h3>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 6%" />
+<col style="width: 91%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Adhere</strong></td>
+<td>An object is covered in extremely sticky slime. <em>Adjacent objects
+stick to the book with great force.</em></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>Anchor</strong></td>
+<td>A strong wire sprouts from your arms, affixing itself to two points
+within 50ft on each side. <em>If a rope is pulled through the iron loop
+on its spine, it becomes as heavy as an elephant.</em></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Animate Object</strong></td>
+<td>An object obeys your commands as best it can. <em>Moldable like
+clay. Childish laughter sprouts from its pages.</em></td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>Anthropomorphize</strong></td>
+<td>An animal either gains human intelligence or human appearance for
+one day. <em>Whimpers, purrs and growls depending on its
+treatment.</em></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>Arcane Eye</strong></td>
+<td>You can see through a magical floating eyeball that flies around at
+your command. <em>Needs a spritz of water to open.</em></td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>Astral Prison</strong></td>
+<td>An object is frozen in time and space within an invulnerable crystal
+shell. <em>Silent, abstract, faces scream in anguish within.</em></td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>Attract</strong></td>
+<td>Two objects are strongly magnetically attracted to each other if
+they come within 10 feet. <em>Nearby compasses spin uselessly.</em></td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>Auditory Illusion</strong></td>
+<td>You create illusory sounds that seem to come from a direction of
+your choice. <em>Produces random and occasionally inopportune sounds
+throughout the day</em>.</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>Babble</strong></td>
+<td>A creature must loudly and clearly repeat everything you think. It
+is otherwise mute. <em>When the text is read aloud, the words of others
+become unintelligible.</em></td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td><strong>Bait Flower</strong></td>
+<td>A plant sprouts from the ground that emanates the smell of decaying
+flesh. <em>Attracts flies.</em></td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><strong>Beast Form</strong></td>
+<td>You and your possessions transform into a mundane animal.
+<em>Covered in thick fur, its edges lined with small teeth.</em></td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td><strong>Befuddle</strong></td>
+<td>A creature of your choice is unable to form new short-term memories
+for the duration of the spell. <em>Its contents shift and change each
+time it is opened.</em></td>
+</tr>
+<tr>
+<td><strong>13</strong></td>
+<td><strong>Body Swap</strong></td>
+<td>You switch bodies with a creature you touch. If one body dies, the
+other dies as well. <em>The front cover shows an image of the last
+creature to read it.</em></td>
+</tr>
+<tr>
+<td><strong>14</strong></td>
+<td><strong>Charm</strong></td>
+<td>A creature you can see treats you as a friend. <em>Warm to the
+touch, and smells of roses.</em></td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td><strong>Command</strong></td>
+<td>A target obeys a single three-word command that does not cause it
+harm. <em>Grows thinner over time, until finally disappearing
+forever.</em></td>
+</tr>
+<tr>
+<td><strong>16</strong></td>
+<td><strong>Comprehend</strong></td>
+<td>You become fluent in all languages for a short while. <em>Drips
+letters, staining whatever it touches.</em></td>
+</tr>
+<tr>
+<td><strong>17</strong></td>
+<td><strong>Cone of Foam</strong></td>
+<td>Dense foam sprays from your hand, coating the target. <em>Spongy and
+moist with a soapy residue.</em></td>
+</tr>
+<tr>
+<td><strong>18</strong></td>
+<td><strong>Control Plants</strong></td>
+<td>Nearby plants and trees obey you and gain the ability to move at a
+slow pace. <em>Leaves grow along the spine, and it smells faintly of
+decay.</em></td>
+</tr>
+<tr>
+<td><strong>19</strong></td>
+<td><strong>Control Weather</strong></td>
+<td>You may alter the type of weather at will, but you do not otherwise
+control it. <em>Highly resistant to fire and water damage.</em></td>
+</tr>
+<tr>
+<td><strong>20</strong></td>
+<td><strong>Cure Wounds</strong></td>
+<td>Restore 1d4 STR per day to a creature you can touch. <em>Smells of
+vinegar and thyme. Turns red after use.</em></td>
+</tr>
+<tr>
+<td><strong>21</strong></td>
+<td><strong>Deafen</strong></td>
+<td>All nearby creatures are deafened. <em>Nearby instruments
+occasionally sound off, as if in protest.</em></td>
+</tr>
+<tr>
+<td><strong>22</strong></td>
+<td><strong>Detect Magic</strong></td>
+<td>You can see or hear nearby magical auras. <em>Becomes warm to the
+touch if magic is used nearby.</em></td>
+</tr>
+<tr>
+<td><strong>23</strong></td>
+<td><strong>Disassemble</strong></td>
+<td>Any of your body parts may be detached and reattached at will,
+without causing pain or damage. You can still control them.
+<em>Regenerates any torn or defaced pages.</em></td>
+</tr>
+<tr>
+<td><strong>24</strong></td>
+<td><strong>Disguise</strong></td>
+<td>You may alter the appearance of one character at will as long as
+they remain humanoid. Attempts to duplicate other characters will seem
+uncanny. <em>The surface makes a perfect mirror.</em></td>
+</tr>
+<tr>
+<td><strong>25</strong></td>
+<td><strong>Displace</strong></td>
+<td>An object appears to be up to 15ft from its actual position.
+<em>Bits of string, clothing, and leaves are sometimes stuffed
+inside.</em></td>
+</tr>
+<tr>
+<td><strong>26</strong></td>
+<td><strong>Earthquake</strong></td>
+<td>The ground begins shaking violently. Structures may be damaged or
+collapse. <em>Sand dribbles from the corners, seemingly without
+stop.</em></td>
+</tr>
+<tr>
+<td><strong>27</strong></td>
+<td><strong>Elasticity</strong></td>
+<td>Your body can stretch up to 10ft. <em>Smells of taffy, and is very
+flexible.</em></td>
+</tr>
+<tr>
+<td><strong>28</strong></td>
+<td><strong>Elemental Wall</strong></td>
+<td>A straight wall of ice or fire 50ft long and 10ft high rises from
+the ground. <em>Skin and warmer substances stick to it after
+use.</em></td>
+</tr>
+<tr>
+<td><strong>29</strong></td>
+<td><strong>Filch</strong></td>
+<td>A visible item teleports to your hands. <em>An ally’s prized
+possession may occasionally be found tucked between its
+covers</em>.</td>
+</tr>
+<tr>
+<td><strong>30</strong></td>
+<td><strong>Fish Lung</strong></td>
+<td>A target can breathe underwater until they surface again. <em>Smells
+strongly of the sea. Attracts wild animals.</em></td>
+</tr>
+<tr>
+<td><strong>31</strong></td>
+<td><strong>Flare</strong></td>
+<td>A bright ball of energy fires a trail of light into the sky,
+revealing your location to friend or foe. <em>Faintly glows in complete
+darkness</em>.</td>
+</tr>
+<tr>
+<td><strong>32</strong></td>
+<td><strong>Fog Cloud</strong></td>
+<td>A dense fog spreads out from you. <em>When submersed in water, the
+book eventually turns all the liquid to vapor.</em></td>
+</tr>
+<tr>
+<td><strong>33</strong></td>
+<td><strong>Frenzy</strong></td>
+<td>A nearby creature erupts in a frenzy of violence. <em>Rough,
+sandpaper cover that destroys any book it touches.</em></td>
+</tr>
+<tr>
+<td><strong>34</strong></td>
+<td><strong>Gate</strong></td>
+<td>A portal to a random plane opens. <em>A large hole is carved into
+the center, ending in a void. Items dropped within are never seen
+again</em>.</td>
+</tr>
+<tr>
+<td><strong>35</strong></td>
+<td><strong>Gravity Shift</strong></td>
+<td>You can change the direction of gravity, but only for yourself.
+<em>Attaches itself to the largest object nearby.</em></td>
+</tr>
+<tr>
+<td><strong>36</strong></td>
+<td><strong>Greed</strong></td>
+<td>A creature develops the overwhelming urge to possess a visible item
+of your choice. <em>The cover changes depending on the owner, subtly
+hinting at their deepest desires.</em></td>
+</tr>
+<tr>
+<td><strong>37</strong></td>
+<td><strong>Haste</strong></td>
+<td>Your movement speed is tripled. <em>Pages flip wildly while open.
+Can cause paper cuts.</em></td>
+</tr>
+<tr>
+<td><strong>38</strong></td>
+<td><strong>Hatred</strong></td>
+<td>A creature develops a deep hatred of another creature or group and
+wishes to destroy them. <em>Long term exposure to the book can cause
+suspicion, paranoia and distrust of others.</em></td>
+</tr>
+<tr>
+<td><strong>39</strong></td>
+<td><strong>Hear Whispers</strong></td>
+<td>You can hear faint sounds clearly. <em>The reader’s voice is
+amplified for a short period of time afterwards.</em></td>
+</tr>
+<tr>
+<td><strong>40</strong></td>
+<td><strong>Hover</strong></td>
+<td>An object hovers, frictionless, 2ft above the ground. It can hold up
+to one humanoid. <em>Floats if dropped.</em></td>
+</tr>
+<tr>
+<td><strong>41</strong></td>
+<td><strong>Hypnotize</strong></td>
+<td>A creature enters a trance and will truthfully answer one yes or no
+question you ask it. <em>Eye-catching, swirling spirals don its
+covers.</em></td>
+</tr>
+<tr>
+<td><strong>42</strong></td>
+<td><strong>Icy Touch</strong></td>
+<td>A thick ice layer spreads across a touched surface, up to 10ft in
+radius. <em>Gloves required. Nonflammable</em>.</td>
+</tr>
+<tr>
+<td><strong>43</strong></td>
+<td><strong>Identify Owner</strong></td>
+<td>Letters appear over the object you touch, spelling out the name of
+the object’s owners, if there are any. <em>The book’s interior lists the
+name of its previous owner.</em></td>
+</tr>
+<tr>
+<td><strong>44</strong></td>
+<td><strong>Illuminate</strong></td>
+<td>A floating light moves as you command. <em>When held in light, the
+pages become a prism of vibrant rainbows.</em></td>
+</tr>
+<tr>
+<td><strong>45</strong></td>
+<td><strong>Invisible Tether</strong></td>
+<td>Two objects within 10ft of each other cannot be moved more than 10ft
+apart. <em>Its pages are not attached by glue or thread, yet stay
+together nonetheless.</em></td>
+</tr>
+<tr>
+<td><strong>46</strong></td>
+<td><strong>Knock</strong></td>
+<td>A nearby mundane or magical lock unlocks loudly. <em>Locked. A new
+owner “produces” the key after their next meal.</em></td>
+</tr>
+<tr>
+<td><strong>47</strong></td>
+<td><strong>Leap</strong></td>
+<td>You jump up to 10ft high, once. <em>When thrown, it just keeps
+going.</em></td>
+</tr>
+<tr>
+<td><strong>48</strong></td>
+<td><strong>Liquid Air</strong></td>
+<td>The air around you becomes swimmable. <em>Floats of its own
+volition, bouncing off of whatever it touches.</em></td>
+</tr>
+<tr>
+<td><strong>49</strong></td>
+<td><strong>Magic Dampener</strong></td>
+<td>All nearby magical effects have their effectiveness halved.
+<em>Relics within 100ft of the spellbook cannot be recharged.</em></td>
+</tr>
+<tr>
+<td><strong>50</strong></td>
+<td><strong>Manse</strong></td>
+<td>A sturdy, furnished cottage appears for hours. You can permit and
+forbid entry to it at will. <em>If left inside, both the book and the
+cottage vanish forever.</em></td>
+</tr>
+<tr>
+<td><strong>51</strong></td>
+<td><strong>Marble Craze</strong></td>
+<td>Your pockets are full of marbles and will refill every 30 seconds.
+<em>When jostled, makes a playful rattling sound.</em></td>
+</tr>
+<tr>
+<td><strong>52</strong></td>
+<td><strong>Masquerade</strong></td>
+<td>A character’s appearance and voice becomes identical to those of a
+character you touch. <em>Extended use causes the owner to develop
+unconscious yet noticeable tics.</em></td>
+</tr>
+<tr>
+<td><strong>53</strong></td>
+<td><strong>Miniaturize</strong></td>
+<td>A creature you touch is shrunk down to the size of a mouse. <em>The
+text is ludicrously, comically large.</em></td>
+</tr>
+<tr>
+<td><strong>54</strong></td>
+<td><strong>Mirror Image</strong></td>
+<td>An illusory duplicate of yourself appears and is under your control.
+<em>Over time, the owner begins to question who is the original, and who
+is the duplicate.</em></td>
+</tr>
+<tr>
+<td><strong>55</strong></td>
+<td><strong>Mirrorwalk</strong></td>
+<td>A mirror becomes a gateway to another mirror that you looked into
+today. <em>Will not open unless the owner politely knocks on the
+cover.</em></td>
+</tr>
+<tr>
+<td><strong>56</strong></td>
+<td><strong>Multiarm</strong></td>
+<td>You temporarily gain an extra arm. <em>After use, the caster is
+wracked with phantom limb syndrome for a day.</em></td>
+</tr>
+<tr>
+<td><strong>57</strong></td>
+<td><strong>Night Sphere</strong></td>
+<td>A 50ft-wide sphere of darkness displaying the night sky appears
+before you. <em>Displays a prominent constellation on its
+cover</em>.</td>
+</tr>
+<tr>
+<td><strong>58</strong></td>
+<td><strong>Objectify</strong></td>
+<td>You become any inanimate object between the size of a grand piano
+and an apple. <em>The owner experiences intense pareidolia for days
+after use.</em></td>
+</tr>
+<tr>
+<td><strong>59</strong></td>
+<td><strong>Ooze Form</strong></td>
+<td>You become a living jelly. <em>Slowly drips an acid that eventually
+eats away anything it touches.</em></td>
+</tr>
+<tr>
+<td><strong>60</strong></td>
+<td><strong>Pacify</strong></td>
+<td>A creature near you has an aversion to violence. <em>Smells of
+jasmine and incense. Attracts children.</em></td>
+</tr>
+<tr>
+<td><strong>61</strong></td>
+<td><strong>Passage</strong></td>
+<td>Creates a temporary path through wood, stone or brick. <em>An object
+dropped on top of the book inevitably falls through the other
+side.</em></td>
+</tr>
+<tr>
+<td><strong>62</strong></td>
+<td><strong>Phobia</strong></td>
+<td>A nearby creature becomes terrified of an object of your choice.
+<em>Over time, haunting, abstract art begins to fill its
+pages.</em></td>
+</tr>
+<tr>
+<td><strong>63</strong></td>
+<td><strong>Pit</strong></td>
+<td>A pit 10ft wide and 10ft deep opens in the ground. <em>A standard
+piton can be safely stored in its spine</em>.</td>
+</tr>
+<tr>
+<td><strong>64</strong></td>
+<td><strong>Primal Surge</strong></td>
+<td>A creature rapidly evolves into a future version of its species.
+<em>The owner is haunted by strange visions of their own
+ancestors.</em></td>
+</tr>
+<tr>
+<td><strong>65</strong></td>
+<td><strong>Push/Pull</strong></td>
+<td>An object of any size is pulled directly towards you or pushed
+directly away from you with the strength of one man. <em>Any force
+against the book is comically amplified.</em></td>
+</tr>
+<tr>
+<td><strong>66</strong></td>
+<td><strong>Raise Dead</strong></td>
+<td>A skeleton rises from the ground to serve you. They are incredibly
+stupid and can only obey simple orders. <em>The owner becomes more and
+more fascinated with bones after each use.</em></td>
+</tr>
+<tr>
+<td><strong>67</strong></td>
+<td><strong>Raise Spirit</strong></td>
+<td>The spirit of a nearby corpse manifests and will answer 1 question.
+<em>The answers (but not their questions) are forever inscribed in its
+pages.</em></td>
+</tr>
+<tr>
+<td><strong>68</strong></td>
+<td><strong>Read Mind</strong></td>
+<td>You can hear the surface thoughts of nearby creatures. <em>Long-term
+possession can cause the reader to mistake the thoughts of others as
+their own.</em></td>
+</tr>
+<tr>
+<td><strong>69</strong></td>
+<td><strong>Repel</strong></td>
+<td>Two objects are strongly magnetically repelled from each other
+within 10 feet. <em>Closed by two powerful straps that spring open at
+inopportune times.</em></td>
+</tr>
+<tr>
+<td><strong>70</strong></td>
+<td><strong>Scry</strong></td>
+<td>You can see through the eyes of a creature you touched earlier
+today. <em>The owner’s eyes turn milky-white for an hour after
+use.</em></td>
+</tr>
+<tr>
+<td><strong>71</strong></td>
+<td><strong>Sculpt Elements</strong></td>
+<td>Inanimate material behaves like clay in your hands. <em>Slowly
+decays on contact with wood or cloth. Bury in dirt or submerge in water
+to refresh.</em></td>
+</tr>
+<tr>
+<td><strong>72</strong></td>
+<td><strong>Sense</strong></td>
+<td>Choose one kind of object (key, gold, arrow, jug, etc). You can
+sense the nearest example. <em>The book’s previous owner is always aware
+of the book’s current location.</em></td>
+</tr>
+<tr>
+<td><strong>73</strong></td>
+<td><strong>Shield</strong></td>
+<td>A creature you touch is protected from mundane attacks for one
+minute. <em>Bound in rusty ring-mail and is quite heavy. If held,
+provides +1 Armor.</em></td>
+</tr>
+<tr>
+<td><strong>74</strong></td>
+<td><strong>Shroud</strong></td>
+<td>A creature you touch is invisible until they move. <em>Invisible to
+any but the book’s current owner.</em></td>
+</tr>
+<tr>
+<td><strong>75</strong></td>
+<td><strong>Shuffle</strong></td>
+<td>Two creatures you can see instantly switch places. <em>If stolen but
+not yet read, it reappears wherever its owner last left it.</em></td>
+</tr>
+<tr>
+<td><strong>76</strong></td>
+<td><strong>Skillful Repair</strong></td>
+<td>You make minor repairs to a nonliving object. <em>Sewn from the
+vellum of one hundred books, no two pages are alike.</em></td>
+</tr>
+<tr>
+<td><strong>77</strong></td>
+<td><strong>Sleep</strong></td>
+<td>A creature you can see falls into a light sleep. <em>Soft as a
+pillow, but yields only fitful sleep.</em></td>
+</tr>
+<tr>
+<td><strong>78</strong></td>
+<td><strong>Slick</strong></td>
+<td>Every surface in a 30ft radius becomes extremely slippery.
+<em>Gloves are required for handling, lest the book is dropped in a most
+comical fashion.</em></td>
+</tr>
+<tr>
+<td><strong>79</strong></td>
+<td><strong>Smoke Form</strong></td>
+<td>Your body becomes a living smoke that you can control. <em>Smells of
+campfire. The pages cannot be burnt, but are very sensitive to
+moisture.</em></td>
+</tr>
+<tr>
+<td><strong>80</strong></td>
+<td><strong>Sniff</strong></td>
+<td>You can smell even the faintest traces of scents. <em>Expresses a
+strong odor detectable only by its owner.</em></td>
+</tr>
+<tr>
+<td><strong>81</strong></td>
+<td><strong>Snuff</strong></td>
+<td>The source of any mundane light you can see is instantly snuffed
+out. <em>If left in one place for long periods, nearby light sources
+eventually dim, then finally go out.</em></td>
+</tr>
+<tr>
+<td><strong>82</strong></td>
+<td><strong>Sort</strong></td>
+<td>Inanimate items sort themselves according to categories you set.
+<em>Rights itself when dropped or thrown.</em></td>
+</tr>
+<tr>
+<td><strong>83</strong></td>
+<td><strong>Spellsaw</strong></td>
+<td>A whirling blade flies from your chest, clearing any plant material
+in its way. It is otherwise harmless. <em>Wrapped in stained leather, it
+should be oiled at least once a month</em>.</td>
+</tr>
+<tr>
+<td><strong>84</strong></td>
+<td><strong>Spider Climb</strong></td>
+<td>You can climb surfaces like a spider. <em>New cobwebs must be pushed
+aside prior to each use. They are hard to remove.</em></td>
+</tr>
+<tr>
+<td><strong>85</strong></td>
+<td><strong>Swarm</strong></td>
+<td>You become a swarm of crows, rats, or piranhas. You can only be
+harmed by <em>blast</em> attacks. <em>Easily broken into a dozen
+distinct parts that slowly move towards one another over time.</em></td>
+</tr>
+<tr>
+<td><strong>86</strong></td>
+<td><strong>Target Lure</strong></td>
+<td>An object you touch becomes the target of any nearby spell.
+<em>Attracts all manner of magical creatures, spell leaks, and
+scrying.</em></td>
+</tr>
+<tr>
+<td><strong>87</strong></td>
+<td><strong>Telekinesis</strong></td>
+<td>You may mentally move 1 item under 60lbs. <em>The owner can summon
+the book through mental command alone (WIL save or become deprived
+afterwards).</em></td>
+</tr>
+<tr>
+<td><strong>88</strong></td>
+<td><strong>Telepathy</strong></td>
+<td>Two creatures can hear each other’s thoughts, no matter how far
+apart. <em>The holder can hear (but not respond) to the thoughts of
+whoever last possessed it, and vice versa.</em></td>
+</tr>
+<tr>
+<td><strong>89</strong></td>
+<td><strong>Teleport</strong></td>
+<td>An object or person you can see is transported from one place to
+another in a 50ft radius. <em>Can be destroyed to create a portal to
+another dimension.</em></td>
+</tr>
+<tr>
+<td><strong>90</strong></td>
+<td><strong>Thicket</strong></td>
+<td>A thicket of trees and dense brush up to 50ft wide suddenly sprouts
+up. <em>Wrapped in vines that must be destroyed again with each
+use.</em></td>
+</tr>
+<tr>
+<td><strong>91</strong></td>
+<td><strong>Time Control</strong></td>
+<td>Time in a 50ft bubble slows down or increases by 10% for 30 seconds.
+<em>Alternates its appearance as either impossibly old or freshly
+written.</em></td>
+</tr>
+<tr>
+<td><strong>92</strong></td>
+<td><strong>True Sight</strong></td>
+<td>You see through all nearby illusions. <em>Cannot be concealed by
+magic, and sticks out like a sore thumb.</em></td>
+</tr>
+<tr>
+<td><strong>93</strong></td>
+<td><strong>Upwell</strong></td>
+<td>A spring of seawater appears. <em>Hardened leather bindings caked in
+salt and living barnacles.</em></td>
+</tr>
+<tr>
+<td><strong>94</strong></td>
+<td><strong>Vision</strong></td>
+<td>You completely control what a creature sees. <em>An unnerving,
+lidless eye graces the front cover.</em></td>
+</tr>
+<tr>
+<td><strong>95</strong></td>
+<td><strong>Visual Illusion</strong></td>
+<td>A silent, immobile, room-sized illusion of your choice appears.
+<em>Filled with rich, colorful pages very much like a children’s bedtime
+story.</em></td>
+</tr>
+<tr>
+<td><strong>96</strong></td>
+<td><strong>Ward</strong></td>
+<td>A silver circle 50ft across appears on the ground. Choose one
+species that cannot cross it. <em>The covers are decorated with bizarre,
+otherworldly creatures with thousands of eyes.</em></td>
+</tr>
+<tr>
+<td><strong>97</strong></td>
+<td><strong>Web</strong></td>
+<td>Your wrists shoot thick webbing. <em>The text is alien, yet somehow
+intelligible, for it is the language of dreams.</em></td>
+</tr>
+<tr>
+<td><strong>98</strong></td>
+<td><strong>Widget</strong></td>
+<td>A primitive version of a drawn tool or item appears before you and
+disappears after a short time. <em>Smells of iron and rust, sweat and
+effort. Faint sounds of harsh labor emanate from deep within its
+pages.</em></td>
+</tr>
+<tr>
+<td><strong>99</strong></td>
+<td><strong>Wizard Mark</strong></td>
+<td>Your finger can shoot a stream of ulfire-colored paint. This paint
+is only visible to you and can be seen at any distance, even through
+solid objects. <em>Inside the front cover is a small pocket containing a
+thin pad of paper, listing the name and date of death of all previous
+owners.</em></td>
+</tr>
+<tr>
+<td><strong>100</strong></td>
+<td><strong>X-Ray Vision</strong></td>
+<td>You can see through walls, dirt, clothing, etc. <em>Long-term
+exposure can cause hair loss, blurry vision, and fatigue.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="d666">D666</h3>
+<table>
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 14%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr>
+<td>111</td>
+<td><strong>Adaptive Skin</strong></td>
+<td>Target can exist comfortably in hot or cold environments.</td>
+</tr>
+<tr>
+<td>112</td>
+<td><strong>Addle Brain</strong></td>
+<td>Target must pass WIL save or drop to 0 WIL for 1 hour.</td>
+</tr>
+<tr>
+<td>113</td>
+<td><strong>Animal Call</strong></td>
+<td>Summons a mundane beast. It holds no loyalty towards you or your
+allies.</td>
+</tr>
+<tr>
+<td>114</td>
+<td><strong>Anti-Magic Globe</strong></td>
+<td>A thin shell of magical protection surrounds a small area around the
+caster. For every additional minute the globe is active they take one
+additional Fatigue.</td>
+</tr>
+<tr>
+<td>115</td>
+<td><strong>Arachnid’s Finesse</strong></td>
+<td>Target can walk on walls and ceilings.</td>
+</tr>
+<tr>
+<td>116</td>
+<td><strong>Arcane Arrow</strong></td>
+<td>Green energy bursts from your fingers, dealing 1d6 damage and
+ignoring mundane armor.</td>
+</tr>
+<tr>
+<td>121</td>
+<td><strong>Arcane Confinement</strong></td>
+<td>Target is bound by magical rope, able only to speak but nothing
+more.</td>
+</tr>
+<tr>
+<td>122</td>
+<td><strong>Arcane Epistle</strong></td>
+<td>You write a letter that only its intended reader can
+understand.</td>
+</tr>
+<tr>
+<td>123</td>
+<td><strong>Arcane Fireworks</strong></td>
+<td>Target flame becomes a great conflagration of heat, light and
+sound.</td>
+</tr>
+<tr>
+<td>124</td>
+<td><strong>Arcane Stain</strong></td>
+<td>Inscribes an invisible rune you can feel. Suffer 1d4 WIL loss if
+removed.</td>
+</tr>
+<tr>
+<td>125</td>
+<td><strong>Architect’s Eye</strong></td>
+<td>Any hidden doors within 60ft light up as if on fire.</td>
+</tr>
+<tr>
+<td>126</td>
+<td><strong>Architect’s Perfection</strong></td>
+<td>Create a holographic wall, floor, or ceiling that looks absolutely
+real.</td>
+</tr>
+<tr>
+<td>131</td>
+<td><strong>Astral Step</strong></td>
+<td>You and anyone touching you instantly transport to a known location
+you have been to before.</td>
+</tr>
+<tr>
+<td>132</td>
+<td><strong>Banishment</strong></td>
+<td>WIL save or creature to returns to native plane.</td>
+</tr>
+<tr>
+<td>133</td>
+<td><strong>Become Unseen</strong></td>
+<td>Target becomes invisible for 1 hour, and are still able use
+abilities and attack without detection. Afterwards they become
+incapacitated (deprived)</td>
+</tr>
+<tr>
+<td>134</td>
+<td><strong>Beguilement</strong></td>
+<td>Target humanoid must make a WIL save or is controlled
+telepathically.</td>
+</tr>
+<tr>
+<td>135</td>
+<td><strong>Bewildering Fog</strong></td>
+<td>A hazy fog surrounds you in a radius of 20ft. Attacks within the
+mist are impaired.</td>
+</tr>
+<tr>
+<td>136</td>
+<td><strong>Blazing Defense</strong></td>
+<td>You manifest a shield of flame (+1 Armor, 1d6 damage). Fire cannot
+hurt you.</td>
+</tr>
+<tr>
+<td>141</td>
+<td><strong>Blessing</strong></td>
+<td>Target’s attacks are enhanced and non-Blast attacks are impaired
+against them until they next take damage.</td>
+</tr>
+<tr>
+<td>142</td>
+<td><strong>Bolster</strong></td>
+<td>A person you can see is emboldened by your words for a few minutes:
+their attacks are enhanced and they cannot become deprived.</td>
+</tr>
+<tr>
+<td>143</td>
+<td><strong>Bound</strong></td>
+<td>Target can make a single jump to any place they can see.</td>
+</tr>
+<tr>
+<td>144</td>
+<td><strong>Boundless Message</strong></td>
+<td>Delivers a single sentence to any one creature instantaneously, no
+matter the distance.</td>
+</tr>
+<tr>
+<td>145</td>
+<td><strong>Breath Soup</strong></td>
+<td>Blocks vision and slows movement.</td>
+</tr>
+<tr>
+<td>146</td>
+<td><strong>Burning Missile</strong></td>
+<td>You fire an acid missile that does 1d6 damage to a target for every
+round it is not washed off.</td>
+</tr>
+<tr>
+<td>151</td>
+<td><strong>Burnishing Bubble</strong></td>
+<td>Target is enclosed by an impenetrable sphere that rolls along the
+ground, unless they pass a DEX save.</td>
+</tr>
+<tr>
+<td>152</td>
+<td><strong>Calcify</strong></td>
+<td>Target object turns to stone at the caster’s touch. Living targets
+save vs STR.</td>
+</tr>
+<tr>
+<td>153</td>
+<td><strong>Catsense</strong></td>
+<td>Target has heightened senses for the next hour, especially at
+night.</td>
+</tr>
+<tr>
+<td>154</td>
+<td><strong>Chilling Graze</strong></td>
+<td>Target loses 1d4+1 STR and is deprived.</td>
+</tr>
+<tr>
+<td>155</td>
+<td><strong>Cinder Flesh</strong></td>
+<td>Energy beams burn enemies (1d10 blast damage) in a straight
+line.</td>
+</tr>
+<tr>
+<td>156</td>
+<td><strong>Circle of Arcane Protection</strong></td>
+<td>Magical or godly beings cannot enter a 10ft circle.</td>
+</tr>
+<tr>
+<td>161</td>
+<td><strong>Cleanse</strong></td>
+<td>Rotten or poisoned food becomes edible.</td>
+</tr>
+<tr>
+<td>162</td>
+<td><strong>Cold Spray</strong></td>
+<td>A spray of cold air does d6 damage 20ft in one direction.</td>
+</tr>
+<tr>
+<td>163</td>
+<td><strong>Conceal Object</strong></td>
+<td>Masks an object against divination or scrying.</td>
+</tr>
+<tr>
+<td>164</td>
+<td><strong>Conquer Gravity</strong></td>
+<td>Target moves up or down according to your whims.</td>
+</tr>
+<tr>
+<td>165</td>
+<td><strong>Cosmic Fingertips</strong></td>
+<td>Your hands sculpt stone, rock or minerals into any form you
+please.</td>
+</tr>
+<tr>
+<td>166</td>
+<td><strong>Coup de Grâce</strong></td>
+<td>An ally’s next attack ignores armor and takes damage directly from
+their target’s STR.</td>
+</tr>
+<tr>
+<td>211</td>
+<td><strong>Craft from Clay</strong></td>
+<td>Any natural, earthen target is transformed (rock to mud, lava to
+rock, etc).</td>
+</tr>
+<tr>
+<td>212</td>
+<td><strong>Create Unlife</strong></td>
+<td>Creates 1d4 undead skeletons and zombies from corpses. WIL save
+every hour to control them.</td>
+</tr>
+<tr>
+<td>213</td>
+<td><strong>Curse of the Sightless</strong></td>
+<td>Anyone within eyesight must make a WIL save or be blinded.</td>
+</tr>
+<tr>
+<td>214</td>
+<td><strong>Curse Unlife</strong></td>
+<td>Deals 1d4+2 STR loss to one undead, ignoring armor and
+resistances.</td>
+</tr>
+<tr>
+<td>215</td>
+<td><strong>Cure-All</strong></td>
+<td>A single illness or disease dissipates at your touch.</td>
+</tr>
+<tr>
+<td>216</td>
+<td><strong>Cute Ink</strong></td>
+<td>A single page in a book can be altered to hide its true
+content.</td>
+</tr>
+<tr>
+<td>221</td>
+<td><strong>Darksight</strong></td>
+<td>Target can see 60 ft. in total darkness.</td>
+</tr>
+<tr>
+<td>222</td>
+<td><strong>Death’s Breath</strong></td>
+<td>You summon a poisonous cloud (d6 STR loss) you can control.</td>
+</tr>
+<tr>
+<td>223</td>
+<td><strong>Devil’s Comedian</strong></td>
+<td>WIL save or target laughs uncontrollably, unable to take any
+action.</td>
+</tr>
+<tr>
+<td>224</td>
+<td><strong>Disaster Fluid</strong></td>
+<td>Anything in a 10ft square becomes slippery; DEX save to avoid
+slipping.</td>
+</tr>
+<tr>
+<td>225</td>
+<td><strong>Disrupt Scry</strong></td>
+<td>Future divinations of one creature or object are misled according to
+your will.</td>
+</tr>
+<tr>
+<td>226</td>
+<td><strong>Doppleganger</strong></td>
+<td>You spawn 1d6 decoy duplicates of someone you touch. Decoys are
+dispelled with a touch.</td>
+</tr>
+<tr>
+<td>231</td>
+<td><strong>Doubleskin</strong></td>
+<td>Target humanoid doubles in size.</td>
+</tr>
+<tr>
+<td>232</td>
+<td><strong>Dreampoison</strong></td>
+<td>Target is deprived after suffering a night of bad dreams.</td>
+</tr>
+<tr>
+<td>233</td>
+<td><strong>Dreamtalker</strong></td>
+<td>Sends a message to anyone currently asleep.</td>
+</tr>
+<tr>
+<td>234</td>
+<td><strong>Earsplit</strong></td>
+<td>Anyone within earshot is deafened.</td>
+</tr>
+<tr>
+<td>235</td>
+<td><strong>Easy Descent</strong></td>
+<td>Objects or creatures nearby fall very slowly.</td>
+</tr>
+<tr>
+<td>236</td>
+<td><strong>Edifice</strong></td>
+<td>You summon a stone wall up to 20ft wide that you can control.</td>
+</tr>
+<tr>
+<td>241</td>
+<td><strong>Energize Rope</strong></td>
+<td>A rope-like objects moves at your command.</td>
+</tr>
+<tr>
+<td>242</td>
+<td><strong>Ensorcelled</strong></td>
+<td>Creatures are enraptured for a few minutes unless they pass a WIL
+save.</td>
+</tr>
+<tr>
+<td>243</td>
+<td><strong>Envision</strong></td>
+<td>Spies on a target you have met, even across vast distances. On a WIL
+save, they can feel your presence.</td>
+</tr>
+<tr>
+<td>244</td>
+<td><strong>Ephemeral Audio</strong></td>
+<td>Point to a spot. Anyone nearby hears a sound you choose at any
+volume.</td>
+</tr>
+<tr>
+<td>245</td>
+<td><strong>Epidemic</strong></td>
+<td>Infects target with disease, which spreads until the source of magic
+is destroyed.</td>
+</tr>
+<tr>
+<td>246</td>
+<td><strong>Extraplanar Convocation</strong></td>
+<td>Summons any extraplanar being onto your plane. It holds no loyalty
+towards you or your allies.</td>
+</tr>
+<tr>
+<td>251</td>
+<td><strong>Extraplanar Request</strong></td>
+<td>Ask a single question of a random extraplanar entity.</td>
+</tr>
+<tr>
+<td>252</td>
+<td><strong>Feline Dexterity</strong></td>
+<td>Target becomes limber, lithe and as fast as quicksilver.</td>
+</tr>
+<tr>
+<td>253</td>
+<td><strong>Find Virulence</strong></td>
+<td>Detects poison in any creature or object within 30ft.</td>
+</tr>
+<tr>
+<td>254</td>
+<td><strong>Fire Curse</strong></td>
+<td>An object you touch is imbued with a hidden flame-trap dealing 1d4+2
+STR loss.</td>
+</tr>
+<tr>
+<td>255</td>
+<td><strong>Firey Missile</strong></td>
+<td>A bow you touch can fire flaming arrows (1d10 damage) for one
+minute.</td>
+</tr>
+<tr>
+<td>256</td>
+<td><strong>Fish Lung</strong></td>
+<td>A target can breathe underwater until they surface again.</td>
+</tr>
+<tr>
+<td>261</td>
+<td><strong>Fleetfooted</strong></td>
+<td>One creature moves at double speed.</td>
+</tr>
+<tr>
+<td>262</td>
+<td><strong>Flicker</strong></td>
+<td>Target randomly vanishes and reappears once at will.</td>
+</tr>
+<tr>
+<td>263</td>
+<td><strong>Fog of Nausea</strong></td>
+<td>A cloud of nauseating vapors pours out from the Spellbook’s pages.
+Anyone nearby makes a STR save or vomit uncontrollably.</td>
+</tr>
+<tr>
+<td>264</td>
+<td><strong>Fold Portal</strong></td>
+<td>A door you touch opens into another door you’ve stepped through
+before until it is shut again.</td>
+</tr>
+<tr>
+<td>265</td>
+<td><strong>Foolishness</strong></td>
+<td>A target you touch becomes vulnerable to wild mood swings, sweeping
+conclusions and silly behavior. They also lose 1d6 WIL for 24 hours
+(down to a minimum of 1).</td>
+</tr>
+<tr>
+<td>266</td>
+<td><strong>Fortify</strong></td>
+<td>Damage from heat, ice, acid or electricity are impaired against a
+target for the next hour.</td>
+</tr>
+<tr>
+<td>311</td>
+<td><strong>Frozen Corpse</strong></td>
+<td>A corpse you touch is preserved.</td>
+</tr>
+<tr>
+<td>312</td>
+<td><strong>Gale</strong></td>
+<td>You summon an impenetrable wall of energy up to 15ft wide.</td>
+</tr>
+<tr>
+<td>313</td>
+<td><strong>Ghost Whisper</strong></td>
+<td>You and a sympathetic ally are linked, able to converse in short
+sentences for an hour.</td>
+</tr>
+<tr>
+<td>314</td>
+<td><strong>Gift of Flight</strong></td>
+<td>Target can fly for a short while.</td>
+</tr>
+<tr>
+<td>315</td>
+<td><strong>Glacier</strong></td>
+<td>You create a wall of ice (15 HP, 3 Armor) around a creature you
+choose.</td>
+</tr>
+<tr>
+<td>316</td>
+<td><strong>Gorgon’s Gaze</strong></td>
+<td>Target is transformed into a statue on a failed WIL save. A success
+reverses the spell; holder must pass a WIL save or the book is
+destroyed.</td>
+</tr>
+<tr>
+<td>321</td>
+<td><strong>Great Ball of Fire</strong></td>
+<td>You fire a ball of flame (1d10 damage) up to 20 feet away.</td>
+</tr>
+<tr>
+<td>322</td>
+<td><strong>Hand of the Protector</strong></td>
+<td>A giant, floating hand blocks all damage from a single opponent
+until you are safe from danger.</td>
+</tr>
+<tr>
+<td>323</td>
+<td><strong>Healing Grace</strong></td>
+<td>A target heals 1d6 STR, and you become deprived until you take the
+time to mediate, pray or sleep.</td>
+</tr>
+<tr>
+<td>324</td>
+<td><strong>Heatless Torch</strong></td>
+<td>Turns any object into a permanent, heatless torch.</td>
+</tr>
+<tr>
+<td>325</td>
+<td><strong>Hedgemagick</strong></td>
+<td>You perform a minor magical trick (create flame, wind, light or
+sound).</td>
+</tr>
+<tr>
+<td>326</td>
+<td><strong>Hempen Hoop</strong></td>
+<td>A rope moves at your command.</td>
+</tr>
+<tr>
+<td>331</td>
+<td><strong>Hide Mind</strong></td>
+<td>The next person to scry your mind or your whereabouts is
+fooled.</td>
+</tr>
+<tr>
+<td>332</td>
+<td><strong>Hoodwink Monster</strong></td>
+<td>Target monster makes a WIL save or treats you as an ally.</td>
+</tr>
+<tr>
+<td>333</td>
+<td><strong>Hoodwink Person</strong></td>
+<td>Target becomes a friend until out of sight.</td>
+</tr>
+<tr>
+<td>334</td>
+<td><strong>Hovering Protection</strong></td>
+<td>A hovering, transparent disk materializes around an ally granting 1
+Armor.</td>
+</tr>
+<tr>
+<td>335</td>
+<td><strong>Ice Ray</strong></td>
+<td>Ice and snow flow from your fingerprints, dealing 1d8 damage (blast)
+in a straight line.</td>
+</tr>
+<tr>
+<td>336</td>
+<td><strong>Icy Tempest</strong></td>
+<td>Hail deals 1d12 damage in a 20ft radius.</td>
+</tr>
+<tr>
+<td>341</td>
+<td><strong>Ill Fate</strong></td>
+<td>Target automatically fails next their next save.</td>
+</tr>
+<tr>
+<td>342</td>
+<td><strong>Illusory Landscape</strong></td>
+<td>You can make one type of terrain appear like another.</td>
+</tr>
+<tr>
+<td>343</td>
+<td><strong>Incorporeal Shrug</strong></td>
+<td>Ignore any one attack.</td>
+</tr>
+<tr>
+<td>344</td>
+<td><strong>Induce Despair</strong></td>
+<td>Target must pass a WIL save or its attacks are impaired.</td>
+</tr>
+<tr>
+<td>345</td>
+<td><strong>Induce Horror</strong></td>
+<td>Target makes a WIL save or flees.</td>
+</tr>
+<tr>
+<td>346</td>
+<td><strong>Inferno</strong></td>
+<td>You summon a flaming wall up to 15ft wide. Anyone passing through
+suffers 1d6 STR loss.</td>
+</tr>
+<tr>
+<td>351</td>
+<td><strong>Influence</strong></td>
+<td>Target gains armor 3 but running and swimming are impossible.</td>
+</tr>
+<tr>
+<td>352</td>
+<td><strong>Insubstantiate</strong></td>
+<td>Target becomes insubstantial and can float.</td>
+</tr>
+<tr>
+<td>353</td>
+<td><strong>Kraken’s Curse</strong></td>
+<td>Tentacles grapple all within 20 ft, STR save to break free.</td>
+</tr>
+<tr>
+<td>354</td>
+<td><strong>Lamp’s Hue</strong></td>
+<td>Target object shines like a torch for one hour.</td>
+</tr>
+<tr>
+<td>355</td>
+<td><strong>Latch</strong></td>
+<td>An unlocked box, cabinet or door opens or closes at your
+command.</td>
+</tr>
+<tr>
+<td>356</td>
+<td><strong>Librarian’s Trap</strong></td>
+<td>Deals 1d4+2 STR loss when read.</td>
+</tr>
+<tr>
+<td>361</td>
+<td><strong>Lichsense</strong></td>
+<td>You feel any undead within 60ft. WIL save to avoid detection by
+intelligent undead.</td>
+</tr>
+<tr>
+<td>362</td>
+<td><strong>Light Show</strong></td>
+<td>You control a dazzling display of light and color.</td>
+</tr>
+<tr>
+<td>363</td>
+<td><strong>Lightning Strike</strong></td>
+<td>Electricity flings from your fingertips doing 1d12 damage (blast) in
+a line.</td>
+</tr>
+<tr>
+<td>364</td>
+<td><strong>Linguist</strong></td>
+<td>For the next hour you can speak and understand any mundane
+language.</td>
+</tr>
+<tr>
+<td>365</td>
+<td><strong>Magic Seal</strong></td>
+<td>Magically locks a door, portal or chest.</td>
+</tr>
+<tr>
+<td>366</td>
+<td><strong>Major Genesis</strong></td>
+<td>Creates an object of nonliving stone or metal no greater than 5
+cubic foot in size.</td>
+</tr>
+<tr>
+<td>411</td>
+<td><strong>Maker</strong></td>
+<td>Transforms raw materials into finished items.</td>
+</tr>
+<tr>
+<td>412</td>
+<td><strong>Manic Fury</strong></td>
+<td>A target’s attacks are enhanced. They must make a WIL save after a
+successful killing or lose control, attacking anyone in sight.</td>
+</tr>
+<tr>
+<td>413</td>
+<td><strong>Masquerade</strong></td>
+<td>You assume the likeness of a similar creature you have seen.</td>
+</tr>
+<tr>
+<td>414</td>
+<td><strong>Master Undead</strong></td>
+<td>Undead creatures obey your command. Intelligent undead make a WIL
+save.</td>
+</tr>
+<tr>
+<td>415</td>
+<td><strong>Mental Tripwire</strong></td>
+<td>Intruders set off an alarm audible only to you.</td>
+</tr>
+<tr>
+<td>416</td>
+<td><strong>Mind Bond</strong></td>
+<td>Two allies can communicate via a mental link for the rest of the
+day.</td>
+</tr>
+<tr>
+<td>421</td>
+<td><strong>Mind Reader</strong></td>
+<td>You can see or hear any person you have met before.</td>
+</tr>
+<tr>
+<td>422</td>
+<td><strong>Miniaturize</strong></td>
+<td>An object shrinks to one tenth its size.</td>
+</tr>
+<tr>
+<td>423</td>
+<td><strong>Minor Aegis</strong></td>
+<td>A target you touch ignores the next instance of harm from a specific
+source.</td>
+</tr>
+<tr>
+<td>424</td>
+<td><strong>Minor Genesis</strong></td>
+<td>Creates an object of nonliving matter no greater than one cubic foot
+in size.</td>
+</tr>
+<tr>
+<td>425</td>
+<td><strong>Mirage</strong></td>
+<td>You summon a noiseless &amp; simple illusion of your choice.</td>
+</tr>
+<tr>
+<td>426</td>
+<td><strong>Molasses Veins</strong></td>
+<td>A single target moves at half speed.</td>
+</tr>
+<tr>
+<td>431</td>
+<td><strong>Murky Bubble</strong></td>
+<td>You create a bubble supernatural shadow within a 20ft radius.</td>
+</tr>
+<tr>
+<td>432</td>
+<td><strong>Necrotic Touch</strong></td>
+<td>Target must DEX save or is paralyzed.</td>
+</tr>
+<tr>
+<td>433</td>
+<td><strong>Obfuscate</strong></td>
+<td>Target cannot be observed either through divination or scrying.</td>
+</tr>
+<tr>
+<td>434</td>
+<td><strong>Obfuscation</strong></td>
+<td>Changes your appearance.</td>
+</tr>
+<tr>
+<td>435</td>
+<td><strong>Obscuring Mist</strong></td>
+<td>A rolling fog obscures vision in a 300ft radius.</td>
+</tr>
+<tr>
+<td>436</td>
+<td><strong>Opaque Cover</strong></td>
+<td>Details about your person become obscured and unmemorable.</td>
+</tr>
+<tr>
+<td>441</td>
+<td><strong>Orb of Ignus</strong></td>
+<td>You control a floating ball of fire (1d8 damage) for a short
+while.</td>
+</tr>
+<tr>
+<td>442</td>
+<td><strong>Orb of Immortality</strong></td>
+<td>Mundane attacks cannot harm anyone within a 10ft radius, or
+vice-versa.</td>
+</tr>
+<tr>
+<td>443</td>
+<td><strong>Otherwordly Pet</strong></td>
+<td>Summons an unintelligent extraplanar creature up to the size of a
+small dog. It holds no loyalty towards you or your allies.</td>
+</tr>
+<tr>
+<td>444</td>
+<td><strong>Otherworldly Gate</strong></td>
+<td>Opens a portal to another reality. It works in both directions.</td>
+</tr>
+<tr>
+<td>445</td>
+<td><strong>Paincurrent</strong></td>
+<td>An arc of electricity passes from your fingertips to a target you
+touch. They take 1d8 damage (1d12 if wearing metal armor).</td>
+</tr>
+<tr>
+<td>446</td>
+<td><strong>Passage</strong></td>
+<td>Creates a temporary path through wood, stone or brick.</td>
+</tr>
+<tr>
+<td>451</td>
+<td><strong>Passive Invisibility</strong></td>
+<td>Target is invisible until they attempt harm.</td>
+</tr>
+<tr>
+<td>452</td>
+<td><strong>Peeping Warlock</strong></td>
+<td>You control a pair of floating eyes so long as yours remain
+closed.</td>
+</tr>
+<tr>
+<td>453</td>
+<td><strong>Perfect Illusion</strong></td>
+<td>Creates an image with sound, smell and thermal effects, activated
+according to a trigger you choose. Touching the image or making a
+successful WIL save will reveal the illusion.</td>
+</tr>
+<tr>
+<td>454</td>
+<td><strong>Perfect Preservation</strong></td>
+<td>A weapon you touch becomes immune to wear, mundane damage or
+elemental effects. The spell wears off after a day.</td>
+</tr>
+<tr>
+<td>455</td>
+<td><strong>Phantom Hound</strong></td>
+<td>A ghostly canine (4 HP, bite (1d4)) obeys your commands for up to
+one hour.</td>
+</tr>
+<tr>
+<td>456</td>
+<td><strong>Phase Anchor</strong></td>
+<td>Binds an extraplanar creature to your will until it performs a task
+specific task, after which they must pass a WIL save to escape (good
+luck).</td>
+</tr>
+<tr>
+<td>461</td>
+<td><strong>Phase Sneak</strong></td>
+<td>Anyone within a 10ft radius is rendered invisible.</td>
+</tr>
+<tr>
+<td>462</td>
+<td><strong>Phase Touch</strong></td>
+<td>A disembodied, floating hand obeys your whims but is immaterial. The
+next Spellbook, ability or item that relies on touch now works from a
+distance.</td>
+</tr>
+<tr>
+<td>463</td>
+<td><strong>Philolomancy</strong></td>
+<td>You understand all spoken and written languages.</td>
+</tr>
+<tr>
+<td>464</td>
+<td><strong>Philosopher’s Mind</strong></td>
+<td>Target is immune to spiritual or psychic attacks, as well as any
+attempts at mental or spiritual manipulation or persuasion.</td>
+</tr>
+<tr>
+<td>465</td>
+<td><strong>Planar Anchor</strong></td>
+<td>Bars extradimensional movement.</td>
+</tr>
+<tr>
+<td>466</td>
+<td><strong>Plant Scourge</strong></td>
+<td>Plants within eyesight wither and die.</td>
+</tr>
+<tr>
+<td>511</td>
+<td><strong>Pocket Container</strong></td>
+<td>Summons a chest from an immaterial plane. It holds up to 6 items.
+The chest is dismissed at will.</td>
+</tr>
+<tr>
+<td>512</td>
+<td><strong>Pocket Sun</strong></td>
+<td>You create a halo of bright light in a 60ft radius.</td>
+</tr>
+<tr>
+<td>513</td>
+<td><strong>Prisma Shard</strong></td>
+<td>An array of hypnotic lights fascinate nearby creatures, unless they
+pass a WIL save.</td>
+</tr>
+<tr>
+<td>514</td>
+<td><strong>Profane Reveal</strong></td>
+<td>Target an empty space to reveal invisible objects or creatures.</td>
+</tr>
+<tr>
+<td>515</td>
+<td><strong>Psychic Eye</strong></td>
+<td>Invisible floating eye allowing you to observe a single location as
+present.</td>
+</tr>
+<tr>
+<td>516</td>
+<td><strong>Psychokinesis</strong></td>
+<td>Magically moves an object up to half your weight.</td>
+</tr>
+<tr>
+<td>521</td>
+<td><strong>Puppeteer</strong></td>
+<td>You can throw your voice a great distance away</td>
+</tr>
+<tr>
+<td>522</td>
+<td><strong>Purge Text</strong></td>
+<td>Mundane or magical writing vanishes at your touch.</td>
+</tr>
+<tr>
+<td>523</td>
+<td><strong>Pyramid of Passivity</strong></td>
+<td>Target creatures must make a DEX save or their attacks are
+impaired.</td>
+</tr>
+<tr>
+<td>524</td>
+<td><strong>Pyschic Touch</strong></td>
+<td>You can hear target’s surface thoughts, so long as you touch
+them.</td>
+</tr>
+<tr>
+<td>525</td>
+<td><strong>Rat-Tat-Tat</strong></td>
+<td>Loudly opens a locked or magically sealed door or chest.</td>
+</tr>
+<tr>
+<td>526</td>
+<td><strong>Ravenless Message</strong></td>
+<td>You send a short message 1 mile that anyone along its path can
+hear.</td>
+</tr>
+<tr>
+<td>531</td>
+<td><strong>Reject Unlife</strong></td>
+<td>Nearby undead are immobilized for 30 seconds or until you take
+another action.</td>
+</tr>
+<tr>
+<td>532</td>
+<td><strong>Remembered Voice</strong></td>
+<td>A spot you mark becomes the trigger for a supernatural recording of
+your voice, delivering a short message of your choice.</td>
+</tr>
+<tr>
+<td>533</td>
+<td><strong>Reverie</strong></td>
+<td>Targets become dazed for a moment, as if lost in daydream.</td>
+</tr>
+<tr>
+<td>534</td>
+<td><strong>Runic Harm</strong></td>
+<td>A rune you draw causes great pain to the reader, who must WIL save
+or scream until they pass out (1d4 WIL loss). A successful save destroys
+the rune.</td>
+</tr>
+<tr>
+<td>535</td>
+<td><strong>Runic Slumber</strong></td>
+<td>A rune you draw puts the reader into a magical sleep that lasts 1d6
+hours.</td>
+</tr>
+<tr>
+<td>536</td>
+<td><strong>Safe Haven</strong></td>
+<td>You summon a floating, invisible refuge for 8 hours. It fits up to 8
+people comfortably.</td>
+</tr>
+<tr>
+<td>541</td>
+<td><strong>Scintillate</strong></td>
+<td>Target must WIL save or their attacks become impaired.</td>
+</tr>
+<tr>
+<td>542</td>
+<td><strong>Scry Creature</strong></td>
+<td>Indicates the precise location of a familiar creature.</td>
+</tr>
+<tr>
+<td>543</td>
+<td><strong>Scry Object</strong></td>
+<td>Indicates the precise location of an object, known or
+otherwise.</td>
+</tr>
+<tr>
+<td>544</td>
+<td><strong>Scrying Ward</strong></td>
+<td>For 24 hours you become aware of any magical eavesdropping.</td>
+</tr>
+<tr>
+<td>545</td>
+<td><strong>Sculpt Water</strong></td>
+<td>Raise, lower or part nearby water.</td>
+</tr>
+<tr>
+<td>546</td>
+<td><strong>Secret Attaché</strong></td>
+<td>You summon an invisible creature of great power that obeys your
+every command. Reading from other Spellbooks dispels the creature.</td>
+</tr>
+<tr>
+<td>551</td>
+<td><strong>Shelter</strong></td>
+<td>Creates a standing edifice that can shelter up to 10 creatures,
+disappearing after 24 hours.</td>
+</tr>
+<tr>
+<td>552</td>
+<td><strong>Shrinking Cant</strong></td>
+<td>A humanoid creature you touch halves in size.</td>
+</tr>
+<tr>
+<td>553</td>
+<td><strong>Signal</strong></td>
+<td>Sends up a flare that can be seen for some distance.</td>
+</tr>
+<tr>
+<td>554</td>
+<td><strong>Simple Illusion</strong></td>
+<td>Creates a simple image with sound. A cursory investigation will
+reveal the illusory image.</td>
+</tr>
+<tr>
+<td>555</td>
+<td><strong>Sinister Flame</strong></td>
+<td>Target’s palms are lined with flames (1d4+1 STR loss) for one
+minute.</td>
+</tr>
+<tr>
+<td>556</td>
+<td><strong>Sinister Polymorph</strong></td>
+<td>WIL save or target is transformed into a harmless animal.</td>
+</tr>
+<tr>
+<td>561</td>
+<td><strong>Skillfull Repair</strong></td>
+<td>You make minor repairs to a nonliving object.</td>
+</tr>
+<tr>
+<td>562</td>
+<td><strong>Sky Raft</strong></td>
+<td>You summon a 3ft wide floating disk that holds up to 100lbs.</td>
+</tr>
+<tr>
+<td>563</td>
+<td><strong>Solar Portal</strong></td>
+<td>Sends an extraplanar message to all beings that wish to enter your
+plane. You have no choice which being answers and it holds no loyalty to
+you or your allies.</td>
+</tr>
+<tr>
+<td>564</td>
+<td><strong>Song of Repose</strong></td>
+<td>Target falls into a deep slumber.</td>
+</tr>
+<tr>
+<td>565</td>
+<td><strong>Sonic Shattering</strong></td>
+<td>A sonic wave causes 1d6 STR loss to susceptible objects or
+crystalline creatures, ignoring armor.</td>
+</tr>
+<tr>
+<td>566</td>
+<td><strong>Sorcerer’s Lock</strong></td>
+<td>Any door (magical or otherwise) is held shut until you leave its
+vicinity.</td>
+</tr>
+<tr>
+<td>611</td>
+<td><strong>Soul Annex</strong></td>
+<td>Target’s spirit is caged within their body and replaced with the
+caster’s. If the body is slain the original soul departs, but the caster
+must pass a WIL save to return to their body.</td>
+</tr>
+<tr>
+<td>612</td>
+<td><strong>Steer’s Strength</strong></td>
+<td>Target’s strength triples; unarmed attacks are enhanced.</td>
+</tr>
+<tr>
+<td>613</td>
+<td><strong>Strength Tap</strong></td>
+<td>A target you touch loses 1d6 STR, which is transferred to you (up to
+your max STR).</td>
+</tr>
+<tr>
+<td>614</td>
+<td><strong>Stumbling Steps</strong></td>
+<td>A target you touch becomes deprived and loses 1 STR.</td>
+</tr>
+<tr>
+<td>615</td>
+<td><strong>Stupefaction</strong></td>
+<td>Target temporarily loses sense of place and time. WIL save to
+overcome.</td>
+</tr>
+<tr>
+<td>616</td>
+<td><strong>Sudden Slumber</strong></td>
+<td>Target falls asleep for 1d4 hours.</td>
+</tr>
+<tr>
+<td>621</td>
+<td><strong>Summon Elemental</strong></td>
+<td>A being of fire, wire, earth, or wind manifests from available
+matter to perform a single task for the caster. It follows this command
+against its will.</td>
+</tr>
+<tr>
+<td>622</td>
+<td><strong>Sway Will</strong></td>
+<td>A target is compelled to follow a stated course of action, without
+understanding why.</td>
+</tr>
+<tr>
+<td>623</td>
+<td><strong>Temporary Reprieve</strong></td>
+<td>Target regains any lost STR, but loses it again after a few
+minutes.</td>
+</tr>
+<tr>
+<td>624</td>
+<td><strong>Terrify</strong></td>
+<td>Targets within eyesight must pass a WIL save or flee.</td>
+</tr>
+<tr>
+<td>625</td>
+<td><strong>Terrifying Illusion</strong></td>
+<td>A target is hunted by a terrible creature only they can see. Its
+attacks do 1d12 damage; on Critical Damage they must pass a WIL save or
+become catatonic.</td>
+</tr>
+<tr>
+<td>626</td>
+<td><strong>Thief’s Bane</strong></td>
+<td>An object appears trapped, even to an experienced thief.</td>
+</tr>
+<tr>
+<td>631</td>
+<td><strong>Thwart the Elements</strong></td>
+<td>Damage from energy blasts are impaired against a target for the next
+hour.</td>
+</tr>
+<tr>
+<td>632</td>
+<td><strong>Tongue of the Blue Serpent</strong></td>
+<td>Rust-colored, serpentine letters materialize on a surface you
+choose. Anyone reading these words becomes immobilized unless they
+succeed a WIL save.</td>
+</tr>
+<tr>
+<td>633</td>
+<td><strong>Torrential Moat</strong></td>
+<td>You summon a powerful wind that deflects arrows, smaller creatures,
+and noxious gases.</td>
+</tr>
+<tr>
+<td>634</td>
+<td><strong>Toxic Blast</strong></td>
+<td>A small orb of acid deals 1d6 blast damage to a target.</td>
+</tr>
+<tr>
+<td>635</td>
+<td><strong>Transform Aura</strong></td>
+<td>Target’s aura is made non-magical or vice-versa.</td>
+</tr>
+<tr>
+<td>636</td>
+<td><strong>True Name</strong></td>
+<td>Determines the properties of a magical item you touch.</td>
+</tr>
+<tr>
+<td>641</td>
+<td><strong>Trueshift</strong></td>
+<td>A willing target takes on a new form (keeping only their WIL), but
+must pass a WIL save to shift out.</td>
+</tr>
+<tr>
+<td>642</td>
+<td><strong>Twilight Steed</strong></td>
+<td>Summons an arcane steed that never tires, but dissipates within
+daylight.</td>
+</tr>
+<tr>
+<td>643</td>
+<td><strong>Ultimate Sacrifice</strong></td>
+<td>The book’s holder transfer’s their life force into a corpse,
+reviving both body and soul.</td>
+</tr>
+<tr>
+<td>644</td>
+<td><strong>Uncurse</strong></td>
+<td>A person or object you touch is freed from a curse or nefarious
+spell.</td>
+</tr>
+<tr>
+<td>645</td>
+<td><strong>Undefinable Target</strong></td>
+<td>An ally becomes immune to mundane ranged attacks for one round.</td>
+</tr>
+<tr>
+<td>646</td>
+<td><strong>Undeniable Courage</strong></td>
+<td>Target passes next WIL save and their attacks are enhanced.</td>
+</tr>
+<tr>
+<td>651</td>
+<td><strong>Unflappable Endurance</strong></td>
+<td>Target does not take Fatigue from non-magical activities or become
+deprived until their next rest.</td>
+</tr>
+<tr>
+<td>652</td>
+<td><strong>Vermin Plague</strong></td>
+<td>Summons a swarm of bats, rats, spiders or similar creatures of your
+choice. They are harmless but distracting and hold no loyalty towards
+you or your allies.</td>
+</tr>
+<tr>
+<td>653</td>
+<td><strong>Vines of Ichor</strong></td>
+<td>You spread sticky spiderwebs on the walls, floor and ceilings within
+a 20ft radius.</td>
+</tr>
+<tr>
+<td>654</td>
+<td><strong>Warrior’s Edge</strong></td>
+<td>Target weapon is enhanced, and victim automatically fails a critical
+damage save.</td>
+</tr>
+<tr>
+<td>655</td>
+<td><strong>Windborn</strong></td>
+<td>You direct a powerful wind in a straight line, strong enough to blow
+over small boulders.</td>
+</tr>
+<tr>
+<td>656</td>
+<td><strong>Winter’s Woe</strong></td>
+<td>An icy storm assails multiple targets, obscuring visibility and
+making the ground icy and treacherous.</td>
+</tr>
+<tr>
+<td>661</td>
+<td><strong>Witch Sight</strong></td>
+<td>Magical auras become visible to you for one hour.</td>
+</tr>
+<tr>
+<td>662</td>
+<td><strong>Wizard’s Exit</strong></td>
+<td>You and and anyone you touch can flee to safety at double
+speed.</td>
+</tr>
+<tr>
+<td>663</td>
+<td><strong>Wizard’s Grasp</strong></td>
+<td>You control a phantasmal hand that can lift up to 5 pounds.</td>
+</tr>
+<tr>
+<td>664</td>
+<td><strong>Wizard’s Haven</strong></td>
+<td>A small, walled-in area cannot be scryed.</td>
+</tr>
+<tr>
+<td>665</td>
+<td><strong>Wizardsniff</strong></td>
+<td>You can feel any magic within a 60ft radius.</td>
+</tr>
+<tr>
+<td>666</td>
+<td><strong>Word of Pain</strong></td>
+<td>A single phrase from your lips does 1d12 blast damage. Affected
+targets are also deafened.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</body>
+</html>
