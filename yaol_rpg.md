@@ -2,8 +2,7 @@
 title: "Yaol Rpg"
 author: "varpeti"
 toc: true
-numbersections: true
-secnumdepth: 6
+number-sections: true
 css: "assets/style.css"
 cover-image: "assets/Darkness_Ambush.svg"
 ---
@@ -17,7 +16,7 @@ cover-image: "assets/Darkness_Ambush.svg"
 
 The universe holds many mysteries waiting to be uncovered. Discard every assumption and pretense of knowing. You must be fearless and stay sharp at all times.
 
-To play the game, you need polyhedral dice (d4, d6, d8, d10, d12, d20) and some way to track the Characters, be it pen and paper or digital. A Game Master and willing Players to form a Party. Snacks, optional but highly recommended.
+To play the game, you need polyhedral dice (d4, d6, d8, d10, d12, d20) and some way to track the Characters, be it pen and paper or digital. A Game Master and Players to form a Party. Snacks, optional but highly recommended.
 
 ---
 
@@ -35,7 +34,7 @@ Your character has three attribute scores; these are the measure of basic streng
 
 Characters naturally fall between -2 and +3. But with magic they can be pushed to -5 and +5.
 
-Chose a method, and stick to it:
+Choose a method, and stick to it:
 
 - **Standard array**: Assign each Attribute one of these: `3 1 -1`.
 - **Point buy**: Each Attribute starts with -2; Allocate 9 points however you like, but a single Attribute cannot be larger than 3.
@@ -58,14 +57,14 @@ STR 1 DEX 2 WIL 0
 
 ### Stats
 
-The only "Main" stat is the **Hit Protection**:
+#### Hit Protection
 
-- `HP`: **Hit Protection** - this is the [damage your character can take](#taking-damage) without the risk of serious injuries.
+`HP` - this is the [damage your character can take](#taking-damage) without the risk of serious injuries.
 
-Chose a method and stick to it:
+Choose a method and stick to it:
 
 - **Fix**: 4
-- **Roll**: Roll `2d6` and keep the highest.
+- **Roll**: `2d6` and keep the highest.
 
 <details><summary>Example</summary>
 
@@ -79,23 +78,54 @@ STR 1 DEX 2 WIL 0 HP 6/6
 
 </details>
 
-There are some stats that are provided by items; the table can decide if it is worth noting these down on the sheet, or if reading them from the items is sufficient.
+#### Coins
 
-- `Resistance`: [Resistance](#immunity-resistance-vulnerability) - this passively reduces the damage taken.
-- `Block with Shield`, `Dodge`, `Parry` and `Reckless Counter Attack` bonus: [Active Defense](#active-defense) modifier's.
+- This is the main currency, it can be used to [buy a starting gear](./items.md)
+- Every 100 coins is 1 slot. Under 100 it is 0
+
+Coins and gear are tied together at the start:
+
+- GM can let the Players roll for items in a prepared starting gear list
+- GM can prepare a list of items which is shared by the party
+- GM can let the Players roll for coin and by [items](./items.md)
+  - Default, GM can tweak the values, choose a method and stick to it:
+    - **Fix Coins**: 75
+    - **Roll**: `8d20`
+
+<details><summary>Recommended</summary>
+
+```text
+| ----------------- | ---- | 75 |
+| Large Backpack    | 30   | 45 | -> Store loot
+| Rations  3x       |  3x2 | 39 | -> 3 day worth of food
+| Torch 2x          |  5x2 | 29 | -> Light required, probably not enough for 3 days...
+| Flint and Steel   |  3   | 26 | -> Hard to create fire without it
+| One Handed Weapon | 10   | 16 | -> Offense
+| Normal Shield     | 10   |  6 | -> Defense
+```
+
+</details>
+
+#### Other Stats
 
 <details><summary>Optionally</summary>
 
 ```text
 Other stats can be recorded as well, depending on the game setting, such as:
 
-- Speed: How much space/meters/feet the character can travel per Move action; Fly, Climb, and Swim speed can be tracked as well.
-- Size: The size of the character, used for calculations.
-- Inspiration: A token of gratitude from the GM for good play, which can be exchanged for a re-roll.
+- Speed: How much space/meters/feet the character can travel per Move action; Fly, Climb, and Swim speed can be tracked as well. (Default: 4)
+- Size: The size of the character, used for calculations. (Default: Normal)
+- Inspiration: A token of gratitude from the GM for good play, which can be exchanged for a re-roll. (Default: +1 for each player which brings snacks)
 - Insanity: Level of ever-growing insanity in a horror setting.
+- Etc
 ```
 
 </details>
+
+There are some stats that are provided by items; the table can decide if it is worth noting these down on the sheet, or if reading them from the items is sufficient.
+
+- `Resistance`: [Resistance](#immunity-resistance-vulnerability) - this passively reduces the damage taken
+- `Bonuses` and `Modifiers`
 
 ### Background
 
@@ -103,10 +133,12 @@ Name and describe your character in one or few words for each:
 
 - **Appearance**: One unique trait they have.
 - **Virtue**: One thing they excel at.
-- **Vice**: One thing they fall short.
+- **Vice**: One thing they fall short of.
 - **Relationship**: With at least one party member.
 
 These are used for role-play, and they could have mechanical impact on the game as well.
+
+These can be rolled on random tables as well.
 
 <details><summary>Example</summary>
 
@@ -135,7 +167,7 @@ Characters die easily. For quick character creation, players can roll on random 
 - Hands can hold **stacked** items, but cannot use them until unstacked.
 - With both hands a character can hold items which have more than **2 slot** within reason.
 - Using a **Heavy** [Items](#offensive-items) (3 Slots) requires 3 `STR` or more.
-- **Versatile** [Items](#offensive-items) (2 Slot) can be used as One or Two handed requiring 1 or 2 hand slot respectively
+- **Versatile** [Items](#offensive-items) (2 Slot) can be used as One or Two handed requiring 1 or 2 hand Slot respectively.
 
 #### Belt and Pockets
 
@@ -145,14 +177,16 @@ Characters die easily. For quick character creation, players can roll on random 
 #### Backpack
 
 - `10 slot`
-
-3 things share **The Backpack** inventory:
+- 3 things share **The Backpack** inventory:
+  - Items in a backpack
+  - Large items worn on the Body
+  - Conditions affecting the character
 
 ##### Physical Backpack with Items
 
 - It can hold items
 - It can be removed/replaced/stolen etc.
-- The default and largest size is 10. Smaller means cannot store items on larger slots.
+- The largest size is 10. Smaller means cannot store items on larger slots.
 - Storing items: Place the items anywhere they fit.
 - Taking items, searching and rearranging:
   - When time is not constrained: Just do it.
@@ -173,36 +207,28 @@ Characters die easily. For quick character creation, players can roll on random 
 - Because of [Wounds](#wound) **The Backpack** acts as the secondary `HP`:
 - If a Character's [Backpack](#backpack) is full and receives a condition, they must drop something if they can. If they cannot they [die](#death).
 - Conditions which can be cleared **at will**, can be refused or cleared any time.
-
-[List of Basic Conditions](./conditions.html)
+- [List of Basic Conditions](./conditions.md)
 
 #### Items
 
-Items have **slot** and can have **stackable** and **usage** attribute.
+Items have **Slot** and can have **Stackable** and **Usage** attribute.
 
-- **x slot**: This item takes x slot in the inventory.
-- **stackable x**: This item can be stacked x times, until another **slot** is required. Different Items can be stacked together if they are the same type.
+- **x Slot**: This item takes x slot in the inventory.
+- **stackable x**: This item can be stacked x times, until another **Slot** is required. Different Items can be stacked together if they are the same type.
+- **x Usage**: Certain items have finite number of uses or duration tracked as [Usage](#usage).
 
 ##### Usage
 
-- **x usage**: Certain items have finite number of uses or duration tracked as **usage**. After the item is used, roll an **usage dice** `xd6`. For each die rolled 1 or 2 remove one **usage**.
+After the item is used, roll an **usage dice** `xd6` but maximum `3d6`. For each die rolled 1 or 2 remove one **Usage**.
 
 Usage can have further modifiers:
 
-- **broken**: The item become permanent broken if reaches **0 usage**, cannot be repaired, refuelled etc.
+- **broken** or **ran-out** or **consumed**: The item become permanent broken if reaches **0 usage**, cannot be repaired, refuelled etc, or ran-out / consumed like ammunition, lamp oil, etc
 - **time**: Roll **usage dice** when the time is up, or when the item usage is stopped.
 - **conditions to restore**: Rest, Refuel, Repair, etc
+  - If no condition given, it is usually means **Repair**.
 
 Items without default usage can be worn-down/destroyed as well, so the GM can assign usage, or call **usage dice roll** for such items.
-
-##### Item Value
-
-- [Common](./items.html) - Mundane object, basic weapons, etc
-- [Artifact](./cairn_spells.html) - Artifacts with Spell Spirits
-- Uncommon - 1-2 Modifiers
-- Rare - Special abilities and/or high modifiers
-- Epic - Special abilities and/or high modifiers
-- Legendary - Special abilities and/or high modifiers
 
 #### Offensive items
 
@@ -212,35 +238,20 @@ Using **Heavy** weapon/armor requires 3 `STR` or more.
 
 ##### Melee
 
-| Type          | Slot | Usage | Damage dice | Average | Example                               |
-| -             | -    | -     | -           | -       | -                                     |
-| Unarmed       | 0    |       | 1d4         | 2.5     | Fist, Foot                            |
-| One handed    | 1    | 3     | 1d6         | 3.5     | Dagger, Short Sword                   |
-| Two handed    | 2    | 4     | 1d8         | 4.5     | Long Sword, Axe, Pike, Halberd, Spear |
-| Dual Wielding | 2x1  | 2x3   | 2d4         | 5.0     | Daggers, Scimitars                    |
-| Heavy Weapon  | 3    | 6     | 1d10        | 5.5     | Great Axe, Warhammer                  |
-
-When Dual Wielding, attacking with both weapons is considered one action, Roll [Usage](#usage) for both.
-
-Versatile Weapons are 2 Slot items but can be used as One Handed `1d6` or Two Handed `1d8`. They have 4 [Usage](#usage).
-
-Attacking multiple targets at once (swing): Roll once, share the damage.
+- [Melee weapons](./items.md#melee)
+- When Dual Wielding, attacking with both weapons is considered one action, Roll [Usage](#usage) for both.
+- Attacking multiple targets at once (swing): Roll once, share the damage.
+- Unarmed or attack is `1d4`.
+- Improvised weapon can give advantage + `1d4`.
 
 ##### Ranged
 
-| Type          | Slot  | Usage   | Damage dice Short | Damage dice Long | Average Short | Average Long | Example                                       |
-| -             | -     | -       | -                 | -                | -             | -            | -                                             |
-| Throwables    | 1  +0 | tracked | 1d4               | -                | 2.5           | -            | Rock, Dagger                                  |
-| Short         | 1  +1 | 3       | 1d6               | 1d4              | 3.5           | 2.5          | Short Bow, Slingshot, Light Crossbow, Blowgun |
-| Long          | 2  +1 | 4       | 1d8               | 1d6              | 4.5           | 3.5          | Long Bow, Crossbow, etc.                      |
-| Dual Wielding | 2x1+1 | 2x3     | 2d4               | 1d8              | 5.0           | 4.5          | Two Light Crossbows                           |
-| Heavy         | 3  +1 | 6       | 1d10              | 2d4              | 5.5           | 5.0          | Hand Cannon                                   |
-
-Ranged weapons (aside from Throwables) require ammunition.
-
-Loading ammunition into a weapon is a [Small Action](#rounds). Roll [Usage](#usage) for the ammunition.
-
-Aiming and shooting costs 1 [Action Point](#combat)
+- [Ranged weapons](./items.md#ranged)
+- Ammunition has [Usage](#usage), when making a ranged attack, roll usage for the ammunition.
+- If the weapon is misused (eg: Melee-attacking/Blocking damage) roll the [Usage](#usage) for the weapon.
+- Loading cost 1 [Small Action](#combat)
+- Aiming and Shooting cost 1 [Action Point](#combat)
+- Ranged weapons cannot be used melee range, they have short (default: 8 Space) and long range (default: 15 Space).
 
 #### Defensive items
 
@@ -248,14 +259,8 @@ There are 2 types of defensive items: Passive (Armor) and Active (Shield).
 
 ##### Armor
 
-| Type   | Slot | Usage | DEX Modifier |
-| -      | -    | -     | -            |
-| None   | 0    | 0     | -            |
-| Light  | 1    | 3     | -            |
-| Medium | 2    | 5     | -1           |
-| Heavy  | 3    | 7     | -2           |
-
-**Resistance:** The armor determines which damage types it can mitigate. Use common sense, be creative, nothing is impenetrable. Description of the attack can and should overwrite the default. The table should aim for consistency and the GM should rule case-by case fairy.
+- [Armor](./items.md#armor)
+- Armor provides **Resistance:** The armor determines which damage types it can mitigate. Use common sense, be creative, nothing is impenetrable. Description of the attack can and should overwrite the default. The table should aim for consistency and the GM should rule case-by case fairy.
 
 <details><summary>Examples</summary>
 
@@ -271,14 +276,8 @@ Plate-armor (Slashing, Bludgeoning, Piercing)
 
 ##### Shield
 
-| Type   | Slot | Block Bonus | Parry Bonus |
-| -      | -    | -           | -           |
-| Small  | 1    | -           | 1           |
-| Normal | 1    | 1           | -           |
-| Large  | 2    | 2           | -           |
-| Heavy  | 3    | 3           | -           |
-
-[Blocking](#active-defense) with a shield adds the **Block Bonus** to the [Attribute Roll](#attribute-roll).
+- [Shield](./items.md#shield)
+- [Blocking](#active-defense) with a shield adds the **Block Bonus** to the [Attribute Roll](#attribute-roll).
 
 ### Character Progression
 
@@ -406,9 +405,9 @@ Provided by items such as [Armor](#armor) or [Conditions](#conditions).
   - Tier 2: Half damage (rounded down)
   - Tier 3: 0 damage
   - Critical Failure: Double damage
-  - Critical Success: Push the enemy so hard they become [Prone](./conditions.html#prone)
+  - Critical Success: Push the enemy so hard they become [Prone](./conditions.md#prone)
 - **Dodge**: A `DEX` [Attribute Roll](#attribute-roll).
-  - Cost: 1 `AP`
+  - Cost: 1 [AP](#action-point)
   - Tier 1: Full damage
   - Tier 2: Half damage (rounded down) + can move 1 space
   - Tier 3: 0 damage + can move 1 space
@@ -457,7 +456,7 @@ To cast a spell, your character must have the possessed item in their hand, and 
 
 ### Spells
 
-- [Cairn Spells](./cairn_spells.html)
+- [Cairn Spells](./cairn_spells.md)
 - **DnD Spells**: Characters can cast up to their **WIS** Level any spell (if they have the spell/spirit/artifact). Cantrip = Level 0
 - **Adventure spells**: Magic is Magical (duh!), nothing can prevent it to brake rules or create never-seen-before spells with unique mechanics.
 
@@ -476,16 +475,16 @@ To cast a spell, your character must have the possessed item in their hand, and 
   - 2-10: numeric value
   - Jack, Knight, Queen, King: 10
   - Ace: Auto Success (no need to roll)
-  - [Major Arcana](./major_arcana.html): Auto Success (no need to roll) + The special effect
+  - [Major Arcana](./major_arcana.md): Auto Success (no need to roll) + The special effect
 - Roll `2d10`
 - Result of `2d10 + card modifier`:
   - Tier 1: `<10`: Failure
   - Tier 2: `10+`: Choose:
     - Failure and draw a new card
-    - Success and gain a [Drained Condition](./conditions.html#drained).
+    - Success and gain a [Drained Condition](./conditions.md#drained).
   - Tier 3: `15+`: Success
   - Tier 4: `20+`: Success and draw a new card
-  - Critical Failure: Failure and gain a [Drained Condition](./conditions.html#drained).
+  - Critical Failure: Failure and gain a [Drained Condition](./conditions.md#drained).
   - Critical Success: Success, draw a new card and keep the card used for casting the spell
 - Roll [Usage](#usage) for the spirit possessed object. (can be rolled alongside with the 2d10)
 
@@ -521,16 +520,15 @@ Critical Success: 3%
 - Day (24 hours; 4 watches)
   - Segments: Morning, Afternoon, Evening, Night
   - Marks: Sunrise, Noon, Sunset, Midnight
-  - Usage: Long travel, Long rest
+  - Usage: Long travel
 - Watch (6 hours; 36 Turns)
   - Segments: 6 segments (1 hour each)
   - Marks: Every 3rd Turn (30 min)
-  - Usage: Medium travel, Full rest (6 hours)
+  - Usage: Medium travel, [Rest](#resting) (6 hours)
 - Turn (10 minutes; 10 Rounds)
   - Usage:
     - All combat takes at least one Turn.
-    - Quick rest is 1 Turn (10 min).
-    - Short rest is 3 Turns (30 min).
+    - A Party can explore a normal sized room in one Turn, larger room or through inspection takes more turns.
 - Round (~1 minute; 3 Actions)
   - Usage: Combat
   - Each combatant takes 3 Actions, that is one Round.
@@ -562,7 +560,7 @@ Everyone needs rest, brave adventurers are not exempt from this rule.
 
 - Repair items (if possible in the situation) -> Restore [Usage](#usage)
 - Tend another Character's [Wound](#wound) -> Remove +1 wound or +2 if first aid kit or other kind of applicable healing is used.
-- Cooking over fire: +1 [Wound](#wound) removal or [Well-Fed Condition](./conditions.html#well-fed)
+- Cooking over fire: +1 [Wound](#wound) removal or [Well-Fed Condition](./conditions.md#well-fed)
 - Craft items (if possible in the situation)
 - Experimenting with or studying an unknown magic artifact
 - Prepare mentally or physically for a described specific task you want to achieve right after the rest -> Possible Advantage(s) for that task.
@@ -576,7 +574,7 @@ Interrupted Rest does not give any benefits. But it is possible to continue an i
 
 ### Hunger
 
-If a characters does not eat for a day (24 hours), they gain a [Hungry Condition](./conditions.html#hungry)
+If a characters does not eat for a day (24 hours), they gain a [Hungry Condition](./conditions.md#hungry)
 
 ---
 
@@ -594,11 +592,17 @@ Without proper light source characters cannot navigate or act, unlike some creat
 
 Combat can be run anywhere on the spectrum from "Theatre of the Mind" to full tactical with battle maps. The table can agree on a mode beforehand, or try different modes, or categorize fights by type. A random encounter does not have to be tactical, whereas a long BBEG fight is better with a battle map.
 
-Action Point `AP` is the resource that defines how many Actions a Character can take in one Round.
+### Action Point
 
-There is one free **Small Action** per Round: opening/closing a door, pushing a button, picking up one item from the floor, loading ammunition, Accessing (take/store/swap) [Belt and Pocket](#belt-and-pockets), etc, Each further **Small Action** requires 1 `AP`.
+**Action Point** `AP` is the resource that defines how many **Actions** a Character can take in one [Round](#time).
 
-Dropping [items](#items) from hands, and dropping **at will** [Conditions](#conditions) from [Backpack](#backpack) is an **always free action**.
+### Small Action
+
+There is one free **Small Action** per [Round](#time): opening/closing a door, pushing a button, picking up one item from the floor, loading ammunition, Accessing (take/store/swap) [Belt and Pocket](#belt-and-pockets), etc, Each further **Small Action** requires 1 `AP`.
+
+### Free Action
+
+Dropping [items](#items) from hands, and dropping **at will** [Conditions](#conditions) from [Backpack](#backpack) is a **Free Action**.
 
 ### Initiative
 
@@ -608,14 +612,14 @@ Combat starts when someone attacks. The attacker starts with 2 `AP` (after their
   - Tier 1: 0 AP
   - Tier 2: 1 AP
   - Tier 3: 2 AP
-  - Critical Failure: 0 AP + [Prone Condition](./conditions.html#prone)
+  - Critical Failure: 0 AP + [Prone Condition](./conditions.md#prone)
   - Critical Success: 3 AP
 - Not Surprised: Roll a `DEX` [Attribute Roll](#attribute-roll)
   - Tier 1: 1 AP
   - Tier 2: 2 AP
   - Tier 3: 3 AP
   - Critical Failure: 0 AP + [Prone Condition](#conditions)
-  - Critical Success: 3 AP + [Refreshed](./conditions.html#refreshed) or [Focused](./conditions.html#focused) Condition.
+  - Critical Success: 3 AP + [Refreshed](./conditions.md#refreshed) or [Focused](./conditions.md#focused) Condition.
 
 ### Rounds
 

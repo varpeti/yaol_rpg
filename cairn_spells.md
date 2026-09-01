@@ -1,8 +1,8 @@
 ---
 title: "Cairn Spells"
 toc: false
-numbersections: false 
-secnumdepth: 6
+toc-depth: 6
+number-sections: false
 css: "assets/style.css"
 ---
 
@@ -20,12 +20,12 @@ License: [CC-BY-SA 4.0.](https://creativecommons.org/licenses/by-sa/4.0/)
 
 **Conversions**:
 
-- **STR** damage/lost equals to [Wounds](./index.html#taking-damage) (same amount)
-- Any **WIL** damage becomes [Drained](./index.html#conditions) (only 1)
-- Deprived = [Drained](./index.html#conditions)
-- Any **DEX** damage becomes [Exhausted](./index.html#conditions) (only 1)
-- Attribute save = [Attribute roll](./index.html#attribute-roll)
-- book = artifact which holds the spell (spirit)
+- **STR** damage/lost equals to [Wounds](./yaol_rpg.md#taking-damage) (same amount)
+- Any **WIL** damage becomes [Drained](./yaol_rpg.md#conditions) (only 1)
+- Deprived = [Drained](./yaol_rpg.md#conditions)
+- Any **DEX** damage becomes [Exhausted](./yaol_rpg.md#conditions) (only 1)
+- Attribute save = [Attribute roll](./yaol_rpg.md#attribute-roll)
+- Book = Spell Spirit possessed Artifact
 
 ## D100
 

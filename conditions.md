@@ -1,9 +1,8 @@
 ---
 title: "Conditions"
-author: "varpeti"
 toc: false
-numbersections: false
-secnumdepth: 6
+toc-depth: 6
+number-sections: false
 css: "assets/style.css"
 ---
 

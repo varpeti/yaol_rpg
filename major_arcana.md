@@ -1,9 +1,9 @@
 ---
-title: "Tarot Magic - Major Arcana"
+title: "Major Arcana"
 author: "varpeti"
 toc: false
-numbersections: true
-secnumdepth: 6
+toc-depth: 6
+number-sections: false
 css: "assets/style.css"
 ---
 
@@ -22,8 +22,8 @@ Draw 5 cards, keep the lowest 2, burn the rest.
 
 ## II The High Priestess
 
-Summon an invulnerable white-gold Pegasuscat. Each creature next to the Pegasuscat (1 Space) has +1 for [Attribute](./index.html#attribute-roll) and [Damage](./index.html#damage-roll) rolls.
-The Pegasuscat has 3 Speed, and can be commanded to move as a [Small Action](./index.html#combat). Lasts for 10 minutes.
+Summon an invulnerable white-gold Pegasuscat. Each creature next to the Pegasuscat (1 Space) has +1 for [Attribute](./yaol_rpg.md#attribute-roll) and [Damage](./yaol_rpg.md#damage-roll) rolls.
+The Pegasuscat has 3 Speed, and can be commanded to move as a [Small Action](./yaol_rpg.md#combat). Lasts for 10 minutes.
 
 ## III The Empress
 
@@ -31,17 +31,17 @@ Roll `1d4` suffer this as true damage, the closes ally gain this many `HP` (up t
 
 ## IV The Emperor
 
-Gain a **Golden Apple**: When eaten removes 1 [Wound](./index.html#wound)
+Gain a **Golden Apple**: When eaten removes 1 [Wound](./yaol_rpg.md#wound)
 
-Roll `1d10` and place it to the rolled slot in your [Backpack](./index.html#backpack). If there is an [Item](./index.html#item) on that slot drop it to the floor. If there is a [Condition](./index.html#conditions) on that slot remove it.
+Roll `1d10` and place it to the rolled slot in your [Backpack](./yaol_rpg.md#backpack). If there is an [Item](./yaol_rpg.md#item) on that slot drop it to the floor. If there is a [Condition](./yaol_rpg.md#conditions) on that slot remove it.
 
 ## V The Hierophant
 
-The caster freezes in loud prayer to their god for at least 5 minutes. They are invulnerable until they finish the prayer, but needs air, and not unmovable. If the prayer interrupted take 1 [Wound](./index.html#wound).
+The caster freezes in loud prayer to their god for at least 5 minutes. They are invulnerable until they finish the prayer, but needs air, and not unmovable. If the prayer interrupted take 1 [Wound](./yaol_rpg.md#wound).
 
 ## VI The lovers
 
-Chose 2 creature, they gain the [Lovers Condition](./index.html#conditions):
+Chose 2 creature, they gain the [Lovers Condition](./yaol_rpg.md#conditions):
 
 ### Lovers
 
@@ -62,11 +62,11 @@ Silence falls to the 8 Space area around the caster for 10 minutes.
 
 ## X Wheel of Fortune
 
-Roll on the [d666](./cairn_spells.html#d666) table. Immediately cast that spell. This does not cost any extra [AP](./index.html#combat) or card and automatically succeed.
+Roll on the [d666](./cairn_spells.md#d666) table. Immediately cast that spell. This does not cost any extra [AP](./yaol_rpg.md#combat) or card and automatically succeed.
 
 ## XI Strength
 
-Everyone in 8 Space around the caster gains 3 [Strengthened Condition](./conditions.html#strengthened)
+Everyone in 8 Space around the caster gains 3 [Strengthened Condition](./conditions.md#strengthened)
 
 ## XII The Hanged Man
 
@@ -85,12 +85,12 @@ Everyone including the caster and it's allies in 8 Space roll `1d20` and telepor
 
 Make a deal with the Devil:
 
-- Permanently lose 1 slot from the [Backpack](./index.html#backpack) and gain +1 [Attribute](./index.html#attributes)
-- Permanently lose 1 [Attribute](./index.html#attributes) and gain +1 slot in the [Backpack](./index.html#backpack)
+- Permanently lose 1 slot from the [Backpack](./yaol_rpg.md#backpack) and gain +1 [Attribute](./yaol_rpg.md#attributes)
+- Permanently lose 1 [Attribute](./yaol_rpg.md#attributes) and gain +1 slot in the [Backpack](./yaol_rpg.md#backpack)
 
 ## XVI Temperance
 
-Caster Receives a [Hungry Condition](./conditions.html#hungry) and a [Holy Fasting Condition](./index.html#conditions).
+Caster Receives a [Hungry Condition](./conditions.md#hungry) and a [Holy Fasting Condition](./yaol_rpg.md#conditions).
 
 ### Holy Fasting
 
@@ -108,7 +108,7 @@ Magic emitting light and celestial objects are blacked out only for a moment.
 
 ## XIX The Sun
 
-Gain the [Sun Condition](./index.html#conditions)
+Gain the [Sun Condition](./yaol_rpg.md#conditions)
 
 ### Sun
 
@@ -121,4 +121,4 @@ Everyone around the caster in 8 Space who killed another creature in the last da
 
 ## XXI The World
 
-Choose any spell existing in the World. Draw an extra card. You can cast the spell immediately using any card you have. This does not cost any extra [AP](./index.html#combat).
+Choose any spell existing in the World. Draw an extra card. You can cast the spell immediately using any card you have. This does not cost any extra [AP](./yaol_rpg.md#combat).
