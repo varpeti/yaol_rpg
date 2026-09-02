@@ -16,7 +16,7 @@ cover-image: "assets/Darkness_Ambush.svg"
 
 The universe holds many mysteries waiting to be uncovered. Discard every assumption and pretense of knowing. You must be fearless and stay sharp at all times.
 
-To play the game, you need polyhedral dice (d4, d6, d8, d10, d12, d20) and some way to track the Characters, be it pen and paper or digital. A Game Master and Players to form a Party. Snacks, optional but highly recommended.
+To play the game, you need polyhedral dice (d4, d6, d8, d10, d12, d20) and some way to track the Characters, be it pen and paper or digital. A Game Master and Players to form a party. Snacks, optional but highly recommended.
 
 ---
 
@@ -37,7 +37,7 @@ Characters naturally fall between -2 and +3. But with magic they can be pushed t
 Choose a method, and stick to it:
 
 - **Standard array**: Assign each Attribute one of these: `3 1 -1`.
-- **Point buy**: Each Attribute starts with -2; Allocate 9 points however you like, but a single Attribute cannot be larger than 3.
+- **Point buy**: Each Attribute starts with -2; allocate 9 points however you like, but a single Attribute cannot be larger than 3.
 - **Roll**: For each attribute in order `1d6 - 3`. You can swap two OR re-roll one attribute.
 
 <details><summary>Example</summary>
@@ -45,12 +45,12 @@ Choose a method, and stick to it:
 ```text
 Rolled 4 -> 4-3 = 1 STR
 Rolled 3 -> 3-3 = 0 DEX
-Rolled 5 -> 5-3 = 2 WIL
+Rolled 6 -> 6-3 = 3 WIL
 
 Swapped DEX and WIL.
 
 Recorded as:
-STR 1 DEX 2 WIL 0
+STR 1 DEX 3 WIL 0
 ```
 
 </details>
@@ -73,7 +73,7 @@ Rolled (3 6) -> 6 HP
 
 Recorded as: HP Current/Max
 
-STR 1 DEX 2 WIL 0 HP 6/6
+STR 1 DEX 3 WIL 0 HP 6/6
 ```
 
 </details>
@@ -129,7 +129,7 @@ There are some stats that are provided by items; the table can decide if it is w
 
 ### Background
 
-Name and describe your character in one or few words for each:
+Name and describe your character in one or a few words for each:
 
 - **Appearance**: One unique trait they have.
 - **Virtue**: One thing they excel at.
@@ -144,10 +144,10 @@ These can be rolled on random tables as well.
 
 ```text
 Flint
-STR 1 DEX 2 WIL 0 HP 6/6
+STR 1 DEX 3 WIL 0 HP 6/6
 
-- Appearance: Long Blond hair, but left side is shaved.
-- Virtue: Great Cheff.
+- Appearance: Long blond hair, but the left side is shaved.
+- Virtue: Great chef.
 - Vice: Hates boring food.
 - Relationship: Childhood friends with Clayd.
 ```
@@ -163,95 +163,96 @@ Characters die easily. For quick character creation, players can roll on random 
 #### Two hands
 
 - `2 slot` (hopefully)
-- Characters can only use items if they are holding it.
+- Characters can only use items if they are holding them.
 - Hands can hold **stacked** items, but cannot use them until unstacked.
 - With both hands a character can hold items which have more than **2 slot** within reason.
 - Using a **Heavy** [Items](#offensive-items) (3 Slots) requires 3 `STR` or more.
-- **Versatile** [Items](#offensive-items) (2 Slot) can be used as One or Two handed requiring 1 or 2 hand Slot respectively.
+- **Versatile** [Items](#offensive-items) (2 Slot) can be used as One or Two handed, requiring 1 or 2 hand slots respectively.
 
 #### Belt and Pockets
 
 - `4 slot`
-- Items to quickly take/store/swap, it takes only a [Small Action](#combat) even when the time is constrained.
+- Items to quickly take/store/swap; it takes only a [Small Action](#combat) even when the time is constrained.
 
 #### Backpack
 
 - `10 slot`
 - 3 things share **The Backpack** inventory:
   - Items in a backpack
-  - Large items worn on the Body
+  - Large items worn on the body
   - Conditions affecting the character
 
 ##### Physical Backpack with Items
 
 - It can hold items
-- It can be removed/replaced/stolen etc.
+- It can be removed, replaced, stolen, etc.
 - The largest size is 10. Smaller means cannot store items on larger slots.
 - Storing items: Place the items anywhere they fit.
 - Taking items, searching and rearranging:
   - When time is not constrained: Just do it.
-  - When time constrained like in [Combat](#combat): To search for an item, roll `1d10`. You can grab any item which are located up to the rolled value. If an item covers more slots it can be grabbed even if it is only partially located. If you don't grab anything, you can rearrange the items in the backpack.
+  - When time is constrained like in [Combat](#combat): To search for an item, roll `1d10`. You can grab any item which are located up to the rolled value. If an item covers more slots it can be grabbed even if it is only partially located. If you don't grab anything, you can rearrange the items in the backpack.
 
 ##### Body
 
-- Large items worn on the Body need slots (Eg: Armor)
-- Small items worn on the body does not need a slot. (Eg: Ring, Necklace, Earring, etc)
-- Magic items does not like to share space on the body.
-- Normal, non-armor clothing does not need slot if worn on the body.
-- Mouth and other body orifices can be used to hold on items temporally.
-- Access speed depends on the item and location, Eg: Removing a hat is quick, getting out of a plate armor takes a significant time.
+- Large items worn on the body need slots (E.g.: Armor)
+- Small items worn on the body do not need a slot. (E.g.: Ring, Necklace, Earring, etc.)
+- Magic items do not like to share space on the body.
+- Normal, non-armor clothing does not need a slot if worn on the body.
+- Mouth and other body orifices can be used to hold items temporarily.
+- Access speed depends on the item and location. E.g.: Removing a hat is quick, getting out of plate armor takes a significant time.
 
 ##### Conditions
 
 - Each Condition, be it boon or bane, takes up one inventory slot. It can affect more than just the inventory, and each has a condition for removal.
 - Because of [Wounds](#wound) **The Backpack** acts as the secondary `HP`:
-- If a Character's [Backpack](#backpack) is full and receives a condition, they must drop something if they can. If they cannot they [die](#death).
+- If a Character's [Backpack](#backpack) is full and receives a condition, they must drop something if they can. If they cannot, they [die](#death).
 - Conditions which can be cleared **at will**, can be refused or cleared any time.
 - [List of Basic Conditions](./conditions.md)
 
-#### Items
+### Items
 
-Items have **Slot** and can have **Stackable** and **Usage** attribute.
+Items have **Slot** and can have **Stackable** and **Usage** attributes.
 
 - **x Slot**: This item takes x slot in the inventory.
-- **stackable x**: This item can be stacked x times, until another **Slot** is required. Different Items can be stacked together if they are the same type.
-- **x Usage**: Certain items have finite number of uses or duration tracked as [Usage](#usage).
+- **stackable x**: This item can be stacked x times, until another **Slot** is required. Different items can be stacked together if they are the same type.
+- **x Usage**: Certain items have a finite number of uses or duration tracked as [Usage](#usage).
 
-##### Usage
+#### Usage
 
 After the item is used, roll an **usage dice** `xd6` but maximum `3d6`. For each die rolled 1 or 2 remove one **Usage**.
 
 Usage can have further modifiers:
 
-- **broken** or **ran-out** or **consumed**: The item become permanent broken if reaches **0 usage**, cannot be repaired, refuelled etc, or ran-out / consumed like ammunition, lamp oil, etc
+- **broken**, **ran-out**, or **consumed**: The item becomes permanently unusable if it reaches **0 usage**, cannot be repaired, refueled, etc.
 - **time**: Roll **usage dice** when the time is up, or when the item usage is stopped.
-- **conditions to restore**: Rest, Refuel, Repair, etc
+- **conditions to restore**: Rest, Refuel, Repair, etc.
   - If no condition given, it is usually means **Repair**.
+- **tracked**: There is no **usage dice** roll; track usage normally.
 
 Items without default usage can be worn-down/destroyed as well, so the GM can assign usage, or call **usage dice roll** for such items.
 
 #### Offensive items
 
-Each weapon has a **Damage dice** and rarely a **Bonus**. The bonus is a flat bonus damage each time a weapon deals damage.
+Each weapon has a **Damage dice** and, occasionally, a **Bonus**. The bonus is a flat damage bonus added each time a weapon deals damage.
 
-Using **Heavy** weapon/armor requires 3 `STR` or more.
+Using **Heavy** weapons or armor requires a `STR` of 3 or more.
 
 ##### Melee
 
 - [Melee weapons](./items.md#melee)
-- When Dual Wielding, attacking with both weapons is considered one action, Roll [Usage](#usage) for both.
+- When Dual Wielding, attacking with both weapons is considered one action; roll [Usage](#usage) for both.
 - Attacking multiple targets at once (swing): Roll once, share the damage.
-- Unarmed or attack is `1d4`.
-- Improvised weapon can give advantage + `1d4`.
+- Unarmed attacks deal `1d4`.
+- Improvised weapon attacks deal `1d4` and can grant advantage.
 
 ##### Ranged
 
 - [Ranged weapons](./items.md#ranged)
-- Ammunition has [Usage](#usage), when making a ranged attack, roll usage for the ammunition.
-- If the weapon is misused (eg: Melee-attacking/Blocking damage) roll the [Usage](#usage) for the weapon.
-- Loading cost 1 [Small Action](#combat)
-- Aiming and Shooting cost 1 [Action Point](#combat)
-- Ranged weapons cannot be used melee range, they have short (default: 8 Space) and long range (default: 15 Space).
+- Ammunition has a [Usage](#usage); when making a ranged attack, roll the usage for the ammunition.
+- If the weapon is misused (e.g., for melee attacks or blocking), roll the [Usage](#usage) for the weapon.
+- Loading costs 1 [Small Action](#combat).
+- Aiming and Shooting cost 1 [Action Point](#combat).
+- Ranged weapons cannot be used at melee range; they have a short range (default: 8 Space) and a long range (default: 15 Space).
 
 #### Defensive items
 
@@ -260,16 +261,17 @@ There are 2 types of defensive items: Passive (Armor) and Active (Shield).
 ##### Armor
 
 - [Armor](./items.md#armor)
-- Armor provides **Resistance:** The armor determines which damage types it can mitigate. Use common sense, be creative, nothing is impenetrable. Description of the attack can and should overwrite the default. The table should aim for consistency and the GM should rule case-by case fairy.
+- Armor provides **Resistance:** The armor determines which damage types it can mitigate. Use common sense, be creative; nothing is impenetrable. The description of the attack could override the default. The table should aim for consistency, and the GM should rule on a case-by-case basis fairly.
 
 <details><summary>Examples</summary>
 
 ```text
 Chainmail (Slashing, Piercing)
-  Note: Can be piecred, for example with long poisoned needles
+  Note: Can be pierced, for example with long poisoned needles
 Plate-armor (Slashing, Bludgeoning, Piercing)
-  Note: Metal weapons are greate at cunducting electricity...
-  Note: Skilled dagger user might find the openings...
+  Note: Metal weapons are great at conducting electricity...
+  Note: Skilled dagger users might find the openings...
+
 ```
 
 </details>
@@ -287,6 +289,16 @@ There is no class system; the items a character is holding define their options.
 
 ![Thief](./assets/Thief.svg)
 
+## Information
+
+Information is freely given, never tied to rolling dice. The GM should describe everything clearly; the Players should ask frequently, and the GM should answer honestly. It is better to give the Players more choices than to dwell on whether their characters should know something or not.
+
+The GM should always telegraph dangers. Players need ample warning so they can decide whether to heed or ignore them and rush to their demise.
+
+Dangers should be meaningful; the GM should never shy away from punishing recklessness.
+
+On the other side, the GM should always reward cleverness. If the Players find a way to bypass difficult traps or defeat hard bosses with ease, let them have it.
+
 ## Actions
 
 The Players should describe or role-play what their Characters want to do or are doing. The GM should then describe the possible outcomes, or the outcome of their actions.
@@ -303,7 +315,7 @@ The GM should only ask for **Attribute Rolls** if the outcome is uncertain. As a
 
 The GM should ensure that the outcomes of a **Attribute Roll** are obvious to the Players before the roll.
 
-Rolling an **Attribute Roll** is `2d10 + Attribute`
+Rolling an **Attribute Roll** is `2d10 + Attribute + Advantage - Disadvantage`
 
 - Tier 1: `<10`: Failure (No)
 - Tier 2: `10+`: Partial Success/Failure (Yes but, No but)
@@ -336,37 +348,33 @@ Critical Success: 3%
 
 ### Damage roll
 
-Roll an **Attribute Roll** with the Attribute used for the attack.
+- Each [Weapon](#offensive-items) that can be used to deal damage has a **Damage dice** to roll damage with.
+- Each attack uses one [Attribute](#attributes). This gives modifiers for the roll: negative: `-1`, 3: `+1`, 4: `+2`, 5: `+3`
+- Advantages and Disadvantages: Roll +x dice, take the highest/lowest.
+- Every attack is a success, so the minimum damage is 1. (So having a -1 modifier and rolling 1 is still 1 damage)
+- Roll [Usage Dice](#usage) as well. The **usage** does not influence the damage. (Can be rolled at once if the player has enough distinguishable dice)
 
-- Tier 1: +0 dmg
-- Tier 2: +1 dmg
-- Tier 3: +2 dmg
-- Critical Failure: Attacker receives the full damage, or something similarly terrible
-- Critical Success: Double Damage or Injury
+<details><summary>Example</summary>
 
-Each [Weapon](#offensive-items) that can be used to deal damage has a **Damage dice** to roll damage with. Roll the dice: that is the damage.
+```text
+Attacking with a Two Handed Axe (1d8) using STR (3): 1d8 + 1
+Attacking with a Two Handed Axe (1d8) using STR (3) with 1 advantage: [highest 1 of 2d8] + 1
+Attacking with a Two Handed Axe (1d8) using STR (3) with 2 advantages: [highest 1 of 3d8] + 1
 
-Roll [Usage Dice](#items) as well. The **usage** does not influence the result.
+Attacking with Two daggers (2d4) using DEX (-2): 2d4 - 1
+Attacking with Two daggers (2d4) using DEX (-2) with 1 disadvantage: [lowest 2 of 3d4] - 1
+Attacking with Two daggers (2d4) using DEX (-2) with 2 disadvantages: [lowest 2 of 4d4] - 1
+```
 
-All can be rolled at once if the player has enough distinguishable dice.
-
-### Advantages and Disadvantages
-
-Stacking flat plus or minus modifiers
+</details>
 
 ### Magic roll
 
 See [Spell Casting](#spell-casting)
 
-## Information
+### Usage roll
 
-Information is freely given, never tied to rolling dice. The GM should describe everything clearly; the Players should ask frequently, and the GM should answer honestly. It is better to give the Players more choices than to dwell on whether their characters should know something or not.
-
-The GM should always telegraph dangers. Players need ample warning so they can decide whether to heed it or ignore it and rush to their demise. Injury, death, and all negative outcomes should be the consequence of the Players' choices; they should never come as a surprise.
-
-Dangers should be meaningful; the GM should never shy away from punishing recklessness.
-
-On the other side, the GM should always reward cleverness. If the Players find a way to bypass difficult traps or defeat hard bosses with ease, let them have it.
+See [Usage](#usage)
 
 ## Taking Damage
 
@@ -378,7 +386,7 @@ Characters take damage to their [Hit Protection](#stats) `HP` until it is deplet
 
 The **Wound** is a [Condition](#conditions) which can be cleared by [Resting](#resting).
 
-Taking too many wound can result in [Death](#death).
+Taking too many wounds can result in [Death](#death).
 
 ### Injuries
 
@@ -419,9 +427,9 @@ Provided by items such as [Armor](#armor) or [Conditions](#conditions).
 - **Reckless Counter Attack**: A [Damage roll](#damage-roll) with a weapon.
   - Apply damage to both. Ignore both Character's [Resistance](#immunity-resistance-vulnerability) including [Armor](#armor)
 - **Counter Spell**: Burn two [Tarot Cards](#magic) the lowest must be higher than the card used for casting the spell.
-  - Countering a spell is only possible before the spell resolved (The `2d10` rolling did not happened yet)
+  - Countering a spell is only possible before the spell is resolved (The `2d10` rolling has not happened yet).
   - Cannot counter spells with Automatic Success.
-  - It is possible to close by characters provide 1-1 **Tarot Card** to counter a spell.
+  - It is also possible that close by characters providing 1-1 **Tarot Cards** to counter a spell.
 
 Players can come up with any other defensive action; the GM should consider them and honor creativity and role-play.
 
@@ -430,16 +438,14 @@ Players can come up with any other defensive action; the GM should consider them
 Some Items provide and some creatures can have Immunity, Resistance, Vulnerability to different types of damage.
 
 - **Immunity**: Total immunity to a certain damage type. Extremely rare.
-- **Resistance**: Resistance to a certain damage type. If a character receives damage which can be resisted by worn/used item:
-  - If the **usage** is higher than the **damage**: subtract the **damage** from the **usage**. Roll this many [Usage Dice](#usage).
-  - If the **damage** is higher than the **usage**: subtract the **usage** from the **damage**. Roll **usage** [Usage Dice](#usage) and receive the rest as damage.
-  - The character receives damage for each **usage** removed.
+- **Resistance**: Resistance to a certain damage type. If a character receives damage which can be resisted by a worn/used item:
+  - Roll [Usage Dice](#usage) for the item (max 3), remove this many damage, take the remainder damage normally.
 - **x Vulnerability**: Vulnerability to certain damage type. +x Extra damage is received from this damage type.
 
 ### Other source of damage
 
-- Falling: 3 meter or more: 1d6 blunt damage for every 3 meters
-- Suffocation: Can hold breath for `STR` minutes (minimum 1) after that take 1d10 wounds every minute
+- Falling: 3 meter or more: `1d6` Bludgeoning damage for every 3 meters
+- Suffocation: Can hold breath for `STR` minutes (minimum 1) after that take `1d10` wounds every minute
 
 ---
 
@@ -457,8 +463,8 @@ To cast a spell, your character must have the possessed item in their hand, and 
 ### Spells
 
 - [Cairn Spells](./cairn_spells.md)
-- **DnD Spells**: Characters can cast up to their **WIS** Level any spell (if they have the spell/spirit/artifact). Cantrip = Level 0
-- **Adventure spells**: Magic is Magical (duh!), nothing can prevent it to brake rules or create never-seen-before spells with unique mechanics.
+- **DnD Spells**: Characters can cast up to their `WIS` Level any spell (if they have the artifact with the spell spirit). Cantrip = Level 0
+- **Adventure spells**: Magic is Magical (duh!), nothing can prevent it from braking rules or creating never-before-seen spells with unique mechanics.
 
 **Defaults if not stated/implied otherwise**:
 
@@ -520,7 +526,7 @@ Critical Success: 3%
 - Day (24 hours; 4 watches)
   - Segments: Morning, Afternoon, Evening, Night
   - Marks: Sunrise, Noon, Sunset, Midnight
-  - Usage: Long travel
+  - Usage: Long-distance travel
 - Watch (6 hours; 36 Turns)
   - Segments: 6 segments (1 hour each)
   - Marks: Every 3rd Turn (30 min)
@@ -528,65 +534,65 @@ Critical Success: 3%
 - Turn (10 minutes; 10 Rounds)
   - Usage:
     - All combat takes at least one Turn.
-    - A Party can explore a normal sized room in one Turn, larger room or through inspection takes more turns.
+    - A Party can explore a normal-sized room in one Turn; larger rooms or through inspection take more turns.
 - Round (~1 minute; 3 Actions)
-  - Usage: Combat
+  - Usage: [Combat Rounds](#rounds)
   - Each combatant takes 3 Actions, that is one Round.
 - Action (~10 sec)
   - Usage: Combat
 
 You can use [Mausritter](https://mausritter.com/)'s Turn Tracker to track time.
 
-Time is the main currency, events occurs with or without the players in the world.
+Time is the primary currency; events occur with or without the players in the world.
 
 ### Resting
 
-Everyone needs rest, brave adventurers are not exempt from this rule.
+Everyone needs rest; even brave adventurers are not exempt from this rule.
 
 **Requires:**
 
 - Safe space
 - Food
-- Minimum 6 hours total with 4 hours uninterrupted sleep
+- Minimum 6 hours total, with 4 hours of uninterrupted sleep
 
 **Provides by default at the end:**
 
 - Restore all [HP](#stats)
-- Restore [Usage](#usage) for items which are **Rest** restored.
-- Drop all [Tarot Cards](#magic) and draw `(WIL or 0) + number of spells you have`
-- Clear [Conditions](#conditions) which are tied to **Rest**. (Like [Wounds](#wound))
+- Restore [Usage](#usage) for items that are **Rest** restorable.
+- Drop all [Tarot Cards](#magic) and draw `(WIL or 0) + number of spells you have` (The [Drained Condition](./conditions.md#drained) affects the `WIL` value).
+- Clear [Conditions](#conditions) that are tied to **Rest** (such as [Wounds](#wound)).
 
-**Extra light activities, can be done while keeping watch:**
+**Extra, light activities can be done while keeping watch:**
 
-- Repair items (if possible in the situation) -> Restore [Usage](#usage)
-- Tend another Character's [Wound](#wound) -> Remove +1 wound or +2 if first aid kit or other kind of applicable healing is used.
-- Cooking over fire: +1 [Wound](#wound) removal or [Well-Fed Condition](./conditions.md#well-fed)
-- Craft items (if possible in the situation)
-- Experimenting with or studying an unknown magic artifact
-- Prepare mentally or physically for a described specific task you want to achieve right after the rest -> Possible Advantage(s) for that task.
-- Other light activities described or faded in the black.
+- Repair items (if the situation allows) to restore [Usage](#usage)
+- Tend another character's [Wound](#wound) -> Remove +1 wound, or +2 if a first-aid kit or other applicable healing is used.
+- Cooking over a fire: +1 [Wound](#wound) removal or [Well-Fed Condition](./conditions.md#well-fed)
+- Craft items (if the situation allows)
+- Experiment with or study an unknown magic artifact
+- Prepare mentally or physically for a specific task you wish to achieve immediately after the rest -> Possible Advantage(s) for that task.
+- Other light activities described or "faded in the black".
 
 **Encounters during Rest:**
 
-If the Party tries to Rest in an unsafe place, there is a possibility for an encounter. They should prepare for it, keep watch in rotation, plant traps or a warning system, or not and get a surprise.
+If the Party tries to Rest in an unsafe place, there is a possibility of an encounter. They should prepare for it by rotating watches, planting traps, establishing warning systems, or they might get a surprise.
 
-Interrupted Rest does not give any benefits. But it is possible to continue an interrupted Rest.
+An interrupted Rest does not provide any benefits, but it can be resumed.
 
 ### Hunger
 
-If a characters does not eat for a day (24 hours), they gain a [Hungry Condition](./conditions.md#hungry)
+If a character does not eat for a day (24 hours), they gain a [Hungry Condition](./conditions.md#hungry).
+
+## Light
+
+Without a proper light source, characters cannot navigate or act (unlike some creatures). There are 3 levels of light:
+
+- Bright (Sun, torch, lantern) - no modifiers
+- Dim (Moon and stars, candle, match) - Disadvantage 2
+- Darkness (nothing) - Disadvantage 5
 
 ---
 
 ![Skeletons](./assets/skeletons.svg)
-
-## Light
-
-Without proper light source characters cannot navigate or act, unlike some creatures. There are 3 levels of light:
-
-- Bright (Sun, torch, lantern) - no modifiers
-- Dim (candle, match) - Disadvantage 2
-- Darkness (nothing) - Disadvantage 5
 
 ## Combat
 
@@ -602,11 +608,11 @@ There is one free **Small Action** per [Round](#time): opening/closing a door, p
 
 ### Free Action
 
-Dropping [items](#items) from hands, and dropping **at will** [Conditions](#conditions) from [Backpack](#backpack) is a **Free Action**.
+Dropping [items](#items) from [Hands](#two-hands), and dropping **at will** [Conditions](#conditions) from [Backpack](#backpack) is a **Free Action**.
 
 ### Initiative
 
-Combat starts when someone attacks. The attacker starts with 2 `AP` (after their attack is resolved). There is no initiative order; instead, roll a `DEX` or `WIL` [Attribute Roll](#attribute-roll) for each combatant to determine starting `AP` for the 1st round:
+Combat starts when someone attacks. The attacker starts with -1 `AP`. There is no initiative order; instead, roll a `DEX` or `WIL` [Attribute Roll](#attribute-roll) for each combatant to determine starting `AP` for the first round:
 
 - Surprised: Roll a `WIL` [Attribute Roll](#attribute-roll)
   - Tier 1: 0 AP
@@ -625,9 +631,9 @@ Combat starts when someone attacks. The attacker starts with 2 `AP` (after their
 
 Split the Combatants into opposing parties (usually two, but three-way or more battles are possible as well).
 
-The 1st Attacker's Party goes first, then the 1st Victim's Party second (and if there are more parties, the order of the rest is decided by the GM).
+The first Attacker's Party goes first, then the first Victim's Party second (and if there are more parties, the order of the rest is decided by the GM).
 
-From each party, do one action or combined/combo actions, then continue with the next party.
+From each party, do one action, combined actions or combo actions, then continue with the next party.
 
 There is no strict order within a party; if Players cannot decide, go clockwise from the Player who last acted.
 
@@ -676,6 +682,7 @@ Player party (P) | Goblin Party (G) | Witch Party (W)
 (G) Goblin Archer flees with the Warrior [Goblin Archer 3 AP]
 (W) Witch realizes she would die before the ritual is finished and stops it, which creates a magical explosion...
 
+
 ```
 
 </details>
@@ -711,6 +718,7 @@ Players should describe or role-play their action in enough detail to leave no d
 - Player: Okay then, I grab a sharp stone from the rubble next to me, load it into the slingshot, then aim at the goblin by the entrance and shoot.
 - GM: That would be one Small Action to grab the stone, 1 AP to load the slingshot, and 1 AP to Aim and Shoot. If you go with this, you can roll your Damage die.
 
+
 ```
 
 </details>
@@ -723,7 +731,7 @@ If a Combatant is attacked and aware of the attack, they can defend themselves. 
 
 ```text
 - GM: Flint, this goblin tries to attack you with a dagger (d4). Do you want to defend yourself?
-- Player: Yes, I would like to Parry with my Rapier, which has a +1 Parry advantage.
+- Player: Yes, I would like to Parry with my Rapier, which has a +1 Parry Bonus.
 - GM: Okay then, do a Damage roll with Usage Dice, and we will see the outcome.
 
 ```
