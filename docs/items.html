@@ -39,6 +39,10 @@
 <div class="nav-and-cover">
 <nav id="TOC" role="doc-toc">
 <ul>
+<li><a href="#backpacks" id="toc-backpacks">Backpacks</a></li>
+<li><a href="#food-and-drink" id="toc-food-and-drink">Food and
+Drink</a></li>
+<li><a href="#light" id="toc-light">Light</a></li>
 <li><a href="#weapons" id="toc-weapons">Weapons</a>
 <ul>
 <li><a href="#melee" id="toc-melee">Melee</a></li>
@@ -50,19 +54,128 @@
 <li><a href="#armor" id="toc-armor">Armor</a></li>
 <li><a href="#shield" id="toc-shield">Shield</a></li>
 </ul></li>
-<li><a href="#food-and-drink" id="toc-food-and-drink">Food and
-Drink</a></li>
-<li><a href="#backpacks" id="toc-backpacks">Backpacks</a></li>
 <li><a href="#gear" id="toc-gear">Gear</a></li>
-<li><a href="#artifact-with-a-spell-spirit"
-id="toc-artifact-with-a-spell-spirit">Artifact with a Spell
-Spirit</a></li>
+<li><a href="#magic" id="toc-magic">Magic</a></li>
 </ul>
 </nav>
 </div>
 <!-- markdownlint-disable MD013 MD026 MD033 -->
 <!-- Long Lines; Punctuations at the end of title; Inline HTML -->
 <script src="assets/theme-selector.js"></script>
+<h2 id="backpacks">Backpacks</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Slot</th>
+<th>Usage</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backpack Large</td>
+<td>10</td>
+<td></td>
+<td>30</td>
+</tr>
+<tr>
+<td>Backpack Medium</td>
+<td>6</td>
+<td></td>
+<td>20</td>
+</tr>
+<tr>
+<td>Backpack Small</td>
+<td>4</td>
+<td></td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="food-and-drink">Food and Drink</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Name</th>
+<th>Slot</th>
+<th>Usage</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rations (Food and Water)</td>
+<td>1 stackable 3</td>
+<td>1 tracked</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Alcohol (Mead, Beer, Wine, etc)</td>
+<td>1 stackable 3</td>
+<td>1 tracked</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Alcohol Hard (Rum, Brandy, Moonshine, etc)</td>
+<td>1 stackable 3</td>
+<td>1 tracked</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="light">Light</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Slot</th>
+<th>Usage</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flint and Seel</td>
+<td>1 stackable 3</td>
+<td>3 run-out</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Torch (1 hour)</td>
+<td>1 stackable 3</td>
+<td>1 run-out</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Lantern (1 hour / oil)</td>
+<td>1</td>
+<td></td>
+<td>10</td>
+</tr>
+<tr>
+<td>Oil Can</td>
+<td>1 stackable 3</td>
+<td>2 run-out</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Candle (dim)</td>
+<td>1 stackable 3</td>
+<td>1 run-out</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="weapons">Weapons</h2>
 <h3 id="melee">Melee</h3>
 <table style="width:100%;">
@@ -99,7 +212,7 @@ Spirit</a></li>
 <tr>
 <td>Versatile</td>
 <td>2</td>
-<td>4</td>
+<td>3</td>
 <td>1d6 or 1d8</td>
 <td>3.5/4.5</td>
 <td>15</td>
@@ -225,10 +338,16 @@ Spirit</a></li>
 </thead>
 <tbody>
 <tr>
-<td>Rocks</td>
+<td>Rocks (disadwantage)</td>
 <td>1</td>
 <td>3 run-out</td>
 <td>0</td>
+</tr>
+<tr>
+<td>Metal Balls</td>
+<td>1</td>
+<td>3 run-out</td>
+<td>5</td>
 </tr>
 <tr>
 <td>Darts</td>
@@ -319,7 +438,7 @@ Spirit</a></li>
 </thead>
 <tbody>
 <tr>
-<td>Buckler</td>
+<td>Small</td>
 <td>1</td>
 <td>-</td>
 <td>2</td>
@@ -345,76 +464,6 @@ Spirit</a></li>
 <td>5</td>
 <td>-</td>
 <td>50</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="food-and-drink">Food and Drink</h2>
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr>
-<th>Name</th>
-<th>Slot</th>
-<th>Usage</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Rations (Food and Water)</td>
-<td>1 stackable 3</td>
-<td>1 tracked</td>
-<td>2</td>
-</tr>
-<tr>
-<td>Alcohol (Mead, Beer, Wine, etc)</td>
-<td>1 stackable 3</td>
-<td>1 tracked</td>
-<td>5</td>
-</tr>
-<tr>
-<td>Alcohol Hard (Rum, Brandy, Moonshine, etc)</td>
-<td>1 stackable 3</td>
-<td>1 tracked</td>
-<td>20</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="backpacks">Backpacks</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Slot</th>
-<th>Usage</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Backpack Large</td>
-<td>10</td>
-<td></td>
-<td>30</td>
-</tr>
-<tr>
-<td>Backpack Medium</td>
-<td>6</td>
-<td></td>
-<td>20</td>
-</tr>
-<tr>
-<td>Backpack Small</td>
-<td>4</td>
-<td></td>
-<td>10</td>
 </tr>
 </tbody>
 </table>
@@ -447,12 +496,6 @@ Spirit</a></li>
 <td>1 stackable 3</td>
 <td>1 run-out</td>
 <td>20</td>
-</tr>
-<tr>
-<td>Bandages</td>
-<td>1</td>
-<td>3 run-out</td>
-<td>30</td>
 </tr>
 <tr>
 <td>Bathing Goods (Soap, Perfume, Sponge, etc)</td>
@@ -495,12 +538,6 @@ Spirit</a></li>
 <td>1</td>
 <td></td>
 <td>10</td>
-</tr>
-<tr>
-<td>Chalk</td>
-<td>0</td>
-<td>3 run-out</td>
-<td>1</td>
 </tr>
 <tr>
 <td>Common Agents (Glue, Grease, etc)</td>
@@ -558,16 +595,16 @@ etc)</td>
 <td>10</td>
 </tr>
 <tr>
+<td>First-Aid kit</td>
+<td>1</td>
+<td>3 run-out</td>
+<td>30</td>
+</tr>
+<tr>
 <td>Fishing Rod</td>
 <td>2</td>
 <td></td>
 <td>10</td>
-</tr>
-<tr>
-<td>Flint and Seel</td>
-<td>1 stackable 3</td>
-<td>3 run-out</td>
-<td>3</td>
 </tr>
 <tr>
 <td>Games (Cards, Dice, etc)</td>
@@ -585,6 +622,12 @@ etc)</td>
 <td>Grappling Hook</td>
 <td>1</td>
 <td></td>
+<td>25</td>
+</tr>
+<tr>
+<td>Herbs Pouch</td>
+<td>1</td>
+<td>3 run-out</td>
 <td>25</td>
 </tr>
 <tr>
@@ -613,12 +656,6 @@ etc)</td>
 </tr>
 <tr>
 <td>Instruments Simple (Pipes, Lute, etc)</td>
-<td>1</td>
-<td></td>
-<td>10</td>
-</tr>
-<tr>
-<td>Lantern (1 hour / oil)</td>
 <td>1</td>
 <td></td>
 <td>10</td>
@@ -660,12 +697,6 @@ etc)</td>
 <td>10</td>
 </tr>
 <tr>
-<td>Oil Can</td>
-<td>1 stackable 2</td>
-<td>3 run-out</td>
-<td>10</td>
-</tr>
-<tr>
 <td>Outdoor Comfort (Blanket, Hammock, etc)</td>
 <td>1</td>
 <td></td>
@@ -703,7 +734,7 @@ etc)</td>
 </tr>
 <tr>
 <td>Sewing Kit</td>
-<td>1 stackable 3</td>
+<td>1</td>
 <td>3 run-out</td>
 <td>20</td>
 </tr>
@@ -738,12 +769,6 @@ etc)</td>
 <td>20</td>
 </tr>
 <tr>
-<td>Torch (1 hour)</td>
-<td>1 stackable 2</td>
-<td>1 broken</td>
-<td>5</td>
-</tr>
-<tr>
 <td>Trap (d6 damage)</td>
 <td>1</td>
 <td>2</td>
@@ -764,7 +789,7 @@ etc)</td>
 </tbody>
 </table>
 <hr />
-<h2 id="artifact-with-a-spell-spirit">Artifact with a Spell Spirit</h2>
+<h2 id="magic">Magic</h2>
 <table>
 <thead>
 <tr>
@@ -779,7 +804,7 @@ etc)</td>
 <td>Artifact with a Spell Spirit</td>
 <td>1</td>
 <td>2 rest</td>
-<td>500-10’000</td>
+<td>100-10’000</td>
 </tr>
 </tbody>
 </table>

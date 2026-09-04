@@ -81,27 +81,29 @@ STR 1 DEX 3 WIL 0 HP 6/6
 #### Coins
 
 - This is the main currency, it can be used to [buy a starting gear](./items.md)
-- Every 100 coins is 1 slot. Under 100 it is 0
+- Every 100 coins is 1 slot. Under 100 it is 0 slot.
 
 Coins and gear are tied together at the start:
 
-- GM can let the Players roll for items in a prepared starting gear list
+- GM can let the Players roll for items in a prepared [starting gear list](./starter_gears.md)
 - GM can prepare a list of items which is shared by the party
-- GM can let the Players roll for coin and by [items](./items.md)
+- GM can let the Players use coins to buy [items](./items.md)
   - Default, GM can tweak the values, choose a method and stick to it:
-    - **Fix Coins**: 75
-    - **Roll**: `8d20`
+    - **Fix Coins**: 100
+    - **Roll**: `5d20 + 60`
 
 <details><summary>Recommended</summary>
 
 ```text
-| ----------------- | ---- | 75 |
-| Large Backpack    | 30   | 45 | -> Store loot
-| Rations  3x       |  3x2 | 39 | -> 3 day worth of food
-| Torch 2x          |  5x2 | 29 | -> Light required, probably not enough for 3 days...
-| Flint and Steel   |  3   | 26 | -> Hard to create fire without it
-| One Handed Weapon | 10   | 16 | -> Offense
-| Normal Shield     | 10   |  6 | -> Defense
+Large Backpack  -> Store loot
+Rations  3x     -> 3 days worth of food
+Torch 3x        -> Light required, probably not enough for 3 days...
+Flint and Steel -> Hard to create fire without it
+Weapons         -> Offense
+Shield or Armor -> Defense
+Other utilities -> Never know what comes handy...
+
+But leave space for loot!
 ```
 
 </details>
@@ -240,7 +242,7 @@ Using **Heavy** weapons or armor requires a `STR` of 3 or more.
 ##### Melee
 
 - [Melee weapons](./items.md#melee)
-- When Dual Wielding, attacking with both weapons is considered one action; roll [Usage](#usage) for both.
+- When Dual Wielding, attacking with both weapons is considered one action; roll [Usage](#usage) for both, then remove the resulting usage from the weapons however you choose.
 - Attacking multiple targets at once (swing): Roll once, share the damage.
 - Unarmed attacks deal `1d4`.
 - Improvised weapon attacks deal `1d4` and can grant advantage.
@@ -486,11 +488,12 @@ To cast a spell, your character must have the possessed item in their hand, and 
 - Result of `2d10 + card modifier`:
   - Tier 1: `<10`: Failure
   - Tier 2: `10+`: Choose:
-    - Failure and draw a new card
-    - Success and gain a [Drained Condition](./conditions.md#drained).
+    - Refocus: Failure and draw a new card
+    - Push through with will: Success and gain a [Drained Condition](./conditions.md#drained).
+    - Push with more mana: Burn another card, which is higher or equal than the used one: Success.
   - Tier 3: `15+`: Success
   - Tier 4: `20+`: Success and draw a new card
-  - Critical Failure: Failure and gain a [Drained Condition](./conditions.md#drained).
+  - Critical Failure: Failure and the spell becomes permanently broken.
   - Critical Success: Success, draw a new card and keep the card used for casting the spell
 - Roll [Usage](#usage) for the spirit possessed object. (can be rolled alongside with the 2d10)
 

@@ -79,3 +79,9 @@ css: "assets/style.css"
 - Multiple enemies standing close threatening from multiple direction.
 - Melee attacks has +1 Advantage against you
 - 0 Slot (not tracked in Backpack)
+
+## Poisoned
+
+- +1 Disadvantage on Attribute or Damage rolls.
+- +1 damage received
+- Clear: antidote, healing or rest

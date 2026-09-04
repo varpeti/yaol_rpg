@@ -265,20 +265,20 @@ class="header-section-number">1.2.2</span> Coins</h4>
 <ul>
 <li>This is the main currency, it can be used to <a
 href="./items.html">buy a starting gear</a></li>
-<li>Every 100 coins is 1 slot. Under 100 it is 0</li>
+<li>Every 100 coins is 1 slot. Under 100 it is 0 slot.</li>
 </ul>
 <p>Coins and gear are tied together at the start:</p>
 <ul>
-<li>GM can let the Players roll for items in a prepared starting gear
-list</li>
+<li>GM can let the Players roll for items in a prepared <a
+href="./starter_gears.html">starting gear list</a></li>
 <li>GM can prepare a list of items which is shared by the party</li>
-<li>GM can let the Players roll for coin and by <a
+<li>GM can let the Players use coins to buy <a
 href="./items.html">items</a>
 <ul>
 <li>Default, GM can tweak the values, choose a method and stick to it:
 <ul>
-<li><strong>Fix Coins</strong>: 75</li>
-<li><strong>Roll</strong>: <code>8d20</code></li>
+<li><strong>Fix Coins</strong>: 100</li>
+<li><strong>Roll</strong>: <code>5d20 + 60</code></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -286,13 +286,15 @@ href="./items.html">items</a>
 <summary>
 Recommended
 </summary>
-<pre class="text"><code>| ----------------- | ---- | 75 |
-| Large Backpack    | 30   | 45 | -&gt; Store loot
-| Rations  3x       |  3x2 | 39 | -&gt; 3 day worth of food
-| Torch 2x          |  5x2 | 29 | -&gt; Light required, probably not enough for 3 days...
-| Flint and Steel   |  3   | 26 | -&gt; Hard to create fire without it
-| One Handed Weapon | 10   | 16 | -&gt; Offense
-| Normal Shield     | 10   |  6 | -&gt; Defense</code></pre>
+<pre class="text"><code>Large Backpack  -&gt; Store loot
+Rations  3x     -&gt; 3 days worth of food
+Torch 3x        -&gt; Light required, probably not enough for 3 days...
+Flint and Steel -&gt; Hard to create fire without it
+Weapons         -&gt; Offense
+Shield or Armor -&gt; Defense
+Other utilities -&gt; Never know what comes handy...
+
+But leave space for loot!</code></pre>
 </details>
 <h4 data-number="1.2.3" id="other-stats"><span
 class="header-section-number">1.2.3</span> Other Stats</h4>
@@ -479,7 +481,8 @@ class="header-section-number">1.5.2.1</span> Melee</h5>
 <ul>
 <li><a href="./items.html#melee">Melee weapons</a></li>
 <li>When Dual Wielding, attacking with both weapons is considered one
-action; roll <a href="#usage">Usage</a> for both.</li>
+action; roll <a href="#usage">Usage</a> for both, then remove the
+resulting usage from the weapons however you choose.</li>
 <li>Attacking multiple targets at once (swing): Roll once, share the
 damage.</li>
 <li>Unarmed attacks deal <code>1d4</code>.</li>
@@ -883,14 +886,16 @@ need to roll) + The special effect</li>
 <li>Tier 1: <code>&lt;10</code>: Failure</li>
 <li>Tier 2: <code>10+</code>: Choose:
 <ul>
-<li>Failure and draw a new card</li>
-<li>Success and gain a <a href="./conditions.html#drained">Drained
-Condition</a>.</li>
+<li>Refocus: Failure and draw a new card</li>
+<li>Push through with will: Success and gain a <a
+href="./conditions.html#drained">Drained Condition</a>.</li>
+<li>Push with more mana: Burn another card, which is higher or equal
+than the used one: Success.</li>
 </ul></li>
 <li>Tier 3: <code>15+</code>: Success</li>
 <li>Tier 4: <code>20+</code>: Success and draw a new card</li>
-<li>Critical Failure: Failure and gain a <a
-href="./conditions.html#drained">Drained Condition</a>.</li>
+<li>Critical Failure: Failure and the spell becomes permanently
+broken.</li>
 <li>Critical Success: Success, draw a new card and keep the card used
 for casting the spell</li>
 </ul></li>
