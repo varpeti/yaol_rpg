@@ -13,12 +13,12 @@ css: "assets/style.css"
 
 ## Wound
 
-- Clear: 1 on Rest
+- Clear: 1 after rest, can be more with cooking or tending other's wounds.
 
 ## Drained
 
 - -1 `WIL`
-- Clear: all on Rest but drawing spell cards is effected before the clear.
+- Clear: all after rest but drawing spell cards is effected before the clear.
 
 ## Focused
 
@@ -28,7 +28,7 @@ css: "assets/style.css"
 ## Exhausted
 
 - -1 `DEX` rolls
-- Clear: all on Rest
+- Clear: all after rest
 
 ## Refreshed
 
@@ -38,7 +38,7 @@ css: "assets/style.css"
 ## Weakened
 
 - -1 `STR`
-- Clear: all on Rest
+- Clear: all after Rest
 
 ## Strengthened
 

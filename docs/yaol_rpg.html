@@ -27,7 +27,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -294,7 +293,7 @@ Weapons         -&gt; Offense
 Shield or Armor -&gt; Defense
 Other utilities -&gt; Never know what comes handy...
 
-But leave space for loot!</code></pre>
+Leave space for loot!</code></pre>
 </details>
 <h4 data-number="1.2.3" id="other-stats"><span
 class="header-section-number">1.2.3</span> Other Stats</h4>
@@ -509,22 +508,23 @@ class="header-section-number">1.5.3</span> Defensive items</h4>
 <h5 data-number="1.5.3.1" id="armor"><span
 class="header-section-number">1.5.3.1</span> Armor</h5>
 <ul>
-<li><a href="./items.html#armor">Armor</a></li>
-<li>Armor provides <strong>Resistance:</strong> The armor determines
-which damage types it can mitigate. Use common sense, be creative;
-nothing is impenetrable. The description of the attack could override
-the default. The table should aim for consistency, and the GM should
-rule on a case-by-case basis fairly.</li>
+<li><a href="./items.html#armor">Armors</a></li>
+<li>Armor provides <a
+href="#immunity-resistance-vulnerability">Resistance</a></li>
+<li>The armor determines which damage types it can mitigate. Use common
+sense, be creative; nothing is impenetrable. The description of the
+attack could override the default. The table should aim for consistency,
+and the GM should rule on a case-by-case basis fairly.</li>
 </ul>
 <details>
 <summary>
 Examples
 </summary>
 <pre class="text"><code>Chainmail (Slashing, Piercing)
-  Note: Can be pierced, for example with long poisoned needles
+  Note: Can be pierced with long poisoned needles
 Plate-armor (Slashing, Bludgeoning, Piercing)
-  Note: Metal weapons are great at conducting electricity...
-  Note: Skilled dagger users might find the openings...
+  Note: Metal weapons are great at conducting electricity
+  Note: A skilled dagger user might find the openings
 </code></pre>
 </details>
 <h5 data-number="1.5.3.2" id="shield"><span
@@ -573,17 +573,31 @@ should honor this.</p>
 solutions instead.</p>
 <h3 data-number="3.1" id="attribute-roll"><span
 class="header-section-number">3.1</span> Attribute Roll</h3>
-<p>Rolling to see if something happens is almost always on the side that
-is affected. In rare cases where an action is deemed fallible, the
-player has to roll a <strong>Attribute Roll</strong> to determine the
-outcome.</p>
-<p>The GM should only ask for <strong>Attribute Rolls</strong> if the
-outcome is uncertain. As a rule of thumb, if the fail rate for the
-Character is below 25%, the action should automatically succeed.</p>
+<ul>
+<li>Most of the time <strong>Attribute Roll</strong> is asked to avoid a
+negative outcome. Aka rolling a <strong>Saving Throw</strong>.</li>
+<li>If a Character action is deemed fallible, the player has to roll a
+<strong>Attribute Roll</strong> to determine the outcome.</li>
+<li>The GM should only ask for <strong>Attribute Rolls</strong> if the
+outcome is uncertain.</li>
+</ul>
+<details>
+<summary>
+GM hint for Fast Check
+</summary>
+<ul>
+<li>If <code>Attribute ± (Dis)advantage(s) &gt;= 3</code> that means the
+fail rate is less than 20%.</li>
+<li>As a rule of thumb, if the fail rate for the Character is below 20%,
+the action should automatically succeed.</li>
+<li>But in the end the GM has to decide between roll and auto
+success.</li>
+</ul>
+</details>
 <p>The GM should ensure that the outcomes of a <strong>Attribute
 Roll</strong> are obvious to the Players before the roll.</p>
 <p>Rolling an <strong>Attribute Roll</strong> is
-<code>2d10 + Attribute + Advantage - Disadvantage</code></p>
+<code>2d10 + Attribute ± (Dis)advantage(s)</code></p>
 <ul>
 <li>Tier 1: <code>&lt;10</code>: Failure (No)</li>
 <li>Tier 2: <code>10+</code>: Partial Success/Failure (Yes but, No
@@ -724,20 +738,23 @@ class="header-section-number">4</span> Taking Damage</h2>
 avoid wounds.</p>
 <h3 data-number="4.1" id="wound"><span
 class="header-section-number">4.1</span> Wound</h3>
-<p>The <strong>Wound</strong> is a <a href="#conditions">Condition</a>
-which can be cleared by <a href="#resting">Resting</a>.</p>
-<p>Taking too many wounds can result in <a href="#death">Death</a>.</p>
+<ul>
+<li>The <a href="./conditions.html#wound">Wound Condition</a></li>
+<li>1 or more can be cleared by <a href="#resting">Resting</a></li>
+<li>Taking too many wounds can result in <a href="#death">Death</a></li>
+</ul>
 <h3 data-number="4.2" id="injuries"><span
 class="header-section-number">4.2</span> Injuries</h3>
 <ul>
 <li>In extreme cases, a character can suffer injuries like
 dismemberment.</li>
-<li>This usually permanent, gory and requires immediate attention. Take
-+1 <a href="#wound">Wound</a> every minute.</li>
-<li>Modify the Character Sheet. (Eg: Lost leg: slower movement speed;
+<li>This usually long lasting or permanent.</li>
+<li>If the injury requires immediate attention, take +1 <a
+href="#wound">Wound</a> every minute until handled.</li>
+<li>Modify the Character Sheet. (Eg: Broken leg: slower movement speed;
 Lost arm: remove arm inventory slot, etc)</li>
-<li>Critical Success on an <a href="#damage-roll">Damage Roll</a> could
-be the source of injuries.</li>
+<li>Receiving critical amount of damage (10+) could be the source of
+injuries.</li>
 </ul>
 <h3 data-number="4.3" id="death"><span
 class="header-section-number">4.3</span> Death</h3>
@@ -806,19 +823,26 @@ consider them and honor creativity and role-play.</p>
 <h3 data-number="4.5" id="immunity-resistance-vulnerability"><span
 class="header-section-number">4.5</span> Immunity, Resistance,
 Vulnerability</h3>
-<p>Some Items provide and some creatures can have Immunity, Resistance,
-Vulnerability to different types of damage.</p>
+<p>Some <a href="#armor">Items</a> and <a
+href="#conditions">Conditions</a> provide and some creatures can have
+Immunity, Resistance, Vulnerability to different types of damage.</p>
 <ul>
 <li><strong>Immunity</strong>: Total immunity to a certain damage type.
 Extremely rare.</li>
 <li><strong>Resistance</strong>: Resistance to a certain damage type. If
 a character receives damage which can be resisted by a worn/used item:
 <ul>
-<li>Roll <a href="#usage">Usage Dice</a> for the item (max 3), remove
-this many damage, take the remainder damage normally.</li>
+<li>Roll <a href="#usage">Usage Dice</a> for the item, remove the number
+of rolled dice damage (max 3), take the remainder damage normally.</li>
+<li>Resistance is non stacking (per type) meaning maximum 3 damage can
+be resisted.</li>
 </ul></li>
 <li><strong>x Vulnerability</strong>: Vulnerability to certain damage
-type. +x Extra damage is received from this damage type.</li>
+type. +x Extra damage is received from this damage type.
+<ul>
+<li>Vulnerability is non stacking (per type), use the highest
+vulnerability.</li>
+</ul></li>
 </ul>
 <h3 data-number="4.6" id="other-source-of-damage"><span
 class="header-section-number">4.6</span> Other source of damage</h3>
@@ -840,9 +864,8 @@ possess physical objects. To cast a spell, your character must have the
 possessed item in their hand, and say aloud an incantation to ask the
 spirit for its power and/or fulfill other prerequisites.</p>
 <ul>
-<li>At Rest draw <code>(WIL or 0) + number of spells you have</code>
-cards from the shared tarot deck (78 cards), this is your ‘Mana
-pool’.</li>
+<li>At Rest draw <code>WIL + number of spells you have</code> cards from
+the shared tarot deck (78 cards), this is your ‘Mana pool’.</li>
 <li>When the party rests, all remaining cards are returned to the deck
 and it is reshuffled.</li>
 <li>If the deck runs out of cards, the burned ones can be
@@ -894,10 +917,10 @@ than the used one: Success.</li>
 </ul></li>
 <li>Tier 3: <code>15+</code>: Success</li>
 <li>Tier 4: <code>20+</code>: Success and draw a new card</li>
-<li>Critical Failure: Failure and the spell becomes permanently
-broken.</li>
-<li>Critical Success: Success, draw a new card and keep the card used
-for casting the spell</li>
+<li>Critical Failure (Natural 2 or 3): Failure and the spell becomes
+permanently broken.</li>
+<li>Critical Success (Natural 19 or 20): Success, draw a new card and
+keep the card used for casting the spell</li>
 </ul></li>
 <li>Roll <a href="#usage">Usage</a> for the spirit possessed object.
 (can be rolled alongside with the 2d10)</li>
@@ -1032,7 +1055,7 @@ through inspection take more turns.</li>
 <p>You can use <a href="https://mausritter.com/">Mausritter</a>’s Turn
 Tracker to track time.</p>
 <p>Time is the primary currency; events occur with or without the
-players in the world.</p>
+characters interference.</p>
 <h3 data-number="6.1" id="resting"><span
 class="header-section-number">6.1</span> Resting</h3>
 <p>Everyone needs rest; even brave adventurers are not exempt from this
@@ -1049,7 +1072,7 @@ rule.</p>
 <li>Restore <a href="#usage">Usage</a> for items that are
 <strong>Rest</strong> restorable.</li>
 <li>Drop all <a href="#magic">Tarot Cards</a> and draw
-<code>(WIL or 0) + number of spells you have</code> (The <a
+<code>WIL + number of spells you have</code> (The <a
 href="./conditions.html#drained">Drained Condition</a> affects the
 <code>WIL</code> value).</li>
 <li>Clear <a href="#conditions">Conditions</a> that are tied to

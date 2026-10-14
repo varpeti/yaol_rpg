@@ -103,7 +103,7 @@ Weapons         -> Offense
 Shield or Armor -> Defense
 Other utilities -> Never know what comes handy...
 
-But leave space for loot!
+Leave space for loot!
 ```
 
 </details>
@@ -262,17 +262,18 @@ There are 2 types of defensive items: Passive (Armor) and Active (Shield).
 
 ##### Armor
 
-- [Armor](./items.md#armor)
-- Armor provides **Resistance:** The armor determines which damage types it can mitigate. Use common sense, be creative; nothing is impenetrable. The description of the attack could override the default. The table should aim for consistency, and the GM should rule on a case-by-case basis fairly.
+- [Armors](./items.md#armor)
+- Armor provides [Resistance](#immunity-resistance-vulnerability)
+- The armor determines which damage types it can mitigate. Use common sense, be creative; nothing is impenetrable. The description of the attack could override the default. The table should aim for consistency, and the GM should rule on a case-by-case basis fairly.
 
 <details><summary>Examples</summary>
 
 ```text
 Chainmail (Slashing, Piercing)
-  Note: Can be pierced, for example with long poisoned needles
+  Note: Can be pierced with long poisoned needles
 Plate-armor (Slashing, Bludgeoning, Piercing)
-  Note: Metal weapons are great at conducting electricity...
-  Note: Skilled dagger users might find the openings...
+  Note: Metal weapons are great at conducting electricity
+  Note: A skilled dagger user might find the openings
 
 ```
 
@@ -311,13 +312,21 @@ Rolling dice should be risky. Players should avoid it and find clever solutions 
 
 ### Attribute Roll
 
-Rolling to see if something happens is almost always on the side that is affected. In rare cases where an action is deemed fallible, the player has to roll a **Attribute Roll** to determine the outcome.
+- Most of the time **Attribute Roll** is asked to avoid a negative outcome. Aka rolling a **Saving Throw**.
+- If a Character action is deemed fallible, the player has to roll a **Attribute Roll** to determine the outcome.
+- The GM should only ask for **Attribute Rolls** if the outcome is uncertain.
 
-The GM should only ask for **Attribute Rolls** if the outcome is uncertain. As a rule of thumb, if the fail rate for the Character is below 25%, the action should automatically succeed.
+<details><summary>GM hint for Fast Check</summary>
+
+- If `Attribute ± (Dis)advantage(s) >= 3` that means the fail rate is less than 20%.
+- As a rule of thumb, if the fail rate for the Character is below 20%, the action should automatically succeed.
+- But in the end the GM has to decide between roll and auto success.
+
+</details>
 
 The GM should ensure that the outcomes of a **Attribute Roll** are obvious to the Players before the roll.
 
-Rolling an **Attribute Roll** is `2d10 + Attribute + Advantage - Disadvantage`
+Rolling an **Attribute Roll** is `2d10 + Attribute ± (Dis)advantage(s)`
 
 - Tier 1: `<10`: Failure (No)
 - Tier 2: `10+`: Partial Success/Failure (Yes but, No but)
@@ -386,16 +395,17 @@ Characters take damage to their [Hit Protection](#stats) `HP` until it is deplet
 
 ### Wound
 
-The **Wound** is a [Condition](#conditions) which can be cleared by [Resting](#resting).
-
-Taking too many wounds can result in [Death](#death).
+- The [Wound Condition](./conditions.md#wound)
+- 1 or more can be cleared by [Resting](#resting)
+- Taking too many wounds can result in [Death](#death)
 
 ### Injuries
 
 - In extreme cases, a character can suffer injuries like dismemberment.
-- This usually permanent, gory and requires immediate attention. Take +1 [Wound](#wound) every minute.
-- Modify the Character Sheet. (Eg: Lost leg: slower movement speed; Lost arm: remove arm inventory slot, etc)
-- Critical Success on an [Damage Roll](#damage-roll) could be the source of injuries.
+- This usually long lasting or permanent.
+- If the injury requires immediate attention, take +1 [Wound](#wound) every minute until handled.
+- Modify the Character Sheet. (Eg: Broken leg: slower movement speed; Lost arm: remove arm inventory slot, etc)
+- Receiving critical amount of damage (10+) could be the source of injuries.
 
 ### Death
 
@@ -437,12 +447,14 @@ Players can come up with any other defensive action; the GM should consider them
 
 ### Immunity, Resistance, Vulnerability
 
-Some Items provide and some creatures can have Immunity, Resistance, Vulnerability to different types of damage.
+Some [Items](#armor) and [Conditions](#conditions) provide and some creatures can have Immunity, Resistance, Vulnerability to different types of damage.
 
 - **Immunity**: Total immunity to a certain damage type. Extremely rare.
 - **Resistance**: Resistance to a certain damage type. If a character receives damage which can be resisted by a worn/used item:
-  - Roll [Usage Dice](#usage) for the item (max 3), remove this many damage, take the remainder damage normally.
+  - Roll [Usage Dice](#usage) for the item, remove the number of rolled dice damage (max 3), take the remainder damage normally.
+  - Resistance is non stacking (per type) meaning maximum 3 damage can be resisted.
 - **x Vulnerability**: Vulnerability to certain damage type. +x Extra damage is received from this damage type.
+  - Vulnerability is non stacking (per type), use the highest vulnerability.
 
 ### Other source of damage
 
@@ -458,7 +470,7 @@ Some Items provide and some creatures can have Immunity, Resistance, Vulnerabili
 Spells are living spirits, travelers between worlds. To stay, they possess physical objects.
 To cast a spell, your character must have the possessed item in their hand, and say aloud an incantation to ask the spirit for its power and/or fulfill other prerequisites.
 
-- At Rest draw `(WIL or 0) + number of spells you have` cards from the shared tarot deck (78 cards), this is your 'Mana pool'.
+- At Rest draw `WIL + number of spells you have` cards from the shared tarot deck (78 cards), this is your 'Mana pool'.
 - When the party rests, all remaining cards are returned to the deck and it is reshuffled.
 - If the deck runs out of cards, the burned ones can be reshuffled.
 
@@ -493,8 +505,8 @@ To cast a spell, your character must have the possessed item in their hand, and 
     - Push with more mana: Burn another card, which is higher or equal than the used one: Success.
   - Tier 3: `15+`: Success
   - Tier 4: `20+`: Success and draw a new card
-  - Critical Failure: Failure and the spell becomes permanently broken.
-  - Critical Success: Success, draw a new card and keep the card used for casting the spell
+  - Critical Failure (Natural 2 or 3): Failure and the spell becomes permanently broken.
+  - Critical Success (Natural 19 or 20): Success, draw a new card and keep the card used for casting the spell
 - Roll [Usage](#usage) for the spirit possessed object. (can be rolled alongside with the 2d10)
 
 The GM can draw from the deck each time an NPC casts a spell instead of drawing all at once and choosing from the hand.
@@ -546,7 +558,7 @@ Critical Success: 3%
 
 You can use [Mausritter](https://mausritter.com/)'s Turn Tracker to track time.
 
-Time is the primary currency; events occur with or without the players in the world.
+Time is the primary currency; events occur with or without the characters interference.
 
 ### Resting
 
@@ -562,7 +574,7 @@ Everyone needs rest; even brave adventurers are not exempt from this rule.
 
 - Restore all [HP](#stats)
 - Restore [Usage](#usage) for items that are **Rest** restorable.
-- Drop all [Tarot Cards](#magic) and draw `(WIL or 0) + number of spells you have` (The [Drained Condition](./conditions.md#drained) affects the `WIL` value).
+- Drop all [Tarot Cards](#magic) and draw `WIL + number of spells you have` (The [Drained Condition](./conditions.md#drained) affects the `WIL` value).
 - Clear [Conditions](#conditions) that are tied to **Rest** (such as [Wounds](#wound)).
 
 **Extra, light activities can be done while keeping watch:**

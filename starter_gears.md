@@ -1,11 +1,16 @@
 ---
 title: "Items"
 author: "varpeti"
-toc: true 
+toc: false
 toc-depth: 6
-number-sections: true
+number-sections: false
 css: "assets/style.css"
 ---
+
+<!-- markdownlint-disable MD013 MD026 MD033 MD038-->
+<!-- Long Lines; Punctuations at the end of title; Inline HTML, extra space in code-->
+
+<script src="assets/theme-selector.js"></script>
 
 ## Default
 
